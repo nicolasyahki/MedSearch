@@ -1,0 +1,88 @@
+[
+  {
+    "id": "gale-001",
+    "nom": "Gale",
+    "categorie": "dermatologiques",
+    "description": "Affection cutanée contagieuse due à un parasite.",
+    "symptomes": [
+      { "nom": "démangeaisons nocturnes", "poids": 3 },
+      { "nom": "lésions cutanées", "poids": 3 },
+      { "nom": "éruption", "poids": 2 }
+    ],
+    "danger": [],
+    "prise_en_charge": "Lotion antiparasitaire.",
+    "urgence": "Faible"
+  },
+  {
+    "id": "roug-001",
+    "nom": "Rougeole",
+    "categorie": "dermatologiques",
+    "description": "Infection virale très contagieuse.",
+    "symptomes": [
+      { "nom": "éruption cutanée", "poids": 3 },
+      { "nom": "fièvre", "poids": 3 },
+      { "nom": "yeux rouges", "poids": 2 },
+      { "nom": "toux", "poids": 2 }
+    ],
+    "danger": ["détresse respiratoire"],
+    "prise_en_charge": "Vitamine A, antipyrétiques.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "vari-001",
+    "nom": "Varicelle",
+    "categorie": "dermatologiques",
+    "description": "Infection virale très contagieuse avec éruption vésiculeuse.",
+    "symptomes": [
+      { "nom": "éruption vésiculeuse", "poids": 3 },
+      { "nom": "fièvre", "poids": 2 },
+      { "nom": "démangeaisons", "poids": 2 },
+      { "nom": "fatigue", "poids": 1 }
+    ],
+    "danger": ["surinfection cutanée", "déshydratation"],
+    "prise_en_charge": "Antipyrétiques, soins cutanés, isolement.",
+    "urgence": "Faible"
+  },
+  {
+    "id": "lepr-001",
+    "nom": "Lèpre",
+    "categorie": "dermatologiques",
+    "description": "Maladie infectieuse chronique attaquant la peau.",
+    "symptomes": [
+      { "nom": "taches insensibles", "poids": 3 },
+      { "nom": "faiblesse musculaire", "poids": 2 },
+      { "nom": "nodules", "poids": 2 }
+    ],
+    "danger": ["mutilations"],
+    "prise_en_charge": "Polychimiothérapie (PCT).",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "teig-001",
+    "nom": "Teigne",
+    "categorie": "dermatologiques",
+    "description": "Infection fongique du cuir chevelu ou de la peau.",
+    "symptomes": [
+      { "nom": "plaques chauves", "poids": 3 },
+      { "nom": "démangeaisons", "poids": 2 },
+      { "nom": "desquamation", "poids": 2 }
+    ],
+    "danger": [],
+    "prise_en_charge": "Antifongiques locaux ou oraux.",
+    "urgence": "Faible"
+  },
+  {
+    "id": "impe-001",
+    "nom": "Impétigo",
+    "categorie": "dermatologiques",
+    "description": "Infection cutanée bactérienne superficielle très contagieuse.",
+    "symptomes": [
+      { "nom": "croûtes jaunâtres", "poids": 3 },
+      { "nom": "lésions suintantes", "poids": 3 },
+      { "nom": "démangeaisons", "poids": 1 }
+    ],
+    "danger": ["surinfection"],
+    "prise_en_charge": "Soins locaux, antiseptiques, antibiotiques.",
+    "urgence": "Faible"
+  }
+]

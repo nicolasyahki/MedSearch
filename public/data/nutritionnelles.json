@@ -1,0 +1,62 @@
+[
+  {
+    "id": "maln-001",
+    "nom": "Malnutrition",
+    "categorie": "nutritionnelles",
+    "description": "Carence sévère en nutriments essentiels.",
+    "symptomes": [
+      { "nom": "perte de poids", "poids": 3 },
+      { "nom": "fonte musculaire", "poids": 3 },
+      { "nom": "œdèmes", "poids": 3 },
+      { "nom": "apathie", "poids": 2 }
+    ],
+    "danger": ["choc", "hypothermie"],
+    "prise_en_charge": "Aliments thérapeutiques (ATPE).",
+    "urgence": "Haute"
+  },
+  {
+    "id": "anem-001",
+    "nom": "Anémie",
+    "categorie": "nutritionnelles",
+    "description": "Baisse anormale du taux d'hémoglobine.",
+    "symptomes": [
+      { "nom": "pâleur", "poids": 3 },
+      { "nom": "fatigue", "poids": 3 },
+      { "nom": "essoufflement", "poids": 2 },
+      { "nom": "vertiges", "poids": 1 }
+    ],
+    "danger": ["inconscient", "insuffisance cardiaque"],
+    "prise_en_charge": "Fer, acide folique.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "vita-001",
+    "nom": "Carence en vitamine A",
+    "categorie": "nutritionnelles",
+    "description": "Carence nutritionnelle grave pouvant conduire à la cécité.",
+    "symptomes": [
+      { "nom": "cécité nocturne", "poids": 3 },
+      { "nom": "sécheresse oculaire", "poids": 3 },
+      { "nom": "taches de Bitot", "poids": 3 },
+      { "nom": "lésions cornéennes", "poids": 2 }
+    ],
+    "danger": ["perte de vision", "ulcération de la cornée"],
+    "prise_en_charge": "Supplémentation en vitamine A (rétinol).",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "goit-001",
+    "nom": "Goitre endémique",
+    "categorie": "nutritionnelles",
+    "description": "Augmentation de volume de la thyroïde liée à une carence en iode.",
+    "symptomes": [
+      { "nom": "gonflement du cou", "poids": 3 },
+      { "nom": "difficulté à avaler", "poids": 2 },
+      { "nom": "difficulté à respirer", "poids": 1 },
+      { "nom": "retard mental (crétinisme)", "poids": 1 }
+    ],
+    "danger": ["compression trachéale"],
+    "prise_en_charge": "Sel iodé, supplémentation en iode.",
+    "urgence": "Faible"
+  }
+]

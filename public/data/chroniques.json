@@ -1,0 +1,63 @@
+[
+  {
+    "id": "diab-001",
+    "nom": "Diabète (Type 2)",
+    "categorie": "chroniques",
+    "description": "Maladie chronique caractérisée par un excès de sucre dans le sang.",
+    "symptomes": [
+      { "nom": "soif intense", "poids": 3 },
+      { "nom": "envie fréquente d'uriner", "poids": 3 },
+      { "nom": "fatigue", "poids": 2 },
+      { "nom": "vision floue", "poids": 2 },
+      { "nom": "cicatrisation lente", "poids": 1 }
+    ],
+    "danger": ["inconscient", "coma", "plaie infectée au pied"],
+    "prise_en_charge": "Contrôle glycémie, antidiabétiques oraux, référence pour suivi.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "hype-001",
+    "nom": "Hypertension artérielle",
+    "categorie": "chroniques",
+    "description": "Tension artérielle anormalement élevée, souvent silencieuse.",
+    "symptomes": [
+      { "nom": "maux de tête intenses", "poids": 3 },
+      { "nom": "vertiges", "poids": 2 },
+      { "nom": "bourdonnements d'oreille", "poids": 2 },
+      { "nom": "saignement de nez", "poids": 1 }
+    ],
+    "danger": ["paralysie", "troubles de la parole", "douleur thoracique"],
+    "prise_en_charge": "Mesure tension. Antihypertenseurs, régime sans sel.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "drep-001",
+    "nom": "Drépanocytose",
+    "categorie": "chroniques",
+    "description": "Maladie génétique du sang très fréquente en Afrique subsaharienne.",
+    "symptomes": [
+      { "nom": "douleurs osseuses intenses", "poids": 3 },
+      { "nom": "crise douloureuse", "poids": 3 },
+      { "nom": "pâleur", "poids": 2 },
+      { "nom": "gonflement des mains ou pieds", "poids": 2 }
+    ],
+    "danger": ["pâleur extrême", "détresse respiratoire", "fièvre élevée"],
+    "prise_en_charge": "Antalgiques puissants, hyperhydratation, acide folique, référence hôpital.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "epil-001",
+    "nom": "Épilepsie",
+    "categorie": "chroniques",
+    "description": "Trouble neurologique provoquant des crises convulsives répétées.",
+    "symptomes": [
+      { "nom": "crise convulsive", "poids": 3 },
+      { "nom": "perte de connaissance brève", "poids": 3 },
+      { "nom": "morsure de la langue", "poids": 2 },
+      { "nom": "perte d'urine", "poids": 2 }
+    ],
+    "danger": ["convulsions de plus de 5 minutes", "inconscient"],
+    "prise_en_charge": "Protection pendant la crise, PLS. Antiépileptiques (phénobarbital, etc.).",
+    "urgence": "Haute"
+  }
+]

@@ -1,0 +1,91 @@
+[
+  {
+    "id": "chol-001",
+    "nom": "Choléra",
+    "categorie": "digestives",
+    "description": "Infection intestinale aiguë causant de graves diarrhées.",
+    "symptomes": [
+      { "nom": "diarrhée liquide", "poids": 3 },
+      { "nom": "vomissements", "poids": 3 },
+      { "nom": "déshydratation", "poids": 3 },
+      { "nom": "crampes musculaires", "poids": 1 }
+    ],
+    "danger": ["choc", "perte de connaissance"],
+    "prise_en_charge": "Réhydratation massive immédiate (SRO/IV).",
+    "urgence": "Critique"
+  },
+  {
+    "id": "diar-001",
+    "nom": "Diarrhée",
+    "categorie": "digestives",
+    "description": "Selles fréquentes et liquides.",
+    "symptomes": [
+      { "nom": "diarrhée", "poids": 3 },
+      { "nom": "douleurs abdominales", "poids": 2 },
+      { "nom": "fièvre", "poids": 1 }
+    ],
+    "danger": ["déshydratation sévère", "inconscient"],
+    "prise_en_charge": "SRO, Zinc.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "hepa-001",
+    "nom": "Hépatite A",
+    "categorie": "digestives",
+    "description": "Infection virale du foie.",
+    "symptomes": [
+      { "nom": "jaunisse", "poids": 3 },
+      { "nom": "urines foncées", "poids": 3 },
+      { "nom": "fatigue", "poids": 2 },
+      { "nom": "perte d'appétit", "poids": 1 }
+    ],
+    "danger": ["insuffisance hépatique"],
+    "prise_en_charge": "Repos, traitement symptomatique.",
+    "urgence": "Faible"
+  },
+  {
+    "id": "helm-001",
+    "nom": "Geo-helminthiases",
+    "categorie": "digestives",
+    "description": "Parasitoses intestinales (ascaris, ankylostomes…) liées à l'hygiène.",
+    "symptomes": [
+      { "nom": "douleurs abdominales", "poids": 2 },
+      { "nom": "diarrhée", "poids": 2 },
+      { "nom": "anémie", "poids": 2 },
+      { "nom": "retard de croissance", "poids": 1 }
+    ],
+    "danger": ["occlusion intestinale"],
+    "prise_en_charge": "Albendazole ou Mébendazole selon protocole national.",
+    "urgence": "Faible"
+  },
+  {
+    "id": "amib-001",
+    "nom": "Amibiase",
+    "categorie": "digestives",
+    "description": "Infection parasitaire de l'intestin provoquant une dysenterie.",
+    "symptomes": [
+      { "nom": "diarrhée sanglante", "poids": 3 },
+      { "nom": "douleurs abdominales", "poids": 3 },
+      { "nom": "fièvre", "poids": 1 },
+      { "nom": "fatigue", "poids": 1 }
+    ],
+    "danger": ["déshydratation sévère", "abcès hépatique"],
+    "prise_en_charge": "Métronidazole et réhydratation.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "bilh-001",
+    "nom": "Bilharziose",
+    "categorie": "digestives",
+    "description": "Maladie parasitaire liée à l'eau douce stagnante.",
+    "symptomes": [
+      { "nom": "sang dans les urines", "poids": 3 },
+      { "nom": "douleurs abdominales", "poids": 2 },
+      { "nom": "fatigue", "poids": 2 },
+      { "nom": "diarrhée", "poids": 1 }
+    ],
+    "danger": ["anémie sévère", "insuffisance rénale"],
+    "prise_en_charge": "Praziquantel selon directives nationales.",
+    "urgence": "Moyenne"
+  }
+]

@@ -1,0 +1,19 @@
+# Dépendances Node.js
+node_modules/
+dist/
+
+# Dépendances Python
+backend/venv/
+backend/__pycache__/
+backend/*/__pycache__/
+*.pyc
+
+# Fichiers d'environnement
+.env
+
+# Fichiers système et de base de données (SQLite en dev)
+backend/db.sqlite3
+.DS_Store
+
+# Fichiers de log
+*.log

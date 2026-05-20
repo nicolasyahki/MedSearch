@@ -1,0 +1,92 @@
+[
+  {
+    "id": "pneu-001",
+    "nom": "Pneumonie",
+    "categorie": "respiratoires",
+    "description": "Infection respiratoire aiguë affectant les poumons.",
+    "symptomes": [
+      { "nom": "toux", "poids": 3 },
+      { "nom": "difficulté à respirer", "poids": 3 },
+      { "nom": "fièvre", "poids": 2 },
+      { "nom": "douleur thoracique", "poids": 2 }
+    ],
+    "danger": ["détresse respiratoire", "cyanose", "inconscient"],
+    "prise_en_charge": "Antibiotiques, oxygène si disponible, réhydratation.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "tube-001",
+    "nom": "Tuberculose",
+    "categorie": "respiratoires",
+    "description": "Maladie infectieuse chronique des poumons.",
+    "symptomes": [
+      { "nom": "toux persistante", "poids": 3 },
+      { "nom": "sueurs nocturnes", "poids": 3 },
+      { "nom": "perte de poids", "poids": 2 },
+      { "nom": "fièvre légère", "poids": 1 }
+    ],
+    "danger": ["hémorragie", "insuffisance respiratoire"],
+    "prise_en_charge": "Dépistage des crachats. Traitement DOTS.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "asth-001",
+    "nom": "Asthme",
+    "categorie": "respiratoires",
+    "description": "Maladie inflammatoire chronique des voies aériennes.",
+    "symptomes": [
+      { "nom": "respiration sifflante", "poids": 3 },
+      { "nom": "essoufflement", "poids": 3 },
+      { "nom": "oppression thoracique", "poids": 2 },
+      { "nom": "toux nocturne", "poids": 1 }
+    ],
+    "danger": ["crise sévère", "cyanose"],
+    "prise_en_charge": "Bronchodilatateurs inhalés.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "otit-001",
+    "nom": "Otite moyenne aiguë",
+    "categorie": "respiratoires",
+    "description": "Infection de l'oreille moyenne, fréquente chez l'enfant.",
+    "symptomes": [
+      { "nom": "douleur auriculaire", "poids": 3 },
+      { "nom": "fièvre", "poids": 2 },
+      { "nom": "irritabilité", "poids": 2 },
+      { "nom": "écoulement auriculaire", "poids": 1 }
+    ],
+    "danger": ["inconscient", "convulsions"],
+    "prise_en_charge": "Antibiotiques si critères cliniques, antalgiques.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "coqu-001",
+    "nom": "Coqueluche",
+    "categorie": "respiratoires",
+    "description": "Infection respiratoire bactérienne très contagieuse.",
+    "symptomes": [
+      { "nom": "toux persistante", "poids": 3 },
+      { "nom": "quinte de toux", "poids": 3 },
+      { "nom": "vomissements après toux", "poids": 2 },
+      { "nom": "fatigue", "poids": 1 }
+    ],
+    "danger": ["détresse respiratoire", "cyanose"],
+    "prise_en_charge": "Antibiotiques (macrolides).",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "bron-001",
+    "nom": "Bronchiolite",
+    "categorie": "respiratoires",
+    "description": "Infection virale aiguë des petites bronches chez le nourrisson.",
+    "symptomes": [
+      { "nom": "respiration sifflante", "poids": 3 },
+      { "nom": "difficulté à respirer", "poids": 3 },
+      { "nom": "toux", "poids": 2 },
+      { "nom": "fièvre légère", "poids": 1 }
+    ],
+    "danger": ["détresse respiratoire", "cyanose", "refus de boire"],
+    "prise_en_charge": "Lavage du nez, hydratation, oxygénothérapie si détresse.",
+    "urgence": "Haute"
+  }
+]

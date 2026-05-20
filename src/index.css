@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Variables du Design System MedSearch */
+    
+    /* Couleurs Principales */
+    --color-primary: #1D9E75;
+    --color-primary-light: #27C694;
+    --color-primary-dark: #0F6E56;
+    --color-primary-muted: #1D9E7520;
+    
+    /* Fonds (Dark Mode par défaut) */
+    --color-bg-app: #0D1117;
+    --color-bg-sidebar: #111820;
+    --color-bg-card: #161D27;
+    --color-bg-input: #1C2433;
+    --color-bg-hover: #1E2A3A;
+    
+    /* Textes */
+    --color-text-primary: #E8EDF3;
+    --color-text-secondary: #8A96A8;
+    --color-text-muted: #4A5568;
+    
+    /* Bordures */
+    --color-border: #1E2A3A;
+    --color-border-strong: #2D3E50;
+    
+    /* Alertes */
+    --color-danger: #E53E3E;
+    --color-warning: #EF9F27;
+  }
+
+  /* Style global pour l'application (Dark mode par défaut) */
+  body {
+    background-color: var(--color-bg-app);
+    color: var(--color-text-primary);
+    font-family: 'Inter', system-ui, sans-serif;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+}
+
+@keyframes pulse-danger {
+  0%, 100% {
+    border-color: rgba(229, 62, 62, 0.4);
+    box-shadow: 0 0 10px rgba(229, 62, 62, 0.15);
+  }
+  50% {
+    border-color: rgba(229, 62, 62, 0.9);
+    box-shadow: 0 0 20px rgba(229, 62, 62, 0.4);
+  }
+}
+
+.animate-pulse-danger {
+  animation: pulse-danger 2s infinite ease-in-out;
+}
+

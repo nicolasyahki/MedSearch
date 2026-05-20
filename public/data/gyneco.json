@@ -1,0 +1,47 @@
+[
+  {
+    "id": "ecla-001",
+    "nom": "Éclampsie",
+    "categorie": "gyneco",
+    "description": "Crises convulsives chez une femme enceinte, compliquant une pré-éclampsie.",
+    "symptomes": [
+      { "nom": "convulsions", "poids": 3 },
+      { "nom": "maux de tête intenses", "poids": 3 },
+      { "nom": "troubles de la vision", "poids": 3 },
+      { "nom": "gonflement", "poids": 2 }
+    ],
+    "danger": ["convulsions", "inconscient", "choc"],
+    "prise_en_charge": "Sulfate de magnésium, transfert en urgence absolue.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "hemo-001",
+    "nom": "Hémorragie du post-partum",
+    "categorie": "gyneco",
+    "description": "Saignement excessif après l'accouchement.",
+    "symptomes": [
+      { "nom": "saignement abondant", "poids": 3 },
+      { "nom": "pâleur", "poids": 3 },
+      { "nom": "fatigue", "poids": 2 },
+      { "nom": "vertiges", "poids": 2 }
+    ],
+    "danger": ["choc", "perte de connaissance"],
+    "prise_en_charge": "Massage utérin, ocytocine, transfert d'urgence.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "puer-001",
+    "nom": "Infection puerpérale",
+    "categorie": "gyneco",
+    "description": "Infection de l'appareil génital après l'accouchement.",
+    "symptomes": [
+      { "nom": "fièvre", "poids": 3 },
+      { "nom": "pertes malodorantes", "poids": 3 },
+      { "nom": "douleurs pelviennes", "poids": 3 },
+      { "nom": "fatigue", "poids": 2 }
+    ],
+    "danger": ["choc septique"],
+    "prise_en_charge": "Antibiotiques à large spectre, transfert.",
+    "urgence": "Haute"
+  }
+]

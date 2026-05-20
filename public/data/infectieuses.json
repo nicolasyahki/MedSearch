@@ -1,0 +1,107 @@
+[
+  {
+    "id": "palu-001",
+    "nom": "Paludisme",
+    "categorie": "infectieuses",
+    "description": "Maladie infectieuse due à un parasite transmis par les piqûres de moustiques.",
+    "symptomes": [
+      { "nom": "fièvre", "poids": 3 },
+      { "nom": "frissons", "poids": 3 },
+      { "nom": "maux de tête", "poids": 2 },
+      { "nom": "nausées", "poids": 1 }
+    ],
+    "danger": ["convulsions", "perte de connaissance", "anémie sévère"],
+    "prise_en_charge": "Effectuer TDR. Si +, donner CTA.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "typh-001",
+    "nom": "Typhoïde",
+    "categorie": "infectieuses",
+    "description": "Infection bactérienne transmissible par l'eau ou les aliments.",
+    "symptomes": [
+      { "nom": "fièvre prolongée", "poids": 3 },
+      { "nom": "douleurs abdominales", "poids": 2 },
+      { "nom": "maux de tête", "poids": 2 },
+      { "nom": "diarrhée", "poids": 1 }
+    ],
+    "danger": ["perforation intestinale", "hémorragie", "état de choc"],
+    "prise_en_charge": "Antibiotiques, réhydratation.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "meni-001",
+    "nom": "Méningite",
+    "categorie": "infectieuses",
+    "description": "Inflammation des membranes qui enveloppent le cerveau et la moelle épinière.",
+    "symptomes": [
+      { "nom": "raideur de la nuque", "poids": 3 },
+      { "nom": "fièvre élevée", "poids": 3 },
+      { "nom": "photophobie", "poids": 2 },
+      { "nom": "maux de tête intenses", "poids": 2 }
+    ],
+    "danger": ["convulsions", "coma", "inconscient"],
+    "prise_en_charge": "Référence immédiate à l'hôpital. Antibiothérapie d'urgence.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "deng-001",
+    "nom": "Dengue",
+    "categorie": "infectieuses",
+    "description": "Virose transmise par les moustiques Aedes, fréquente en zones tropicales.",
+    "symptomes": [
+      { "nom": "fièvre élevée", "poids": 3 },
+      { "nom": "douleurs articulaires", "poids": 2 },
+      { "nom": "maux de tête", "poids": 2 },
+      { "nom": "éruption cutanée", "poids": 1 }
+    ],
+    "danger": ["hémorragie", "choc", "détresse respiratoire"],
+    "prise_en_charge": "Réhydratation, surveillance des signes d'alarme. Pas d'Aspirine/AINS.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "fiev-001",
+    "nom": "Fièvre Jaune",
+    "categorie": "infectieuses",
+    "description": "Maladie hémorragique virale transmise par des moustiques infectés.",
+    "symptomes": [
+      { "nom": "fièvre", "poids": 3 },
+      { "nom": "jaunisse", "poids": 3 },
+      { "nom": "douleurs musculaires", "poids": 2 },
+      { "nom": "vomissements", "poids": 2 }
+    ],
+    "danger": ["hémorragie", "inconscient"],
+    "prise_en_charge": "Traitement symptomatique, hydratation. Transfert hôpital.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "teta-001",
+    "nom": "Tétanos",
+    "categorie": "infectieuses",
+    "description": "Infection aiguë grave par une neurotoxine due à une plaie souillée.",
+    "symptomes": [
+      { "nom": "spasmes musculaires", "poids": 3 },
+      { "nom": "rigidité de la mâchoire", "poids": 3 },
+      { "nom": "fièvre", "poids": 1 },
+      { "nom": "difficulté à avaler", "poids": 2 }
+    ],
+    "danger": ["détresse respiratoire", "convulsions"],
+    "prise_en_charge": "Sérum antitétanique, antibiotiques, transfert immédiat.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "onch-001",
+    "nom": "Onchocercose",
+    "categorie": "infectieuses",
+    "description": "Maladie parasitaire transmise par les simulies, cause de cécité (cécité des rivières).",
+    "symptomes": [
+      { "nom": "démangeaisons intenses", "poids": 3 },
+      { "nom": "lésions oculaires", "poids": 3 },
+      { "nom": "nodules sous-cutanés", "poids": 2 },
+      { "nom": "éruption", "poids": 1 }
+    ],
+    "danger": ["perte de vision"],
+    "prise_en_charge": "Ivermectine selon le programme national.",
+    "urgence": "Moyenne"
+  }
+]
