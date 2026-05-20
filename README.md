@@ -223,6 +223,12 @@ npm run build    # Build production → dist/
 npm run preview  # Prévisualiser le build
 ```
 
+### Déploiement en Production
+
+L'architecture est séparée pour garantir une disponibilité maximale de la PWA :
+1. **Frontend (Vite/React)** : Déployé automatiquement sur **Vercel** à chaque `git push`. Fournit l'interface et la base de données hors-ligne (Dexie) aux agents.
+2. **Backend (Django)** : Doit être hébergé sur un service supportant Python de manière persistante (ex: Render, Railway, PythonAnywhere) pour recevoir les synchronisations.
+
 ### Backend
 
 ```bash
@@ -327,7 +333,9 @@ Interface **dark mode** médical — vert pour les actions positives, rouge rés
 - [x] Page profil agent (zone, stats sync, notifications)
 
 ### En cours / à faire
-- [ ] Enrichissement du catalogue médical (objectif 30+ pathologies)
+- [x] Enrichissement du catalogue médical (ajout des maladies chroniques, dermatologiques, etc.)
+- [x] Déploiement du Frontend en production via Vercel (CI/CD GitHub)
+- [ ] Déploiement du Backend (Django) sur une plateforme persistante (Render/Railway)
 - [ ] Tests unitaires (moteur, API, hooks, conflits)
 - [ ] Configuration production (variables d'environnement, SECRET_KEY, VAPID)
 
