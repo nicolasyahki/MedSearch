@@ -56,22 +56,24 @@ export function useAuth() {
       let syncToken = null;
       let refreshToken = null;
 
-      // Inscription sur le serveur central si en ligne
-      if (navigator.onLine) {
-        try {
-          const backendResult = await syncService.register({ nom, prenom, zone, pin, email });
-          if (backendResult && backendResult.tokens) {
-            syncToken = backendResult.tokens.access;
-            refreshToken = backendResult.tokens.refresh;
-            console.log("Agent enregistré sur le backend avec succès, tokens reçus.");
-          }
-        } catch (backendError) {
-          console.warn("Échec de l'inscription serveur. Création du compte local uniquement.", backendError);
-          // Si l'erreur concerne un doublon d'email, on propage l'erreur pour en informer l'utilisateur
-          if (backendError.message.includes("déjà enregistré") || backendError.message.includes("email")) {
-            throw backendError;
-          }
+      // Inscription sur le serveur central obligatoire (nécessite d'être en ligne)
+      if (!navigator.onLine) {
+        throw new Error("Une connexion Internet est obligatoire pour enregistrer votre compte sur le serveur central.");
+      }
+
+      try {
+        const backendResult = await syncService.register({ nom, prenom, zone, pin, email });
+        if (backendResult && backendResult.tokens) {
+          syncToken = backendResult.tokens.access;
+          refreshToken = backendResult.tokens.refresh;
+          console.log("Agent enregistré sur le backend avec succès, tokens reçus.");
+        } else {
+          throw new Error("Le serveur central n'a pas retourné de jetons d'accès.");
         }
+      } catch (backendError) {
+        console.error("Échec de l'inscription sur le serveur central:", backendError);
+        // On affiche un message d'erreur clair contenant l'URL de l'API pour faciliter le diagnostic
+        throw new Error(`Échec de l'inscription sur le serveur (${syncService.apiBaseUrl}) : ${backendError.message}`);
       }
 
       const newAgent = {
@@ -160,7 +162,7 @@ export function useAuth() {
       return true;
     } catch (error) {
       console.error('Erreur de connexion serveur', error);
-      throw error;
+      throw new Error(`Échec de la connexion au serveur (${syncService.apiBaseUrl}) : ${error.message}`);
     }
   };
 
