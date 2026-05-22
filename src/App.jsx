@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useAuth } from './hooks/useAuth';
-import { useAutoSyncOnReconnect } from './hooks/useAutoSyncOnReconnect';
+import AutoSyncRunner from './components/AutoSyncRunner';
 import ProtectedRoute from './components/ProtectedRoute';
 import Register from './pages/Register';
 import Login from './pages/Login';
@@ -16,7 +16,6 @@ import Profile from './pages/Profile';
 
 function App() {
   const { isAuthenticated, hasAgent, currentAgent, registerAgent, loginAgent, loginWithEmailAndPin, logout, updateAgent } = useAuth();
-  useAutoSyncOnReconnect(isAuthenticated);
 
   // Affichage d'un écran de chargement pendant la vérification Dexie
   if (hasAgent === null) {
@@ -25,6 +24,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <AutoSyncRunner isAuthenticated={isAuthenticated} />
       <Routes>
         <Route
           path="/login"

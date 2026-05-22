@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import { db } from '../db/database';
+import { triggerAutoSync, SYNC_COMPLETE_EVENT } from '../sync/autoSync';
 import { IconHistory, IconChevronRight, IconCloudUpload, IconClock, IconSearch, IconAlertTriangle, IconCheck } from '@tabler/icons-react';
 
 /**
@@ -17,6 +18,15 @@ export default function PatientList({ onLogout }) {
 
   useEffect(() => {
     loadConsultations();
+    if (navigator.onLine) {
+      triggerAutoSync().then(() => loadConsultations());
+    }
+  }, []);
+
+  useEffect(() => {
+    const refreshAfterSync = () => loadConsultations();
+    window.addEventListener(SYNC_COMPLETE_EVENT, refreshAfterSync);
+    return () => window.removeEventListener(SYNC_COMPLETE_EVENT, refreshAfterSync);
   }, []);
 
   useEffect(() => {

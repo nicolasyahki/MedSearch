@@ -5,6 +5,7 @@ import { db } from '../db/database';
 import { useSync } from '../hooks/useSync';
 import { useOnlineStatus } from '../hooks/useOnlineStatus';
 import { subscribeToPushNotifications } from '../hooks/usePushNotifications';
+import { triggerAutoSync } from '../sync/autoSync';
 import {
   IconUserCircle,
   IconMapPin,
@@ -114,6 +115,8 @@ export default function Profile({ currentAgent, onLogout, onUpdateAgent }) {
         setReauthPin('');
         setSaveStatus('success');
         setSaveMessage('Session de synchronisation renouvelée avec succès !');
+        await triggerAutoSync();
+        await loadStats();
       } else {
         throw new Error('Réponse serveur invalide.');
       }

@@ -1,39 +1,59 @@
 import { useEffect } from 'react';
-import { runSync } from '../sync/syncEngine';
-import { scheduleBackgroundSync } from '../sync/backgroundSync';
+import { useLocation } from 'react-router-dom';
+import { useOnlineStatus } from './useOnlineStatus';
+import { triggerAutoSync, hasPendingSync } from '../sync/autoSync';
+
+const PERIODIC_SYNC_MS = 15000;
 
 /**
- * Déclenche une sync automatique au retour réseau, au focus et au montage de l'application.
+ * Synchronisation automatique tant que l'agent est authentifié et en ligne :
+ * montage, focus, retour réseau, visibilité, changement de page, intervalle si dossiers en attente.
  */
 export function useAutoSyncOnReconnect(isAuthenticated) {
-  useEffect(() => {
-    if (!isAuthenticated) return;
+  const isOnline = useOnlineStatus();
+  const location = useLocation();
 
-    const triggerSync = async () => {
-      if (navigator.onLine) {
-        await scheduleBackgroundSync();
-        try {
-          await runSync();
-        } catch (error) {
-          console.warn('[AutoSync] Échec ou report de la synchronisation automatique :', error.message);
-        }
+  useEffect(() => {
+    if (!isAuthenticated || !isOnline) return;
+
+    const run = () => triggerAutoSync();
+
+    run();
+
+    const onFocus = () => run();
+    const onOnline = () => run();
+    const onVisible = () => {
+      if (document.visibilityState === 'visible') run();
+    };
+
+    window.addEventListener('focus', onFocus);
+    window.addEventListener('online', onOnline);
+    document.addEventListener('visibilitychange', onVisible);
+
+    return () => {
+      window.removeEventListener('focus', onFocus);
+      window.removeEventListener('online', onOnline);
+      document.removeEventListener('visibilitychange', onVisible);
+    };
+  }, [isAuthenticated, isOnline]);
+
+  useEffect(() => {
+    if (!isAuthenticated || !isOnline) return;
+    triggerAutoSync();
+  }, [location.pathname, isAuthenticated, isOnline]);
+
+  useEffect(() => {
+    if (!isAuthenticated || !isOnline) return;
+
+    const tick = async () => {
+      if (await hasPendingSync()) {
+        await triggerAutoSync();
       }
     };
 
-    // 1. Déclenchement immédiat au montage (si en ligne)
-    triggerSync();
-
-    // 2. Déclenchement au retour au focus de l'application (changement d'onglet ou réouverture)
-    window.addEventListener('focus', triggerSync);
-
-    // 3. Déclenchement lors du retour réseau
-    window.addEventListener('online', triggerSync);
-
-    return () => {
-      window.removeEventListener('focus', triggerSync);
-      window.removeEventListener('online', triggerSync);
-    };
-  }, [isAuthenticated]);
+    const interval = setInterval(tick, PERIODIC_SYNC_MS);
+    return () => clearInterval(interval);
+  }, [isAuthenticated, isOnline]);
 }
 
 export default useAutoSyncOnReconnect;

@@ -1,6 +1,7 @@
 import { db } from '../db/database';
 import { syncService } from '../api/syncService';
 import { scheduleBackgroundSync } from './backgroundSync';
+import { triggerAutoSync } from './autoSync';
 
 /**
  * Moteur de synchronisation partagé (UI + déclenchement Background Sync).
@@ -124,6 +125,10 @@ export async function resolveConflict(conflictId, choice) {
     resolvedAt: new Date().toISOString(),
     resolution: choice,
   });
+
+  if (navigator.onLine) {
+    await triggerAutoSync();
+  }
 }
 
 /**
@@ -155,10 +160,6 @@ export async function saveConsultationAndScheduleSync(consultation) {
   await scheduleBackgroundSync();
 
   if (navigator.onLine) {
-    try {
-      await runSync();
-    } catch (error) {
-      console.warn('[Sync] Échec sync immédiate, Background Sync planifié :', error.message);
-    }
+    await triggerAutoSync();
   }
 }

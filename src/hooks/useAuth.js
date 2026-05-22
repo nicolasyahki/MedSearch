@@ -3,6 +3,7 @@ import { db } from '../db/database';
 import { syncService } from '../api/syncService';
 import { subscribeToPushNotifications } from './usePushNotifications';
 import { hashPin } from '../utils/pinHash';
+import { triggerAutoSync } from '../sync/autoSync';
 
 async function trySubscribePush(token) {
   if (!token) return;
@@ -98,6 +99,9 @@ export function useAuth() {
       await checkAgent();
       setIsAuthenticated(true);
       await trySubscribePush(syncToken);
+      if (navigator.onLine) {
+        await triggerAutoSync();
+      }
       return true;
     } catch (error) {
       console.error("Erreur d'enregistrement", error);
@@ -167,6 +171,9 @@ export function useAuth() {
       await checkAgent();
       setIsAuthenticated(true);
       await trySubscribePush(tokens.access);
+      if (navigator.onLine) {
+        await triggerAutoSync();
+      }
       return true;
     } catch (error) {
       console.error('Erreur de connexion serveur', error);
@@ -188,10 +195,9 @@ export function useAuth() {
 
       // Comparaison du hash de sécurité
       if (agent.pin === hashedPin || agent.pin === pin) {
-        setIsAuthenticated(true);
         sessionStorage.removeItem('medsearch-require-full-login');
 
-        // Si l'appareil est connecté à Internet, on récupère un nouveau token JWT
+        // Renouveler le JWT avant toute sync (évite une course avec useAutoSync)
         if (navigator.onLine && agent.email) {
           try {
             const loginResult = await syncService.login(agent.email, pin);
@@ -201,8 +207,7 @@ export function useAuth() {
                 refreshToken: loginResult.tokens.refresh,
                 apiBaseUrl: syncService.apiBaseUrl
               });
-              
-              // Mettre à jour le profil agent en mémoire avec ses nouveaux tokens
+
               setCurrentAgent({
                 ...agent,
                 syncToken: loginResult.tokens.access,
@@ -215,6 +220,14 @@ export function useAuth() {
           } catch (jwtError) {
             console.warn("Connexion en ligne échouée, conservation des tokens JWT actuels :", jwtError.message);
           }
+        }
+
+        setIsAuthenticated(true);
+
+        if (navigator.onLine) {
+          triggerAutoSync().catch((err) => {
+            console.warn('[AutoSync] Sync post-connexion reportée :', err.message);
+          });
         }
 
         return true;
