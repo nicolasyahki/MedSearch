@@ -9,7 +9,7 @@ Application web progressive (PWA) d'**aide au pré-diagnostic médical** pour ag
 | **Recherche symptômes** | Saisie libre → recherche floue (Fuse.js) sur un catalogue de maladies |
 | **Scoring** | Score de correspondance symptômes / pathologie (filtrage ≥ 30 %) |
 | **Alertes danger** | Détection de signes critiques (référentiel PCIME / OMS) avec consignes d'urgence |
-| **Dossiers patients** | Enregistrement local des consultations (Dexie / IndexedDB) |
+| **Dossiers patients** | Enregistrement local des consultations avec ID unique de diagnostic (format `DIAG-MALADIE-DATE-RANDOM`) et sauvegarde du score de confiance clinique |
 | **Historique** | Liste et détail des consultations sur l'appareil |
 | **Authentification** | Inscription et connexion par code PIN (1 agent par appareil) |
 | **Synchronisation** | Envoi des consultations vers l'API Django (JWT) |
@@ -125,16 +125,19 @@ Chaque maladie contient : symptômes pondérés, signes de danger, prise en char
 
 ## Mode hors-ligne avancé
 
-### Background Sync (Service Worker)
+### Background Sync & Synchronisation Automatique
 
 Lorsqu'une consultation est enregistrée hors ligne, l'app planifie un tag `medsearch-sync-consultations` via l'API **Background Sync**. Dès que le réseau revient — même si l'app est fermée — le Service Worker envoie automatiquement les fiches en attente vers Django.
 
 - Planification : `src/sync/backgroundSync.js`
 - Logique partagée UI/SW : `src/sync/syncEngine.js`
-- Fallback : sync automatique au retour réseau (`useAutoSyncOnReconnect`)
+- **Synchronisation automatique intelligente (`useAutoSyncOnReconnect`)** : La synchronisation s'enclenche de manière transparente et sans intervention dans tous les scénarios clés :
+  1. Au chargement/démarrage de l'application (si le réseau est disponible).
+  2. À chaque reprise de focus de l'application (par exemple si l'agent revient sur l'onglet après avoir utilisé son téléphone).
+  3. Immédiatement lors de la détection du retour réseau.
 - **Persistance URL API** : L'URL de synchronisation (`apiBaseUrl`) est sauvegardée dans IndexedDB pour que le Service Worker puisse toujours s'adresser au bon serveur en arrière-plan, même en cas de redémarrage de celui-ci par le système d'exploitation mobile (comme Android).
 
-> **Note** : Background Sync est supporté surtout sur Chrome/Edge Android. Sur les navigateurs non compatibles, la sync se déclenche à la reconnexion ou via le bouton manuel.
+> **Note** : Background Sync est supporté surtout sur Chrome/Edge Android. Sur les navigateurs non compatibles (ex: Safari iOS), la synchronisation automatique transparente au focus ou au retour réseau prend le relais.
 
 ### Notifications push
 
@@ -336,6 +339,8 @@ Interface **dark mode** médical — vert pour les actions positives, rouge rés
 - [x] Toast de confirmation temporaire ("Dossier Patient Enregistré") après soumission d'une consultation
 - [x] Renouvellement en ligne sécurisé par PIN de la session de synchronisation expirée sur le profil
 - [x] Persistance dynamique et lecture de l'URL API dans le Service Worker pour le bon fonctionnement sur mobile
+- [x] ID unique de diagnostic par dossier patient (format `DIAG-...`) et résolution dynamique du nom de la maladie avec badge de certitude clinique
+- [x] Synchronisation automatique robuste et intelligente au démarrage de l'app, au focus de l'onglet et au rétablissement du réseau
 
 ### En cours / à faire
 - [x] Enrichissement du catalogue médical (ajout des maladies chroniques, dermatologiques, etc.)
