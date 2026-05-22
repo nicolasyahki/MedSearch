@@ -1,7 +1,7 @@
 // Service Worker MedSearch — offline-first, Background Sync, Push Notifications
 
-const CACHE_NAME = 'medsearch-assets-v4';
-const DATA_CACHE_NAME = 'medsearch-data-v4';
+const CACHE_NAME = 'medsearch-assets-v5';
+const DATA_CACHE_NAME = 'medsearch-data-v5';
 const BACKGROUND_SYNC_TAG = 'medsearch-sync-consultations';
 const DB_NAME = 'MedSearchDatabase';
 const DEFAULT_API_BASE = 'https://Nicolas60.pythonanywhere.com/api';
@@ -173,6 +173,25 @@ self.addEventListener('activate', (event) => {
   );
 });
 
+/** Réseau d'abord pour le code app — évite de garder d'anciens bundles JS après un déploiement Vercel. */
+async function networkFirst(request, cacheName) {
+  try {
+    const networkResponse = await fetch(request);
+    if (networkResponse?.status === 200) {
+      const cache = await caches.open(cacheName);
+      await cache.put(request, networkResponse.clone());
+    }
+    return networkResponse;
+  } catch {
+    const cached = await caches.match(request);
+    if (cached) return cached;
+    if (request.mode === 'navigate') {
+      return caches.match('/index.html') || caches.match('/');
+    }
+    return undefined;
+  }
+}
+
 self.addEventListener('message', (event) => {
   if (event.data?.type === 'SET_API_BASE_URL') {
     cachedApiBaseUrl = event.data.apiBaseUrl || DEFAULT_API_BASE;
@@ -281,23 +300,15 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  const isPrecachedAsset = assetsToPrecache.includes(url.pathname);
   const isHashedBuildAsset = url.pathname.match(/\/assets\/[^/]+\.(js|css)$/);
+  const isAppShell =
+    event.request.mode === 'navigate' ||
+    url.pathname === '/' ||
+    url.pathname === '/index.html' ||
+    url.pathname.match(/\/assets\/[^/]+\.(js|css)$/);
 
-  if (isPrecachedAsset || isHashedBuildAsset) {
-    event.respondWith(
-      caches.match(event.request).then(
-        (cachedResponse) =>
-          cachedResponse ||
-          fetch(event.request).then((networkResponse) => {
-            if (networkResponse?.status === 200) {
-              const clone = networkResponse.clone();
-              caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
-            }
-            return networkResponse;
-          })
-      )
-    );
+  if (isAppShell || isHashedBuildAsset) {
+    event.respondWith(networkFirst(event.request, CACHE_NAME));
     return;
   }
 

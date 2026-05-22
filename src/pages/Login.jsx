@@ -32,7 +32,12 @@ export default function Login({ currentAgent, hasLocalAgent, onLogin, onLoginWit
     const success = await onLogin(pin);
     if (success) {
       sessionStorage.removeItem(FULL_LOGIN_KEY);
-      navigate('/');
+      // Rechargement léger pour appliquer une éventuelle mise à jour SW (évite l'ancien code en cache)
+      if ('serviceWorker' in navigator) {
+        const reg = await navigator.serviceWorker.getRegistration();
+        await reg?.update().catch(() => {});
+      }
+      navigate('/', { replace: true });
     } else {
       setError(true);
       setErrorMessage('Code PIN incorrect. Veuillez réessayer.');
@@ -54,7 +59,11 @@ export default function Login({ currentAgent, hasLocalAgent, onLogin, onLoginWit
     try {
       await onLoginWithEmailAndPin(email.trim(), pin);
       setRequireFullLogin(false);
-      navigate('/');
+      if ('serviceWorker' in navigator) {
+        const reg = await navigator.serviceWorker.getRegistration();
+        await reg?.update().catch(() => {});
+      }
+      navigate('/', { replace: true });
     } catch (err) {
       setError(true);
       setErrorMessage(err.message || 'Email ou code PIN incorrect.');

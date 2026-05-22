@@ -40,6 +40,9 @@ async function bootstrap() {
   const { syncService } = await import('./api/syncService');
 
   if (!import.meta.env.DEV && 'serviceWorker' in navigator) {
+    const { setupServiceWorkerUpdates } = await import('./utils/appUpdate');
+    setupServiceWorkerUpdates();
+
     navigator.serviceWorker.ready
       .then(() => persistApiBaseUrl(syncService.apiBaseUrl))
       .catch((error) => console.warn('[SW] Initialisation ignorée :', error.message));
