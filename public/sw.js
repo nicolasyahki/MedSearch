@@ -1,7 +1,7 @@
 // Service Worker MedSearch — offline-first, Background Sync, Push Notifications
 
-const CACHE_NAME = 'medsearch-assets-v3';
-const DATA_CACHE_NAME = 'medsearch-data-v3';
+const CACHE_NAME = 'medsearch-assets-v4';
+const DATA_CACHE_NAME = 'medsearch-data-v4';
 const BACKGROUND_SYNC_TAG = 'medsearch-sync-consultations';
 const DB_NAME = 'MedSearchDatabase';
 const DEFAULT_API_BASE = 'https://Nicolas60.pythonanywhere.com/api';
