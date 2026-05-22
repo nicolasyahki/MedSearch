@@ -132,6 +132,7 @@ Lorsqu'une consultation est enregistrée hors ligne, l'app planifie un tag `meds
 - Planification : `src/sync/backgroundSync.js`
 - Logique partagée UI/SW : `src/sync/syncEngine.js`
 - Fallback : sync automatique au retour réseau (`useAutoSyncOnReconnect`)
+- **Persistance URL API** : L'URL de synchronisation (`apiBaseUrl`) est sauvegardée dans IndexedDB pour que le Service Worker puisse toujours s'adresser au bon serveur en arrière-plan, même en cas de redémarrage de celui-ci par le système d'exploitation mobile (comme Android).
 
 > **Note** : Background Sync est supporté surtout sur Chrome/Edge Android. Sur les navigateurs non compatibles, la sync se déclenche à la reconnexion ou via le bouton manuel.
 
@@ -156,7 +157,7 @@ Chaque consultation possède un `clientUuid` + `updatedAt` + `version`.
 3. **Recherche** → Saisie des symptômes sur l'accueil → page résultats (scores + alertes danger).
 4. **Consultation** → Création d'un dossier patient lié au diagnostic.
 5. **Historique** → Consultation des fiches enregistrées localement.
-6. **Synchronisation** → Envoi des fiches `statutSync: 'attente'` vers le serveur (nécessite connexion + token JWT valide).
+6. **Synchronisation** → Envoi des fiches `statutSync: 'attente'` vers le serveur (nécessite connexion + token JWT valide). Si la session est expirée ou absente (ex: inscription hors ligne), l'agent peut la renouveler en saisissant simplement son code PIN en ligne directement sur la page Profil.
 
 ## Installation et démarrage
 
@@ -310,7 +311,7 @@ Interface **dark mode** médical — vert pour les actions positives, rouge rés
 
 | Table | Champs principaux |
 |-------|-------------------|
-| `agents` | email, nom, prenom, zone, pin (hash SHA-256), syncToken, refreshToken |
+| `agents` | email, nom, prenom, zone, pin (hash SHA-256), syncToken, refreshToken, apiBaseUrl |
 | `consultations` | clientUuid, patientRef, updatedAt, version, statutSync (`attente` / `synced` / `conflit`) |
 | `syncConflicts` | snapshots local/serveur en attente de résolution manuelle |
 
@@ -331,6 +332,10 @@ Interface **dark mode** médical — vert pour les actions positives, rouge rés
 - [x] Notifications push (abonnement + diffusion admin)
 - [x] Gestion conflits sync (LWW + résolution manuelle)
 - [x] Page profil agent (zone, stats sync, notifications)
+- [x] Bandeaux de feedback visuel de succès / échec lors de l'enregistrement de la zone
+- [x] Toast de confirmation temporaire ("Dossier Patient Enregistré") après soumission d'une consultation
+- [x] Renouvellement en ligne sécurisé par PIN de la session de synchronisation expirée sur le profil
+- [x] Persistance dynamique et lecture de l'URL API dans le Service Worker pour le bon fonctionnement sur mobile
 
 ### En cours / à faire
 - [x] Enrichissement du catalogue médical (ajout des maladies chroniques, dermatologiques, etc.)

@@ -25,8 +25,12 @@ export default function Profile({ currentAgent, onLogout, onUpdateAgent }) {
   const [zone, setZone] = useState(currentAgent?.zone || '');
   const [isSaving, setIsSaving] = useState(false);
   const [saveMessage, setSaveMessage] = useState('');
+  const [saveStatus, setSaveStatus] = useState(null); // 'success' or 'error'
   const [pushMessage, setPushMessage] = useState('');
   const [stats, setStats] = useState({ total: 0, pending: 0, synced: 0, conflicts: 0 });
+  const [reauthPin, setReauthPin] = useState('');
+  const [isReauthorizing, setIsReauthorizing] = useState(false);
+  const [reauthError, setReauthError] = useState('');
 
   useEffect(() => {
     loadStats();
@@ -48,21 +52,76 @@ export default function Profile({ currentAgent, onLogout, onUpdateAgent }) {
 
     setIsSaving(true);
     setSaveMessage('');
+    setSaveStatus(null);
 
     try {
       await db.agents.update(currentAgent.id, { zone: zone.trim() });
 
+      let isSynced = false;
       if (navigator.onLine && currentAgent.syncToken) {
         const { syncService } = await import('../api/syncService');
         await syncService.updateProfile({ zone: zone.trim() }, currentAgent.syncToken);
+        isSynced = true;
       }
 
       onUpdateAgent?.({ ...currentAgent, zone: zone.trim() });
-      setSaveMessage('Zone mise à jour.');
+      setSaveStatus('success');
+      if (isSynced) {
+        setSaveMessage('Zone d\'intervention enregistrée localement et synchronisée avec le serveur.');
+      } else {
+        setSaveMessage('Zone d\'intervention enregistrée localement (hors ligne). Elle sera synchronisée au retour du réseau.');
+      }
     } catch (error) {
+      setSaveStatus('error');
       setSaveMessage(error.message || 'Échec de la mise à jour.');
     } finally {
       setIsSaving(false);
+    }
+  };
+
+  const handleReauth = async (e) => {
+    if (e) e.preventDefault();
+    if (!currentAgent?.email) {
+      setReauthError("Aucun email associé à cet agent.");
+      return;
+    }
+    if (reauthPin.length !== 4) {
+      setReauthError("Veuillez saisir votre code PIN à 4 chiffres.");
+      return;
+    }
+
+    setIsReauthorizing(true);
+    setReauthError('');
+
+    try {
+      const { syncService } = await import('../api/syncService');
+      const loginResult = await syncService.login(currentAgent.email, reauthPin);
+      
+      if (loginResult && loginResult.tokens) {
+        await db.agents.update(currentAgent.id, {
+          syncToken: loginResult.tokens.access,
+          refreshToken: loginResult.tokens.refresh,
+          apiBaseUrl: syncService.apiBaseUrl
+        });
+        
+        onUpdateAgent?.({
+          ...currentAgent,
+          syncToken: loginResult.tokens.access,
+          refreshToken: loginResult.tokens.refresh,
+          apiBaseUrl: syncService.apiBaseUrl
+        });
+
+        setReauthPin('');
+        setSaveStatus('success');
+        setSaveMessage('Session de synchronisation renouvelée avec succès !');
+      } else {
+        throw new Error('Réponse serveur invalide.');
+      }
+    } catch (err) {
+      console.error('[Reauth] Échec :', err);
+      setReauthError(err.message || 'Échec de la connexion. Vérifiez votre connexion Internet et votre code PIN.');
+    } finally {
+      setIsReauthorizing(false);
     }
   };
 
@@ -166,7 +225,23 @@ export default function Profile({ currentAgent, onLogout, onUpdateAgent }) {
               Enregistrer
             </button>
           </form>
-          {saveMessage && <p className="text-sm text-text-secondary">{saveMessage}</p>}
+          {saveMessage && (
+            <div className={`p-4 rounded-xl border text-sm flex items-start gap-3 animate-in fade-in ${
+              saveStatus === 'success' 
+                ? 'bg-primary/10 border-primary/20 text-text-primary' 
+                : 'bg-danger/10 border-danger/20 text-danger'
+            }`}>
+              <div className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
+                saveStatus === 'success' ? 'bg-primary/20 text-primary' : 'bg-danger/20 text-danger'
+              }`}>
+                {saveStatus === 'success' ? <IconCheck size={14} /> : <IconAlertTriangle size={14} />}
+              </div>
+              <div className="flex-1">
+                <p className="font-semibold">{saveStatus === 'success' ? 'Enregistrement réussi' : 'Erreur'}</p>
+                <p className="text-xs text-text-secondary mt-0.5">{saveMessage}</p>
+              </div>
+            </div>
+          )}
         </div>
 
         <div className="bg-bg-card border border-border-strong rounded-2xl p-6 mb-6 space-y-4">
@@ -192,6 +267,42 @@ export default function Profile({ currentAgent, onLogout, onUpdateAgent }) {
 
           {syncError && <p className="text-sm text-warning">{syncError}</p>}
           {pushMessage && <p className="text-sm text-text-secondary">{pushMessage}</p>}
+
+          {/* Section reconnexion/renouvellement de session */}
+          {(!currentAgent?.syncToken || syncError) && (
+            <div className="mt-4 p-4 border border-warning/20 bg-warning/5 rounded-xl space-y-3">
+              <p className="text-xs text-warning flex items-start gap-2">
+                <IconAlertTriangle size={16} className="shrink-0 mt-0.5" />
+                <span>
+                  {!currentAgent?.syncToken 
+                    ? "Aucune session de synchronisation n'est active sur cet appareil. Vos dossiers restent locaux."
+                    : "Votre session de synchronisation a expiré ou a rencontré un problème. Reconnectez-vous pour continuer."}
+                </span>
+              </p>
+              
+              <form onSubmit={handleReauth} className="flex flex-col sm:flex-row gap-3 pt-2">
+                <input
+                  type="password"
+                  maxLength={4}
+                  pattern="[0-9]*"
+                  inputMode="numeric"
+                  value={reauthPin}
+                  onChange={(e) => setReauthPin(e.target.value)}
+                  className="bg-bg-input border border-border-strong rounded-xl px-4 py-2.5 text-center text-text-primary focus:border-primary outline-none tracking-widest text-lg font-bold sm:w-32"
+                  placeholder="PIN"
+                  required
+                />
+                <button
+                  type="submit"
+                  disabled={isReauthorizing}
+                  className="flex-1 px-4 py-2.5 rounded-xl bg-primary text-white hover:bg-primary-light transition-colors font-medium text-sm flex items-center justify-center gap-1.5 disabled:opacity-50"
+                >
+                  {isReauthorizing ? 'Connexion en cours...' : 'Renouveler la session en ligne'}
+                </button>
+              </form>
+              {reauthError && <p className="text-xs text-danger">{reauthError}</p>}
+            </div>
+          )}
 
           {stats.conflicts > 0 && (
             <button

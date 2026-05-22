@@ -31,7 +31,13 @@ export function useAuth() {
       const agents = await db.agents.toArray();
       if (agents.length > 0) {
         setHasAgent(true);
-        setCurrentAgent(agents[0]);
+        const agent = agents[0];
+        // S'assurer que l'agent a l'URL de l'API à jour
+        if (!agent.apiBaseUrl || agent.apiBaseUrl !== syncService.apiBaseUrl) {
+          agent.apiBaseUrl = syncService.apiBaseUrl;
+          await db.agents.update(agent.id, { apiBaseUrl: syncService.apiBaseUrl });
+        }
+        setCurrentAgent(agent);
       } else {
         setHasAgent(false);
         setCurrentAgent(null);
@@ -84,6 +90,7 @@ export function useAuth() {
         pin: hashedPin,
         syncToken: syncToken,
         refreshToken: refreshToken,
+        apiBaseUrl: syncService.apiBaseUrl,
         dateCreation: new Date().toISOString()
       };
 
@@ -153,6 +160,7 @@ export function useAuth() {
         pin: hashedPin,
         syncToken: tokens.access,
         refreshToken: tokens.refresh,
+        apiBaseUrl: syncService.apiBaseUrl,
         dateCreation: agent.date_creation || new Date().toISOString(),
       });
 
@@ -190,14 +198,16 @@ export function useAuth() {
             if (loginResult && loginResult.tokens) {
               await db.agents.update(agent.id, {
                 syncToken: loginResult.tokens.access,
-                refreshToken: loginResult.tokens.refresh
+                refreshToken: loginResult.tokens.refresh,
+                apiBaseUrl: syncService.apiBaseUrl
               });
               
               // Mettre à jour le profil agent en mémoire avec ses nouveaux tokens
               setCurrentAgent({
                 ...agent,
                 syncToken: loginResult.tokens.access,
-                refreshToken: loginResult.tokens.refresh
+                refreshToken: loginResult.tokens.refresh,
+                apiBaseUrl: syncService.apiBaseUrl
               });
               console.log("Tokens JWT renouvelés avec succès depuis le serveur Django.");
               await trySubscribePush(loginResult.tokens.access);

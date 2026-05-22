@@ -1,35 +1,75 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import { buildConsultationPayload, saveConsultationAndScheduleSync } from '../sync/syncEngine';
+import { loadIndex } from '../engine/fuzzySearch';
 import { IconArrowLeft, IconCheck } from '@tabler/icons-react';
 
 /**
  * Formulaire de création d'un dossier patient / consultation
  */
+const generateUniqueRef = () => {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  const randomStr = Math.random().toString(36).substring(2, 6).toUpperCase();
+  return `MS-${year}${month}${day}-${randomStr}`;
+};
+
+const generateUniqueDiagnosticId = (diseaseId) => {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  const randomStr = Math.random().toString(36).substring(2, 6).toUpperCase();
+  
+  if (diseaseId) {
+    const cleanDiseaseId = diseaseId.toUpperCase();
+    return `DIAG-${cleanDiseaseId}-${year}${month}${day}-${randomStr}`;
+  }
+  
+  return `DIAG-${year}${month}${day}-${randomStr}`;
+};
+
 export default function PatientForm({ currentAgent, onLogout }) {
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
   // Récupère l'ID de la maladie si on vient d'une carte diagnostic
   const diseaseId = searchParams.get('diseaseId') || '';
+  const score = searchParams.get('score') || '';
+
+  const [diseaseName, setDiseaseName] = useState('');
 
   const [formData, setFormData] = useState({
-    nomPatient: '',
+    nomPatient: generateUniqueRef(),
     age: '',
     sexe: 'M',
     poids: '',
     zone: currentAgent?.zone || '',
     symptomes: '',
-    diagnosticId: diseaseId,
+    diagnosticId: generateUniqueDiagnosticId(diseaseId),
+    score: score ? parseInt(score, 10) : 0,
     notes: ''
   });
+
+  useEffect(() => {
+    if (diseaseId) {
+      loadIndex().then(index => {
+        const found = index.find(d => d.id === diseaseId);
+        if (found) {
+          setDiseaseName(found.nom);
+        }
+      });
+    }
+  }, [diseaseId]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const consultation = buildConsultationPayload(formData, currentAgent);
       await saveConsultationAndScheduleSync(consultation);
-      navigate('/patients');
+      navigate('/patients', { state: { success: true, patientRef: formData.nomPatient } });
     } catch (error) {
       console.error("Erreur d'enregistrement", error);
       alert("Une erreur est survenue lors de l'enregistrement de la consultation.");
@@ -56,14 +96,14 @@ export default function PatientForm({ currentAgent, onLogout }) {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
             <div>
-              <label className="block text-sm font-medium text-text-secondary mb-1.5">Nom ou Réf. Patient</label>
+              <label className="block text-sm font-medium text-text-secondary mb-1.5">Nom ou Réf. unique du Dossier</label>
               <input 
                 required
                 type="text" 
                 value={formData.nomPatient}
                 onChange={e => setFormData({...formData, nomPatient: e.target.value})}
                 className="w-full bg-bg-input border border-border-strong rounded-xl p-3 text-text-primary focus:border-primary outline-none transition-colors"
-                placeholder="Ex: P-0012"
+                placeholder="Ex: MS-20260522-ABCD"
               />
             </div>
             
@@ -132,7 +172,7 @@ export default function PatientForm({ currentAgent, onLogout }) {
           </div>
 
           <div className="mb-5">
-            <label className="block text-sm font-medium text-text-secondary mb-1.5">ID Diagnostic (Pré-rempli)</label>
+            <label className="block text-sm font-medium text-text-secondary mb-1.5">ID unique du diagnostic</label>
             <input 
               type="text" 
               value={formData.diagnosticId}
@@ -141,6 +181,20 @@ export default function PatientForm({ currentAgent, onLogout }) {
               readOnly={!!diseaseId}
               placeholder="Aucun diagnostic sélectionné"
             />
+            {diseaseName && (
+              <p className="text-sm text-primary font-semibold mt-1.5 flex items-center gap-1.5">
+                <span>🩺 Maladie associée :</span>
+                <span className="text-text-primary font-bold">{diseaseName}</span>
+                {formData.score > 0 && (
+                  <span className="text-xs bg-primary/20 text-primary px-2 py-0.5 rounded-full border border-primary/30 font-bold ml-1">
+                    Confiance : {formData.score}%
+                  </span>
+                )}
+              </p>
+            )}
+            <p className="text-[11px] text-text-muted mt-1.5">
+              * Cet identifiant est unique à cette consultation (format: DIAG-MALADIE-DATE-RANDOM) pour éviter les doublons de dossiers.
+            </p>
           </div>
 
           {/* Calculateur de Posologie Pédiatrique */}

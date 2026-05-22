@@ -144,6 +144,7 @@ export function buildConsultationPayload(formData, currentAgent) {
     zone: formData.zone,
     symptomes: formData.symptomes,
     diagnosticId: formData.diagnosticId,
+    score: formData.score || 0,
     notes: formData.notes,
     statutSync: 'attente',
   };

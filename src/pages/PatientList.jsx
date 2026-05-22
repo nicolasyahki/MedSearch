@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import { db } from '../db/database';
-import { IconHistory, IconChevronRight, IconCloudUpload, IconClock, IconSearch, IconAlertTriangle } from '@tabler/icons-react';
+import { IconHistory, IconChevronRight, IconCloudUpload, IconClock, IconSearch, IconAlertTriangle, IconCheck } from '@tabler/icons-react';
 
 /**
  * Liste des consultations enregistrées (historique)
@@ -11,10 +11,25 @@ export default function PatientList({ onLogout }) {
   const [consultations, setConsultations] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
+  const location = useLocation();
+  const [showSuccessBanner, setShowSuccessBanner] = useState(false);
+  const [registeredPatientRef, setRegisteredPatientRef] = useState('');
 
   useEffect(() => {
     loadConsultations();
   }, []);
+
+  useEffect(() => {
+    if (location.state?.success) {
+      setShowSuccessBanner(true);
+      setRegisteredPatientRef(location.state.patientRef || '');
+      // Clear navigation state to prevent reappearing on reload
+      window.history.replaceState({}, document.title);
+      
+      const timer = setTimeout(() => setShowSuccessBanner(false), 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [location]);
 
   const loadConsultations = async () => {
     try {
@@ -55,6 +70,28 @@ export default function PatientList({ onLogout }) {
             </div>
           </div>
         </div>
+
+        {showSuccessBanner && (
+          <div className="mb-6 p-4 bg-primary/10 border border-primary/20 rounded-2xl flex items-center justify-between animate-in fade-in slide-in-from-top-2">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center text-primary shrink-0">
+                <IconCheck size={18} />
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-text-primary">Dossier Patient Enregistré</p>
+                <p className="text-xs text-text-secondary">
+                  Le dossier de <span className="font-semibold text-text-primary">{registeredPatientRef}</span> a été enregistré localement avec succès.
+                </p>
+              </div>
+            </div>
+            <button 
+              onClick={() => setShowSuccessBanner(false)}
+              className="text-text-muted hover:text-text-primary text-xs font-semibold px-2 py-1 transition-colors"
+            >
+              Fermer
+            </button>
+          </div>
+        )}
 
         <div className="bg-bg-card border border-border-strong rounded-2xl overflow-hidden shadow-sm">
           

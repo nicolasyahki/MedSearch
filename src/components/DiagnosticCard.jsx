@@ -31,7 +31,7 @@ export default function DiagnosticCard({ result }) {
   return (
     <div 
       className="bg-bg-card border border-border-strong rounded-xl p-5 hover:border-primary/50 transition-colors cursor-pointer group flex flex-col h-full"
-      onClick={() => navigate(`/patient/new?diseaseId=${disease.id}`)}
+      onClick={() => navigate(`/patient/new?diseaseId=${disease.id}&score=${score}`)}
     >
       <div className="flex justify-between items-start mb-3">
         <div className="pr-2">

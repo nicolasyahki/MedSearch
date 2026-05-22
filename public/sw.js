@@ -4,7 +4,7 @@ const CACHE_NAME = 'medsearch-assets-v3';
 const DATA_CACHE_NAME = 'medsearch-data-v3';
 const BACKGROUND_SYNC_TAG = 'medsearch-sync-consultations';
 const DB_NAME = 'MedSearchDatabase';
-const DEFAULT_API_BASE = 'http://localhost:8000/api';
+const DEFAULT_API_BASE = 'https://Nicolas60.pythonanywhere.com/api';
 
 let cachedApiBaseUrl = DEFAULT_API_BASE;
 
@@ -73,7 +73,9 @@ function addSyncConflict(db, conflict) {
 async function runConsultationSync() {
   const db = await openDexieDb();
   const agents = await readAllFromStore(db, 'agents');
-  const token = agents[0]?.syncToken;
+  const agent = agents[0];
+  const token = agent?.syncToken;
+  const apiBase = agent?.apiBaseUrl || cachedApiBaseUrl || DEFAULT_API_BASE;
 
   if (!token) {
     throw new Error('Token de synchronisation absent.');
@@ -86,7 +88,7 @@ async function runConsultationSync() {
     return { syncedCount: 0 };
   }
 
-  const response = await fetch(`${cachedApiBaseUrl}/consultations/sync/`, {
+  const response = await fetch(`${apiBase}/consultations/sync/`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
