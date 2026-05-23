@@ -14,12 +14,16 @@ L'application web (PWA) est encapsulée avec **Capacitor** dans une APK installa
 ## Méthode 1 — GitHub Actions (sans installer le SDK)
 
 1. Allez sur [github.com/nicolasyahki/MedSearch/actions](https://github.com/nicolasyahki/MedSearch/actions)
-2. Workflow **Build Android APK** → **Run workflow**
-3. Attendez ~5 min (coche verte)
-4. Téléchargez l'artefact **medsearch-debug-apk** → fichier `app-debug.apk`
+2. Workflow **Build Android APK** (pas un autre nom) → **Run workflow**
+3. Attendez la coche verte (~5–10 min)
+4. Téléchargez l'artefact **MedSearch-debug-apk** → `app-debug.apk`
 5. Copiez sur le téléphone et installez
 
-Le workflow se lance aussi automatiquement à chaque push sur `main` (si fichiers app/android modifiés).
+> **Important :** n'utilisez pas `npx cap build android` dans un workflow. Cette commande demande le chemin d'Android Studio et échoue sur GitHub. Le workflow officiel utilise **Gradle** (`./gradlew assembleDebug`).
+
+Si vous avez créé un workflow manuel qui échoue, supprimez-le et utilisez uniquement **Build Android APK** du dépôt.
+
+Le workflow se lance aussi à chaque push sur `main` (fichiers app / android modifiés).
 
 ---
 

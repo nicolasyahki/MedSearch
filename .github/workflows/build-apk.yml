@@ -1,4 +1,4 @@
-# Compile l'APK sur les serveurs GitHub — sans Android Studio sur votre PC.
+# MedSearch — compile l'APK sur GitHub (Gradle uniquement, PAS "npx cap build android").
 name: Build Android APK
 
 on:
@@ -9,46 +9,80 @@ on:
       - 'src/**'
       - 'public/**'
       - 'android/**'
+      - 'assets/**'
       - 'package.json'
       - 'package-lock.json'
       - 'capacitor.config.ts'
       - 'vite.config.js'
+      - '.github/workflows/build-apk.yml'
+
+concurrency:
+  group: build-apk-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build-apk:
+    name: MedSearch APK (debug)
     runs-on: ubuntu-latest
+    timeout-minutes: 25
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Node.js
+      - name: Node.js 20
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: npm
 
-      - name: Java 17
+      - name: Java 17 (Temurin)
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '17'
 
-      - name: Android SDK
-        uses: android-actions/setup-android@v3
+      - name: Android SDK (cmdline-tools)
+        uses: android-actions/setup-android@v4
 
-      - name: Install dependencies
+      - name: SDK platform & build-tools
+        run: |
+          yes | sdkmanager --licenses >/dev/null 2>&1 || true
+          sdkmanager --install \
+            "platform-tools" \
+            "platforms;android-36" \
+            "build-tools;35.0.0"
+
+      - name: Install npm dependencies
         run: npm ci
 
-      - name: Build web + sync Capacitor
-        run: npm run build:android
+      - name: Build web (Vite)
+        run: npm run build
 
-      - name: Assemble debug APK
+      - name: Sync Capacitor → android/
+        run: npx cap sync android
+
+      - name: Compile APK (Gradle)
         working-directory: android
-        run: chmod +x gradlew && ./gradlew assembleDebug --no-daemon
+        run: chmod +x gradlew && ./gradlew assembleDebug --no-daemon --stacktrace
 
-      - name: Upload APK artifact
+      - name: Verify APK
+        run: |
+          APK=android/app/build/outputs/apk/debug/app-debug.apk
+          test -f "$APK" || (echo "APK introuvable" && exit 1)
+          ls -lh "$APK"
+
+      - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: medsearch-debug-apk
+          name: MedSearch-debug-apk
           path: android/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
+          retention-days: 30
+
+      - name: Résumé
+        run: |
+          echo "## MedSearch — APK prête" >> "$GITHUB_STEP_SUMMARY"
+          echo "Téléchargez l'artefact **MedSearch-debug-apk** (fichier \`app-debug.apk\`)." >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "> Ne pas utiliser \`npx cap build android\` : cette commande exige Android Studio installé." >> "$GITHUB_STEP_SUMMARY"

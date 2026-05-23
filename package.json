@@ -9,6 +9,7 @@
     "mobile:url": "powershell -ExecutionPolicy Bypass -File scripts/show-mobile-url.ps1",
     "build": "vite build",
     "build:android": "npm run build && npx cap sync android",
+    "android:apk": "npm run build:android && cd android && gradlew.bat assembleDebug",
     "android:open": "npx cap open android",
     "android:sync": "npx cap sync android",
     "android:assets": "npx capacitor-assets generate --android",
