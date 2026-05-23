@@ -2,11 +2,33 @@
 
 L'application web (PWA) est encapsulée avec **Capacitor** dans une APK installable sur téléphone Android.
 
-## Prérequis (une seule fois)
+**Vous n'avez pas besoin d'ouvrir Android Studio.** Deux méthodes :
+
+| Méthode | Android Studio ? | Où ça compile |
+|---------|------------------|---------------|
+| **GitHub Actions** (recommandé) | Non | Dans le cloud GitHub |
+| **Terminal local** | Non (juste SDK + Java) | Votre PC, dans Cursor |
+
+---
+
+## Méthode 1 — GitHub Actions (sans installer le SDK)
+
+1. Allez sur [github.com/nicolasyahki/MedSearch/actions](https://github.com/nicolasyahki/MedSearch/actions)
+2. Workflow **Build Android APK** → **Run workflow**
+3. Attendez ~5 min (coche verte)
+4. Téléchargez l'artefact **medsearch-debug-apk** → fichier `app-debug.apk`
+5. Copiez sur le téléphone et installez
+
+Le workflow se lance aussi automatiquement à chaque push sur `main` (si fichiers app/android modifiés).
+
+---
+
+## Méthode 2 — Terminal local (Cursor / PowerShell)
+
+### Prérequis (une seule fois)
 
 1. **Node.js** 18+ (déjà installé)
-2. **Android Studio** : [developer.android.com/studio](https://developer.android.com/studio)
-   - Lors de l'installation, cocher **Android SDK** et **Android SDK Platform-Tools**
+2. **Android SDK + JDK 17** — le plus simple : installer [Android Studio](https://developer.android.com/studio) **sans jamais l'ouvrir** (il installe le SDK et Java en arrière-plan)
 3. **JDK 17** (fourni avec Android Studio)
 4. Variables d'environnement Windows (PowerShell admin ou profil utilisateur) :
 
@@ -17,33 +39,28 @@ $env:Path += ";$env:ANDROID_HOME\platform-tools;$env:ANDROID_HOME\tools"
 
 Redémarrer le terminal après configuration.
 
-## Commandes rapides
-
-```bash
-# 1. Installer les dépendances (si pas déjà fait)
-npm install
-
-# 2. Créer le projet Android (première fois uniquement)
-npx cap add android
-
-# 3. Build web + copie vers Android
-npm run build:android
-
-# 4. Icônes et splash (première fois ou après changement d'icône)
-#    Les sources sont dans assets/icon-only.png et assets/splash.png
-npm run android:assets
-
-# 5. Ouvrir dans Android Studio (recommandé pour la première compilation)
-npm run android:open
-```
-
-Dans Android Studio : **Build → Build Bundle(s) / APK(s) → Build APK(s)**.
-
-## Script automatique (Windows)
+## Commandes rapides (terminal)
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File scripts/build-apk.ps1
+npm install
+powershell -ExecutionPolicy Bypass -File scripts\build-apk.ps1
 ```
+
+Ou manuellement :
+
+```bash
+npm run build:android
+cd android
+.\gradlew.bat assembleDebug    # Windows
+# ./gradlew assembleDebug      # Mac/Linux
+```
+
+Icônes (optionnel) : `npm run android:assets` — sources dans `assets/icon-only.png`.
+
+## Android Studio (optionnel)
+
+Uniquement si vous préférez une interface graphique : `npm run android:open` puis **Build → Build APK(s)**.
+Ce n'est **pas obligatoire**.
 
 APK debug générée :
 

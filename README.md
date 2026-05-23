@@ -231,10 +231,9 @@ npm run preview  # Prévisualiser le build
 
 Pour installer MedSearch comme **application native** sur téléphone Android (fichier `.apk`) :
 
-1. Installer [Android Studio](https://developer.android.com/studio) et configurer `ANDROID_HOME`.
-2. Première fois : `npx cap add android` (déjà fait si le dossier `android/` existe).
-3. Build : `npm run build:android`
-4. Compiler l'APK : voir le guide détaillé **[docs/BUILD_APK.md](docs/BUILD_APK.md)** ou le script `scripts/build-apk.ps1`.
+1. **Sans Android Studio** : GitHub → **Actions** → **Build Android APK** → télécharger l'artefact (voir **[docs/BUILD_APK.md](docs/BUILD_APK.md)**).
+2. **En local (terminal)** : `powershell -File scripts/build-apk.ps1` (nécessite SDK + Java, pas l'IDE).
+3. Build web seul : `npm run build:android`
 
 L'APK embarque le catalogue médical et fonctionne hors ligne ; la sync utilise toujours l'API PythonAnywhere en ligne.
 
