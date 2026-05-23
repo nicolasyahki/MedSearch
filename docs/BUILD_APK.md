@@ -31,7 +31,7 @@ Le workflow se lance aussi à chaque push sur `main` (fichiers app / android mod
 
 ### Prérequis (une seule fois)
 
-1. **Node.js** 18+ (déjà installé)
+1. **Node.js** 22+ (requis par Capacitor 8)
 2. **Android SDK + JDK 17** — le plus simple : installer [Android Studio](https://developer.android.com/studio) **sans jamais l'ouvrir** (il installe le SDK et Java en arrière-plan)
 3. **JDK 17** (fourni avec Android Studio)
 4. Variables d'environnement Windows (PowerShell admin ou profil utilisateur) :

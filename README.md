@@ -165,7 +165,7 @@ Chaque consultation possède un `clientUuid` + `updatedAt` + `version`.
 ## Installation et démarrage
 
 ### Prérequis
-- **Node.js** 18+
+- **Node.js** 22+ (requis par Capacitor 8)
 - **Python** 3.10+
 
 ### Frontend
