@@ -1,7 +1,7 @@
 // Service Worker MedSearch — offline-first, Background Sync, Push Notifications
 
-const CACHE_NAME = 'medsearch-assets-v5';
-const DATA_CACHE_NAME = 'medsearch-data-v5';
+const CACHE_NAME = 'medsearch-assets-v6';
+const DATA_CACHE_NAME = 'medsearch-data-v6';
 const BACKGROUND_SYNC_TAG = 'medsearch-sync-consultations';
 const DB_NAME = 'MedSearchDatabase';
 const DEFAULT_API_BASE = 'https://Nicolas60.pythonanywhere.com/api';
@@ -19,7 +19,7 @@ const MEDICAL_JSON = [
   '/data/respiratoires.json',
 ];
 
-const BASE_ASSETS = ['/', '/index.html', '/manifest.json', '/icon.svg'];
+const BASE_ASSETS = ['/', '/index.html', '/manifest.json', '/icon-192x192.png', '/icon-512x512.png'];
 const viteAssets = self.__WB_MANIFEST || [];
 const compiledAssets = viteAssets.map((asset) => (typeof asset === 'string' ? asset : asset.url));
 const assetsToPrecache = [...BASE_ASSETS, ...compiledAssets];
@@ -207,8 +207,8 @@ self.addEventListener('sync', (event) => {
           if (result.syncedCount > 0) {
             return self.registration.showNotification('MedSearch', {
               body: `${result.syncedCount} consultation(s) synchronisée(s) en arrière-plan.`,
-              icon: '/icon.svg',
-              badge: '/icon.svg',
+              icon: '/icon-192x192.png',
+              badge: '/icon-192x192.png',
               tag: 'medsearch-sync-success',
             });
           }
@@ -235,8 +235,8 @@ self.addEventListener('push', (event) => {
   event.waitUntil(
     self.registration.showNotification(payload.title || 'MedSearch', {
       body: payload.body || '',
-      icon: '/icon.svg',
-      badge: '/icon.svg',
+      icon: '/icon-192x192.png',
+      badge: '/icon-192x192.png',
       tag: payload.tag || 'medsearch-push',
       data: payload.data || {},
     })
