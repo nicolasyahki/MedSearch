@@ -39,13 +39,36 @@ async function bootstrap() {
   const { persistApiBaseUrl } = await import('./sync/backgroundSync');
   const { syncService } = await import('./api/syncService');
 
-  if (!import.meta.env.DEV && 'serviceWorker' in navigator) {
+  const { isCapacitorNative } = await import('./utils/capacitor');
+
+  if (!import.meta.env.DEV && 'serviceWorker' in navigator && !isCapacitorNative()) {
     const { setupServiceWorkerUpdates } = await import('./utils/appUpdate');
     setupServiceWorkerUpdates();
 
     navigator.serviceWorker.ready
       .then(() => persistApiBaseUrl(syncService.apiBaseUrl))
       .catch((error) => console.warn('[SW] Initialisation ignorée :', error.message));
+  }
+
+  if (isCapacitorNative()) {
+    const { App } = await import('@capacitor/app');
+    const { StatusBar, Style } = await import('@capacitor/status-bar');
+    const { SplashScreen } = await import('@capacitor/splash-screen');
+
+    try {
+      await StatusBar.setStyle({ style: Style.Dark });
+      await StatusBar.setBackgroundColor({ color: '#0D1117' });
+    } catch {
+      /* ignore */
+    }
+
+    App.addListener('appStateChange', ({ isActive }) => {
+      if (isActive) {
+        import('./sync/autoSync').then(({ triggerAutoSync }) => triggerAutoSync());
+      }
+    });
+
+    await SplashScreen.hide();
   }
 
   ReactDOMClient.createRoot(document.getElementById('root')).render(

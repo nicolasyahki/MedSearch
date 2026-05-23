@@ -4,6 +4,8 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // Configuration de Vite pour le projet MedSearch
 export default defineConfig({
+  // Chemins relatifs requis pour le WebView Capacitor (APK Android)
+  base: './',
   resolve: {
     dedupe: ['react', 'react-dom'],
   },

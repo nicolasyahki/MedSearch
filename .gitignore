@@ -17,3 +17,13 @@ backend/db.sqlite3
 
 # Fichiers de log
 *.log
+
+# Capacitor / Android (artefacts de build locaux)
+android/.gradle/
+android/app/build/
+android/build/
+android/local.properties
+android/.idea/
+*.apk
+*.aab
+.capacitor/

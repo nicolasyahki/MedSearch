@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">MedSearch</string>
+    <string name="title_activity_main">MedSearch</string>
+    <string name="package_name">org.medsearch.app</string>
+    <string name="custom_url_scheme">org.medsearch.app</string>
+</resources>

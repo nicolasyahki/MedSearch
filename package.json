@@ -8,11 +8,21 @@
     "dev:mobile": "vite --host",
     "mobile:url": "powershell -ExecutionPolicy Bypass -File scripts/show-mobile-url.ps1",
     "build": "vite build",
+    "build:android": "npm run build && npx cap sync android",
+    "android:open": "npx cap open android",
+    "android:sync": "npx cap sync android",
+    "android:assets": "npx capacitor-assets generate --android",
     "preview": "vite preview",
     "preview:host": "vite preview --host",
     "share": "powershell -ExecutionPolicy Bypass -File scripts/share-internet.ps1"
   },
   "dependencies": {
+    "@capacitor/android": "^8.3.4",
+    "@capacitor/app": "^8.1.0",
+    "@capacitor/cli": "^8.3.4",
+    "@capacitor/core": "^8.3.4",
+    "@capacitor/splash-screen": "^8.0.1",
+    "@capacitor/status-bar": "^8.0.2",
     "@tabler/icons-react": "^3.2.0",
     "dexie": "^4.0.4",
     "fuse.js": "^7.0.0",
@@ -22,6 +32,7 @@
     "react-router-dom": "^6.23.1"
   },
   "devDependencies": {
+    "@capacitor/assets": "^3.0.5",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",

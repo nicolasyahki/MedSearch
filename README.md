@@ -227,6 +227,17 @@ npm run build    # Build production → dist/
 npm run preview  # Prévisualiser le build
 ```
 
+### Application Android (APK)
+
+Pour installer MedSearch comme **application native** sur téléphone Android (fichier `.apk`) :
+
+1. Installer [Android Studio](https://developer.android.com/studio) et configurer `ANDROID_HOME`.
+2. Première fois : `npx cap add android` (déjà fait si le dossier `android/` existe).
+3. Build : `npm run build:android`
+4. Compiler l'APK : voir le guide détaillé **[docs/BUILD_APK.md](docs/BUILD_APK.md)** ou le script `scripts/build-apk.ps1`.
+
+L'APK embarque le catalogue médical et fonctionne hors ligne ; la sync utilise toujours l'API PythonAnywhere en ligne.
+
 ### Déploiement en Production
 
 L'architecture est séparée pour garantir une disponibilité maximale de la PWA :
@@ -345,6 +356,7 @@ Interface **dark mode** médical — vert pour les actions positives, rouge rés
 ### En cours / à faire
 - [x] Enrichissement du catalogue médical (ajout des maladies chroniques, dermatologiques, etc.)
 - [x] Déploiement du Frontend en production via Vercel (CI/CD GitHub)
+- [x] Projet Android Capacitor (APK installable — voir docs/BUILD_APK.md)
 - [ ] Déploiement du Backend (Django) sur une plateforme persistante (Render/Railway)
 - [ ] Tests unitaires (moteur, API, hooks, conflits)
 - [ ] Configuration production (variables d'environnement, SECRET_KEY, VAPID)
