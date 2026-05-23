@@ -16,7 +16,7 @@
     "android:open": "npx cap open android",
     "android:sync": "npx cap sync android",
     "android:icons": "powershell -ExecutionPolicy Bypass -File scripts/sync-android-icons.ps1",
-    "android:assets": "npm run android:icons && npx capacitor-assets generate --android",
+    "android:assets": "npm run android:icons",
     "preview": "vite preview",
     "preview:host": "vite preview --host",
     "share": "powershell -ExecutionPolicy Bypass -File scripts/share-internet.ps1"
