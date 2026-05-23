@@ -5,12 +5,27 @@
     "categorie": "digestives",
     "description": "Infection intestinale aiguë causant de graves diarrhées.",
     "symptomes": [
-      { "nom": "diarrhée liquide", "poids": 3 },
-      { "nom": "vomissements", "poids": 3 },
-      { "nom": "déshydratation", "poids": 3 },
-      { "nom": "crampes musculaires", "poids": 1 }
+      {
+        "nom": "diarrhée liquide",
+        "poids": 3
+      },
+      {
+        "nom": "vomissements",
+        "poids": 3
+      },
+      {
+        "nom": "déshydratation",
+        "poids": 3
+      },
+      {
+        "nom": "crampes musculaires",
+        "poids": 1
+      }
     ],
-    "danger": ["choc", "perte de connaissance"],
+    "danger": [
+      "choc",
+      "perte de connaissance"
+    ],
     "prise_en_charge": "Réhydratation massive immédiate (SRO/IV).",
     "urgence": "Critique"
   },
@@ -20,11 +35,23 @@
     "categorie": "digestives",
     "description": "Selles fréquentes et liquides.",
     "symptomes": [
-      { "nom": "diarrhée", "poids": 3 },
-      { "nom": "douleurs abdominales", "poids": 2 },
-      { "nom": "fièvre", "poids": 1 }
+      {
+        "nom": "diarrhée",
+        "poids": 3
+      },
+      {
+        "nom": "douleurs abdominales",
+        "poids": 2
+      },
+      {
+        "nom": "fièvre",
+        "poids": 1
+      }
     ],
-    "danger": ["déshydratation sévère", "inconscient"],
+    "danger": [
+      "déshydratation sévère",
+      "inconscient"
+    ],
     "prise_en_charge": "SRO, Zinc.",
     "urgence": "Moyenne"
   },
@@ -34,12 +61,26 @@
     "categorie": "digestives",
     "description": "Infection virale du foie.",
     "symptomes": [
-      { "nom": "jaunisse", "poids": 3 },
-      { "nom": "urines foncées", "poids": 3 },
-      { "nom": "fatigue", "poids": 2 },
-      { "nom": "perte d'appétit", "poids": 1 }
+      {
+        "nom": "jaunisse",
+        "poids": 3
+      },
+      {
+        "nom": "urines foncées",
+        "poids": 3
+      },
+      {
+        "nom": "fatigue",
+        "poids": 2
+      },
+      {
+        "nom": "perte d'appétit",
+        "poids": 1
+      }
     ],
-    "danger": ["insuffisance hépatique"],
+    "danger": [
+      "insuffisance hépatique"
+    ],
     "prise_en_charge": "Repos, traitement symptomatique.",
     "urgence": "Faible"
   },
@@ -49,12 +90,26 @@
     "categorie": "digestives",
     "description": "Parasitoses intestinales (ascaris, ankylostomes…) liées à l'hygiène.",
     "symptomes": [
-      { "nom": "douleurs abdominales", "poids": 2 },
-      { "nom": "diarrhée", "poids": 2 },
-      { "nom": "anémie", "poids": 2 },
-      { "nom": "retard de croissance", "poids": 1 }
+      {
+        "nom": "douleurs abdominales",
+        "poids": 2
+      },
+      {
+        "nom": "diarrhée",
+        "poids": 2
+      },
+      {
+        "nom": "anémie",
+        "poids": 2
+      },
+      {
+        "nom": "retard de croissance",
+        "poids": 1
+      }
     ],
-    "danger": ["occlusion intestinale"],
+    "danger": [
+      "occlusion intestinale"
+    ],
     "prise_en_charge": "Albendazole ou Mébendazole selon protocole national.",
     "urgence": "Faible"
   },
@@ -64,12 +119,27 @@
     "categorie": "digestives",
     "description": "Infection parasitaire de l'intestin provoquant une dysenterie.",
     "symptomes": [
-      { "nom": "diarrhée sanglante", "poids": 3 },
-      { "nom": "douleurs abdominales", "poids": 3 },
-      { "nom": "fièvre", "poids": 1 },
-      { "nom": "fatigue", "poids": 1 }
+      {
+        "nom": "diarrhée sanglante",
+        "poids": 3
+      },
+      {
+        "nom": "douleurs abdominales",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre",
+        "poids": 1
+      },
+      {
+        "nom": "fatigue",
+        "poids": 1
+      }
     ],
-    "danger": ["déshydratation sévère", "abcès hépatique"],
+    "danger": [
+      "déshydratation sévère",
+      "abcès hépatique"
+    ],
     "prise_en_charge": "Métronidazole et réhydratation.",
     "urgence": "Haute"
   },
@@ -79,13 +149,209 @@
     "categorie": "digestives",
     "description": "Maladie parasitaire liée à l'eau douce stagnante.",
     "symptomes": [
-      { "nom": "sang dans les urines", "poids": 3 },
-      { "nom": "douleurs abdominales", "poids": 2 },
-      { "nom": "fatigue", "poids": 2 },
-      { "nom": "diarrhée", "poids": 1 }
+      {
+        "nom": "sang dans les urines",
+        "poids": 3
+      },
+      {
+        "nom": "douleurs abdominales",
+        "poids": 2
+      },
+      {
+        "nom": "fatigue",
+        "poids": 2
+      },
+      {
+        "nom": "diarrhée",
+        "poids": 1
+      }
     ],
-    "danger": ["anémie sévère", "insuffisance rénale"],
+    "danger": [
+      "anémie sévère",
+      "insuffisance rénale"
+    ],
     "prise_en_charge": "Praziquantel selon directives nationales.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "appe-001",
+    "nom": "Appendicite aiguë",
+    "categorie": "digestives",
+    "description": "Inflammation aiguë de l'appendice (référence chirurgicale OMS).",
+    "symptomes": [
+      {
+        "nom": "douleur ombilicale puis FID",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "nausées",
+        "poids": 2
+      },
+      {
+        "nom": "vomissements",
+        "poids": 1
+      },
+      {
+        "nom": "douleur à la palpation",
+        "poids": 3
+      }
+    ],
+    "danger": [
+      "perforation",
+      "péritonite"
+    ],
+    "prise_en_charge": "Référence chirurgicale urgente. Jeûne. Antibiotiques péri-opératoires.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "gast-001",
+    "nom": "Gastro-entérite aiguë",
+    "categorie": "digestives",
+    "description": "Syndrome diarrhéique et vomissements, cause infectieuse fréquente (OMS/IMCI).",
+    "symptomes": [
+      {
+        "nom": "diarrhée",
+        "poids": 3
+      },
+      {
+        "nom": "vomissements",
+        "poids": 2
+      },
+      {
+        "nom": "crampes abdominales",
+        "poids": 2
+      },
+      {
+        "nom": "fièvre légère",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "déshydratation sévère"
+    ],
+    "prise_en_charge": "Plan A/B/C SRO (IMCI). Zinc enfant. Continuer alimentation si possible.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "ulce-001",
+    "nom": "Ulcère gastroduodénal",
+    "categorie": "digestives",
+    "description": "Lésion de la muqueuse gastrique ou duodénale, souvent H. pylori (OMS).",
+    "symptomes": [
+      {
+        "nom": "douleur épigastrique",
+        "poids": 3
+      },
+      {
+        "nom": "brûlures d'estomac",
+        "poids": 2
+      },
+      {
+        "nom": "nausées",
+        "poids": 2
+      },
+      {
+        "nom": "vomissements",
+        "poids": 1
+      },
+      {
+        "nom": "perte d'appétit",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "hémorragie digestive",
+      "perforation"
+    ],
+    "prise_en_charge": "Test H. pylori si disponible. IPP + éradication H. pylori. Référence si hémorragie.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "hepe-001",
+    "nom": "Hépatite E",
+    "categorie": "digestives",
+    "description": "Hépatite virale aiguë, risque grave en grossesse (OMS).",
+    "symptomes": [
+      {
+        "nom": "jaunisse",
+        "poids": 3
+      },
+      {
+        "nom": "fatigue",
+        "poids": 2
+      },
+      {
+        "nom": "nausées",
+        "poids": 2
+      },
+      {
+        "nom": "douleurs abdominales",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "insuffissante hépatique fulminante en grossesse"
+    ],
+    "prise_en_charge": "Traitement symptomatique. Surveillance grossesse. Référence si enceinte.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "occl-001",
+    "nom": "Occlusion intestinale",
+    "categorie": "digestives",
+    "description": "Arrêt du transit intestinal, urgence chirurgicale (OMS).",
+    "symptomes": [
+      {
+        "nom": "douleurs abdominales violentes",
+        "poids": 3
+      },
+      {
+        "nom": "vomissements",
+        "poids": 3
+      },
+      {
+        "nom": "arrêt des gaz",
+        "poids": 3
+      },
+      {
+        "nom": "distension abdominale",
+        "poids": 3
+      }
+    ],
+    "danger": [
+      "nécrose intestinale",
+      "choc"
+    ],
+    "prise_en_charge": "Référence chirurgicale IMMÉDIATE. SNG, réhydratation IV.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "asc-001",
+    "nom": "Ascite parasitaire",
+    "categorie": "digestives",
+    "description": "Complication de filariose ou autres causes ; ascite dans contexte tropical.",
+    "symptomes": [
+      {
+        "nom": "ventre gonflé",
+        "poids": 3
+      },
+      {
+        "nom": "douleurs abdominales",
+        "poids": 2
+      },
+      {
+        "nom": "essoufflement",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "infection du liquide"
+    ],
+    "prise_en_charge": "Traiter cause sous-jacente. Référence pour ponction si respiratoire.",
     "urgence": "Moyenne"
   }
 ]

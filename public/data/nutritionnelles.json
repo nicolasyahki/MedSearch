@@ -5,12 +5,27 @@
     "categorie": "nutritionnelles",
     "description": "Carence sévère en nutriments essentiels.",
     "symptomes": [
-      { "nom": "perte de poids", "poids": 3 },
-      { "nom": "fonte musculaire", "poids": 3 },
-      { "nom": "œdèmes", "poids": 3 },
-      { "nom": "apathie", "poids": 2 }
+      {
+        "nom": "perte de poids",
+        "poids": 3
+      },
+      {
+        "nom": "fonte musculaire",
+        "poids": 3
+      },
+      {
+        "nom": "œdèmes",
+        "poids": 3
+      },
+      {
+        "nom": "apathie",
+        "poids": 2
+      }
     ],
-    "danger": ["choc", "hypothermie"],
+    "danger": [
+      "choc",
+      "hypothermie"
+    ],
     "prise_en_charge": "Aliments thérapeutiques (ATPE).",
     "urgence": "Haute"
   },
@@ -20,12 +35,27 @@
     "categorie": "nutritionnelles",
     "description": "Baisse anormale du taux d'hémoglobine.",
     "symptomes": [
-      { "nom": "pâleur", "poids": 3 },
-      { "nom": "fatigue", "poids": 3 },
-      { "nom": "essoufflement", "poids": 2 },
-      { "nom": "vertiges", "poids": 1 }
+      {
+        "nom": "pâleur",
+        "poids": 3
+      },
+      {
+        "nom": "fatigue",
+        "poids": 3
+      },
+      {
+        "nom": "essoufflement",
+        "poids": 2
+      },
+      {
+        "nom": "vertiges",
+        "poids": 1
+      }
     ],
-    "danger": ["inconscient", "insuffisance cardiaque"],
+    "danger": [
+      "inconscient",
+      "insuffisance cardiaque"
+    ],
     "prise_en_charge": "Fer, acide folique.",
     "urgence": "Moyenne"
   },
@@ -35,12 +65,27 @@
     "categorie": "nutritionnelles",
     "description": "Carence nutritionnelle grave pouvant conduire à la cécité.",
     "symptomes": [
-      { "nom": "cécité nocturne", "poids": 3 },
-      { "nom": "sécheresse oculaire", "poids": 3 },
-      { "nom": "taches de Bitot", "poids": 3 },
-      { "nom": "lésions cornéennes", "poids": 2 }
+      {
+        "nom": "cécité nocturne",
+        "poids": 3
+      },
+      {
+        "nom": "sécheresse oculaire",
+        "poids": 3
+      },
+      {
+        "nom": "taches de Bitot",
+        "poids": 3
+      },
+      {
+        "nom": "lésions cornéennes",
+        "poids": 2
+      }
     ],
-    "danger": ["perte de vision", "ulcération de la cornée"],
+    "danger": [
+      "perte de vision",
+      "ulcération de la cornée"
+    ],
     "prise_en_charge": "Supplémentation en vitamine A (rétinol).",
     "urgence": "Moyenne"
   },
@@ -50,13 +95,247 @@
     "categorie": "nutritionnelles",
     "description": "Augmentation de volume de la thyroïde liée à une carence en iode.",
     "symptomes": [
-      { "nom": "gonflement du cou", "poids": 3 },
-      { "nom": "difficulté à avaler", "poids": 2 },
-      { "nom": "difficulté à respirer", "poids": 1 },
-      { "nom": "retard mental (crétinisme)", "poids": 1 }
+      {
+        "nom": "gonflement du cou",
+        "poids": 3
+      },
+      {
+        "nom": "difficulté à avaler",
+        "poids": 2
+      },
+      {
+        "nom": "difficulté à respirer",
+        "poids": 1
+      },
+      {
+        "nom": "retard mental (crétinisme)",
+        "poids": 1
+      }
     ],
-    "danger": ["compression trachéale"],
+    "danger": [
+      "compression trachéale"
+    ],
     "prise_en_charge": "Sel iodé, supplémentation en iode.",
     "urgence": "Faible"
+  },
+  {
+    "id": "kwas-001",
+    "nom": "Kwashiorkor",
+    "categorie": "nutritionnelles",
+    "description": "Malnutrition protéino-énergétique avec œdème (OMS).",
+    "symptomes": [
+      {
+        "nom": "œdème des pieds",
+        "poids": 3
+      },
+      {
+        "nom": "cheveux décolorés",
+        "poids": 2
+      },
+      {
+        "nom": "peau desquamée",
+        "poids": 2
+      },
+      {
+        "nom": "apathie",
+        "poids": 2
+      },
+      {
+        "nom": "perte d'appétit",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "infection sévère",
+      "choc"
+    ],
+    "prise_en_charge": "F-75 puis F-100 (protocole OMS). Antibiotiques systématiques. Référence nutritionnelle.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "mara-001",
+    "nom": "Marasme",
+    "categorie": "nutritionnelles",
+    "description": "Malnutrition sévère par déficit énergétique (OMS).",
+    "symptomes": [
+      {
+        "nom": "émaciation",
+        "poids": 3
+      },
+      {
+        "nom": "peau plissée",
+        "poids": 3
+      },
+      {
+        "nom": "perte de poids",
+        "poids": 3
+      },
+      {
+        "nom": "faiblesse extrême",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "hypothermie",
+      "infection"
+    ],
+    "prise_en_charge": "Réhabilitation nutritionnelle progressive (F-75/F-100). Traiter infections.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "pem-001",
+    "nom": "Malnutrition aiguë sévère",
+    "categorie": "nutritionnelles",
+    "description": "Définition OMS incluant marasme, kwashiorkor et formes mixtes.",
+    "symptomes": [
+      {
+        "nom": "poids très bas",
+        "poids": 3
+      },
+      {
+        "nom": "muqueuse pâle",
+        "poids": 2
+      },
+      {
+        "nom": "faiblesse",
+        "poids": 3
+      },
+      {
+        "nom": "œdème",
+        "poids": 2
+      },
+      {
+        "nom": "diarrhée",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "défaillance organes",
+      "sepsis"
+    ],
+    "prise_en_charge": "Protocole national UNI/OMS. Hospitalisation si complications.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "fer-001",
+    "nom": "Anémie ferriprive",
+    "categorie": "nutritionnelles",
+    "description": "Carence en fer, cause majeure d'anémie mondiale (OMS).",
+    "symptomes": [
+      {
+        "nom": "fatigue",
+        "poids": 3
+      },
+      {
+        "nom": "pâleur",
+        "poids": 3
+      },
+      {
+        "nom": "essoufflement à l'effort",
+        "poids": 2
+      },
+      {
+        "nom": "ongles cassants",
+        "poids": 1
+      },
+      {
+        "nom": "langue lisse",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "insuffisance cardiaque",
+      "choc hémorragique"
+    ],
+    "prise_en_charge": "Fer oral ou IV selon gravité. Traiter cause (parasites, saignement).",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "zinc-001",
+    "nom": "Déficit en zinc",
+    "categorie": "nutritionnelles",
+    "description": "Carence en zinc, aggrave diarrhée et infections (OMS).",
+    "symptomes": [
+      {
+        "nom": "retard de croissance",
+        "poids": 2
+      },
+      {
+        "nom": "diarrhée",
+        "poids": 2
+      },
+      {
+        "nom": "lésions cutanées",
+        "poids": 2
+      },
+      {
+        "nom": "perte d'appétit",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "infection sévère"
+    ],
+    "prise_en_charge": "Zinc 10-14 jours (IMCI diarrhée). Aliments riches en zinc.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "scor-001",
+    "nom": "Scorbut (carence vitamine C)",
+    "categorie": "nutritionnelles",
+    "description": "Carence en acide ascorbique (OMS).",
+    "symptomes": [
+      {
+        "nom": "gencives qui saignent",
+        "poids": 3
+      },
+      {
+        "nom": "fatigue",
+        "poids": 2
+      },
+      {
+        "nom": "douleurs articulaires",
+        "poids": 2
+      },
+      {
+        "nom": "cicatrisation lente",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "hémorragie"
+    ],
+    "prise_en_charge": "Vitamine C. Aliments frais (agrumes, légumes verts).",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "rick-001",
+    "nom": "Rachitisme",
+    "categorie": "nutritionnelles",
+    "description": "Carence en vitamine D chez l'enfant (OMS).",
+    "symptomes": [
+      {
+        "nom": "retard de croissance",
+        "poids": 2
+      },
+      {
+        "nom": "déformations osseuses",
+        "poids": 3
+      },
+      {
+        "nom": "faiblesse musculaire",
+        "poids": 1
+      },
+      {
+        "nom": "crampes",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "fractures",
+      "convulsions"
+    ],
+    "prise_en_charge": "Vitamine D + calcium. Exposition solaire modérée.",
+    "urgence": "Moyenne"
   }
 ]

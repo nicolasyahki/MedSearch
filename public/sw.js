@@ -1,7 +1,7 @@
 // Service Worker MedSearch — offline-first, Background Sync, Push Notifications
 
-const CACHE_NAME = 'medsearch-assets-v8';
-const DATA_CACHE_NAME = 'medsearch-data-v8';
+const CACHE_NAME = 'medsearch-assets-v9';
+const DATA_CACHE_NAME = 'medsearch-data-v9';
 const BACKGROUND_SYNC_TAG = 'medsearch-sync-consultations';
 const DB_NAME = 'MedSearchDatabase';
 const DEFAULT_API_BASE = 'https://Nicolas60.pythonanywhere.com/api';
@@ -15,8 +15,11 @@ const MEDICAL_JSON = [
   '/data/digestives.json',
   '/data/gyneco.json',
   '/data/infectieuses.json',
+  '/data/neurologiques.json',
   '/data/nutritionnelles.json',
+  '/data/pediatriques.json',
   '/data/respiratoires.json',
+  '/data/traumatiques.json',
 ];
 
 const BASE_ASSETS = ['/', '/index.html', '/manifest.json', '/icon-192x192.png', '/icon-512x512.png'];

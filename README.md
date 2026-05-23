@@ -83,7 +83,7 @@ ProjetMedSearch/
 │   ├── App.jsx                  # Routes et protection des pages
 │   └── main.jsx
 ├── public/
-│   ├── data/                    # Catalogue médical JSON (14 maladies)
+│   ├── data/                    # Catalogue médical JSON (136 maladies)
 │   ├── sw.js                    # Service Worker (cache offline)
 │   └── manifest.json
 ├── backend/
@@ -97,16 +97,23 @@ ProjetMedSearch/
 
 ## Catalogue médical
 
-Données statiques dans `public/data/` — **18 maladies** réparties en 5 catégories :
+Données statiques dans `public/data/` — **136 maladies** réparties en **10 catégories** (références OMS / IMCI) :
 
 | Fichier | Contenu |
 |---------|---------|
-| `index.json` | Index des 18 maladies |
-| `infectieuses.json` | Paludisme, Typhoïde, Méningite, Dengue… |
-| `respiratoires.json` | Pneumonie, Tuberculose, Asthme, Otite… |
-| `digestives.json` | Choléra, Diarrhée, Hépatite A, Helminthiases… |
-| `nutritionnelles.json` | Malnutrition, Anémie |
-| `dermatologiques.json` | Gale, Rougeole, Varicelle, Lèpre |
+| `index.json` | Index alphabétique des 136 maladies |
+| `infectieuses.json` | Paludisme, VIH, COVID-19, Ebola, rage, trachome… |
+| `respiratoires.json` | Pneumonie, TB, asthme, coqueluche, bronchiolite… |
+| `digestives.json` | Choléra, diarrhée, hépatites, amibiase, bilharziose… |
+| `nutritionnelles.json` | Malnutrition, anémie, carence vitamine A, goitre… |
+| `dermatologiques.json` | Gale, rougeole, impétigo, teigne, abcès… |
+| `gyneco.json` | Éclampsie, HPP, infection puerpérale… |
+| `chroniques.json` | Diabète, HTA, drépanocytose, épilepsie… |
+| `neurologiques.json` | AVC, convulsions, méningite, encéphalite… |
+| `pediatriques.json` | Déshydratation, sepsis néonatal, otite, malaria enfant… |
+| `traumatiques.json` | Fracture, brûlure, morsure serpent, traumatisme crânien… |
+
+Pour régénérer le catalogue : `node scripts/build-medical-catalog.mjs`
 
 Chaque maladie contient : symptômes pondérés, signes de danger, prise en charge, niveau d'urgence.
 
@@ -353,7 +360,7 @@ Interface **dark mode** médical — vert pour les actions positives, rouge rés
 - [x] Synchronisation automatique robuste et intelligente au démarrage de l'app, au focus de l'onglet et au rétablissement du réseau
 
 ### En cours / à faire
-- [x] Enrichissement du catalogue médical (ajout des maladies chroniques, dermatologiques, etc.)
+- [x] Enrichissement du catalogue médical (136 maladies, 10 catégories OMS/IMCI)
 - [x] Déploiement du Frontend en production via Vercel (CI/CD GitHub)
 - [x] Projet Android Capacitor (APK installable — voir docs/BUILD_APK.md)
 - [ ] Déploiement du Backend (Django) sur une plateforme persistante (Render/Railway)

@@ -1,38 +1,682 @@
 [
-  { "id": "palu-001", "nom": "Paludisme", "categorie": "infectieuses" },
-  { "id": "typh-001", "nom": "Typhoïde", "categorie": "infectieuses" },
-  { "id": "meni-001", "nom": "Méningite", "categorie": "infectieuses" },
-  { "id": "deng-001", "nom": "Dengue", "categorie": "infectieuses" },
-  { "id": "pneu-001", "nom": "Pneumonie", "categorie": "respiratoires" },
-  { "id": "tube-001", "nom": "Tuberculose", "categorie": "respiratoires" },
-  { "id": "asth-001", "nom": "Asthme", "categorie": "respiratoires" },
-  { "id": "otit-001", "nom": "Otite moyenne aiguë", "categorie": "respiratoires" },
-  { "id": "chol-001", "nom": "Choléra", "categorie": "digestives" },
-  { "id": "diar-001", "nom": "Diarrhée", "categorie": "digestives" },
-  { "id": "hepa-001", "nom": "Hépatite A", "categorie": "digestives" },
-  { "id": "helm-001", "nom": "Geo-helminthiases", "categorie": "digestives" },
-  { "id": "maln-001", "nom": "Malnutrition", "categorie": "nutritionnelles" },
-  { "id": "anem-001", "nom": "Anémie", "categorie": "nutritionnelles" },
-  { "id": "gale-001", "nom": "Gale", "categorie": "dermatologiques" },
-  { "id": "roug-001", "nom": "Rougeole", "categorie": "dermatologiques" },
-  { "id": "vari-001", "nom": "Varicelle", "categorie": "dermatologiques" },
-  { "id": "lepr-001", "nom": "Lèpre", "categorie": "dermatologiques" },
-  { "id": "fiev-001", "nom": "Fièvre Jaune", "categorie": "infectieuses" },
-  { "id": "teta-001", "nom": "Tétanos", "categorie": "infectieuses" },
-  { "id": "onch-001", "nom": "Onchocercose", "categorie": "infectieuses" },
-  { "id": "amib-001", "nom": "Amibiase", "categorie": "digestives" },
-  { "id": "bilh-001", "nom": "Bilharziose", "categorie": "digestives" },
-  { "id": "ecla-001", "nom": "Éclampsie", "categorie": "gyneco" },
-  { "id": "hemo-001", "nom": "Hémorragie du post-partum", "categorie": "gyneco" },
-  { "id": "puer-001", "nom": "Infection puerpérale", "categorie": "gyneco" },
-  { "id": "coqu-001", "nom": "Coqueluche", "categorie": "respiratoires" },
-  { "id": "bron-001", "nom": "Bronchiolite", "categorie": "respiratoires" },
-  { "id": "vita-001", "nom": "Carence en vitamine A", "categorie": "nutritionnelles" },
-  { "id": "goit-001", "nom": "Goitre endémique", "categorie": "nutritionnelles" },
-  { "id": "teig-001", "nom": "Teigne", "categorie": "dermatologiques" },
-  { "id": "impe-001", "nom": "Impétigo", "categorie": "dermatologiques" },
-  { "id": "diab-001", "nom": "Diabète (Type 2)", "categorie": "chroniques" },
-  { "id": "hype-001", "nom": "Hypertension artérielle", "categorie": "chroniques" },
-  { "id": "drep-001", "nom": "Drépanocytose", "categorie": "chroniques" },
-  { "id": "epil-001", "nom": "Épilepsie", "categorie": "chroniques" }
+  {
+    "id": "absc-001",
+    "nom": "Abcès cutané",
+    "categorie": "dermatologiques"
+  },
+  {
+    "id": "avc-001",
+    "nom": "Accident vasculaire cérébral",
+    "categorie": "neurologiques"
+  },
+  {
+    "id": "amib-001",
+    "nom": "Amibiase",
+    "categorie": "digestives"
+  },
+  {
+    "id": "amp-001",
+    "nom": "Amputation traumatique",
+    "categorie": "traumatiques"
+  },
+  {
+    "id": "anem-001",
+    "nom": "Anémie",
+    "categorie": "nutritionnelles"
+  },
+  {
+    "id": "anem-002",
+    "nom": "Anémie de la grossesse",
+    "categorie": "gyneco"
+  },
+  {
+    "id": "fer-001",
+    "nom": "Anémie ferriprive",
+    "categorie": "nutritionnelles"
+  },
+  {
+    "id": "stre-001",
+    "nom": "Angine streptococcique",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "orl-001",
+    "nom": "Angine virale (enfant)",
+    "categorie": "pediatriques"
+  },
+  {
+    "id": "appe-001",
+    "nom": "Appendicite aiguë",
+    "categorie": "digestives"
+  },
+  {
+    "id": "arth-001",
+    "nom": "Arthrite rhumatoïde",
+    "categorie": "chroniques"
+  },
+  {
+    "id": "asc-001",
+    "nom": "Ascite parasitaire",
+    "categorie": "digestives"
+  },
+  {
+    "id": "asth-001",
+    "nom": "Asthme",
+    "categorie": "respiratoires"
+  },
+  {
+    "id": "bilh-001",
+    "nom": "Bilharziose",
+    "categorie": "digestives"
+  },
+  {
+    "id": "bpco-001",
+    "nom": "BPCO",
+    "categorie": "respiratoires"
+  },
+  {
+    "id": "bron-001",
+    "nom": "Bronchiolite",
+    "categorie": "respiratoires"
+  },
+  {
+    "id": "pneu-004",
+    "nom": "Bronchopneumonie (nourrisson)",
+    "categorie": "pediatriques"
+  },
+  {
+    "id": "brul-001",
+    "nom": "Brûlure",
+    "categorie": "dermatologiques"
+  },
+  {
+    "id": "burn-001",
+    "nom": "Brûlure",
+    "categorie": "traumatiques"
+  },
+  {
+    "id": "vita-001",
+    "nom": "Carence en vitamine A",
+    "categorie": "nutritionnelles"
+  },
+  {
+    "id": "cell-001",
+    "nom": "Cellulite infectieuse",
+    "categorie": "dermatologiques"
+  },
+  {
+    "id": "ceph-001",
+    "nom": "Céphalée de tension",
+    "categorie": "neurologiques"
+  },
+  {
+    "id": "chla-001",
+    "nom": "Chlamydia",
+    "categorie": "gyneco"
+  },
+  {
+    "id": "chol-001",
+    "nom": "Choléra",
+    "categorie": "digestives"
+  },
+  {
+    "id": "avort-001",
+    "nom": "Complications d'avortement non médicalisé",
+    "categorie": "gyneco"
+  },
+  {
+    "id": "conv-001",
+    "nom": "Convulsions fébriles",
+    "categorie": "pediatriques"
+  },
+  {
+    "id": "coqu-001",
+    "nom": "Coqueluche",
+    "categorie": "respiratoires"
+  },
+  {
+    "id": "covi-001",
+    "nom": "COVID-19",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "crup-001",
+    "nom": "Croup (laryngotrachéite)",
+    "categorie": "respiratoires"
+  },
+  {
+    "id": "zinc-001",
+    "nom": "Déficit en zinc",
+    "categorie": "nutritionnelles"
+  },
+  {
+    "id": "dem-001",
+    "nom": "Démence",
+    "categorie": "neurologiques"
+  },
+  {
+    "id": "deng-001",
+    "nom": "Dengue",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "dep-001",
+    "nom": "Dépression",
+    "categorie": "chroniques"
+  },
+  {
+    "id": "derm-001",
+    "nom": "Dermatophytose (teigne corps)",
+    "categorie": "dermatologiques"
+  },
+  {
+    "id": "desh-001",
+    "nom": "Déshydratation (enfant)",
+    "categorie": "pediatriques"
+  },
+  {
+    "id": "diab-001",
+    "nom": "Diabète (Type 2)",
+    "categorie": "chroniques"
+  },
+  {
+    "id": "diar-001",
+    "nom": "Diarrhée",
+    "categorie": "digestives"
+  },
+  {
+    "id": "diar-002",
+    "nom": "Diarrhée persistante (enfant)",
+    "categorie": "pediatriques"
+  },
+  {
+    "id": "diph-001",
+    "nom": "Diphtérie",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "drep-001",
+    "nom": "Drépanocytose",
+    "categorie": "chroniques"
+  },
+  {
+    "id": "ecla-001",
+    "nom": "Éclampsie",
+    "categorie": "gyneco"
+  },
+  {
+    "id": "enc-001",
+    "nom": "Encéphalite",
+    "categorie": "neurologiques"
+  },
+  {
+    "id": "entr-001",
+    "nom": "Entorse",
+    "categorie": "traumatiques"
+  },
+  {
+    "id": "epig-001",
+    "nom": "Épiglotte aiguë",
+    "categorie": "respiratoires"
+  },
+  {
+    "id": "epil-001",
+    "nom": "Épilepsie",
+    "categorie": "chroniques"
+  },
+  {
+    "id": "epi-002",
+    "nom": "État de mal épileptique",
+    "categorie": "chroniques"
+  },
+  {
+    "id": "lfas-001",
+    "nom": "Fièvre de Lassa",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "fiev-001",
+    "nom": "Fièvre Jaune",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "fiev-002",
+    "nom": "Fièvre sans foyer (nourrisson)",
+    "categorie": "pediatriques"
+  },
+  {
+    "id": "fila-001",
+    "nom": "Filariose lymphatique",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "frac-001",
+    "nom": "Fracture",
+    "categorie": "traumatiques"
+  },
+  {
+    "id": "gale-001",
+    "nom": "Gale",
+    "categorie": "dermatologiques"
+  },
+  {
+    "id": "rota-001",
+    "nom": "Gastro-entérite à rotavirus",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "gast-001",
+    "nom": "Gastro-entérite aiguë",
+    "categorie": "digestives"
+  },
+  {
+    "id": "helm-001",
+    "nom": "Geo-helminthiases",
+    "categorie": "digestives"
+  },
+  {
+    "id": "giar-001",
+    "nom": "Giardiase",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "goit-001",
+    "nom": "Goitre endémique",
+    "categorie": "nutritionnelles"
+  },
+  {
+    "id": "gon-001",
+    "nom": "Gonorrhée",
+    "categorie": "gyneco"
+  },
+  {
+    "id": "grip-001",
+    "nom": "Grippe (Influenza)",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "hemo-001",
+    "nom": "Hémorragie du post-partum",
+    "categorie": "gyneco"
+  },
+  {
+    "id": "hepa-001",
+    "nom": "Hépatite A",
+    "categorie": "digestives"
+  },
+  {
+    "id": "hepb-001",
+    "nom": "Hépatite B",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "hepc-001",
+    "nom": "Hépatite C",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "hepe-001",
+    "nom": "Hépatite E",
+    "categorie": "digestives"
+  },
+  {
+    "id": "hype-001",
+    "nom": "Hypertension artérielle",
+    "categorie": "chroniques"
+  },
+  {
+    "id": "hypo-001",
+    "nom": "Hypothyroïdie",
+    "categorie": "chroniques"
+  },
+  {
+    "id": "jaun-001",
+    "nom": "Ictère néonatal",
+    "categorie": "pediatriques"
+  },
+  {
+    "id": "impe-001",
+    "nom": "Impétigo",
+    "categorie": "dermatologiques"
+  },
+  {
+    "id": "vih-001",
+    "nom": "Infection à VIH",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "neon-001",
+    "nom": "Infection néonatale",
+    "categorie": "pediatriques"
+  },
+  {
+    "id": "puer-001",
+    "nom": "Infection puerpérale",
+    "categorie": "gyneco"
+  },
+  {
+    "id": "imp-002",
+    "nom": "Infection urinaire",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "vag-001",
+    "nom": "Infection vaginale (candidose)",
+    "categorie": "gyneco"
+  },
+  {
+    "id": "icc-001",
+    "nom": "Insuffisance cardiaque",
+    "categorie": "chroniques"
+  },
+  {
+    "id": "irc-001",
+    "nom": "Insuffisance rénale chronique",
+    "categorie": "chroniques"
+  },
+  {
+    "id": "kwas-001",
+    "nom": "Kwashiorkor",
+    "categorie": "nutritionnelles"
+  },
+  {
+    "id": "lary-001",
+    "nom": "Laryngite aiguë",
+    "categorie": "respiratoires"
+  },
+  {
+    "id": "crou-001",
+    "nom": "Laryngite aiguë (croup)",
+    "categorie": "pediatriques"
+  },
+  {
+    "id": "leis-001",
+    "nom": "Leishmaniose",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "lepr-001",
+    "nom": "Lèpre",
+    "categorie": "dermatologiques"
+  },
+  {
+    "id": "lept-001",
+    "nom": "Leptospirose",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "disl-001",
+    "nom": "Luxation",
+    "categorie": "traumatiques"
+  },
+  {
+    "id": "ebol-001",
+    "nom": "Maladie à virus Ebola",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "park-001",
+    "nom": "Maladie de Parkinson",
+    "categorie": "neurologiques"
+  },
+  {
+    "id": "maln-001",
+    "nom": "Malnutrition",
+    "categorie": "nutritionnelles"
+  },
+  {
+    "id": "pem-001",
+    "nom": "Malnutrition aiguë sévère",
+    "categorie": "nutritionnelles"
+  },
+  {
+    "id": "mara-001",
+    "nom": "Marasme",
+    "categorie": "nutritionnelles"
+  },
+  {
+    "id": "meni-001",
+    "nom": "Méningite",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "meni-002",
+    "nom": "Méningite à méningocoque",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "meni-003",
+    "nom": "Méningite tuberculeuse",
+    "categorie": "neurologiques"
+  },
+  {
+    "id": "migr-001",
+    "nom": "Migraine",
+    "categorie": "neurologiques"
+  },
+  {
+    "id": "moll-001",
+    "nom": "Molluscum contagiosum",
+    "categorie": "dermatologiques"
+  },
+  {
+    "id": "dog-001",
+    "nom": "Morsure de chien",
+    "categorie": "traumatiques"
+  },
+  {
+    "id": "snak-001",
+    "nom": "Morsure de serpent",
+    "categorie": "traumatiques"
+  },
+  {
+    "id": "mpox-001",
+    "nom": "Mpox (variole du singe)",
+    "categorie": "dermatologiques"
+  },
+  {
+    "id": "neur-001",
+    "nom": "Neuropathie périphérique",
+    "categorie": "neurologiques"
+  },
+  {
+    "id": "noy-001",
+    "nom": "Noyade / quasi-noyade",
+    "categorie": "traumatiques"
+  },
+  {
+    "id": "occl-001",
+    "nom": "Occlusion intestinale",
+    "categorie": "digestives"
+  },
+  {
+    "id": "onch-001",
+    "nom": "Onchocercose",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "orei-001",
+    "nom": "Oreillons",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "otit-001",
+    "nom": "Otite moyenne aiguë",
+    "categorie": "respiratoires"
+  },
+  {
+    "id": "palu-001",
+    "nom": "Paludisme",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "mala-001",
+    "nom": "Paludisme grave (enfant)",
+    "categorie": "pediatriques"
+  },
+  {
+    "id": "bell-001",
+    "nom": "Paralysie faciale (Bell)",
+    "categorie": "neurologiques"
+  },
+  {
+    "id": "phar-001",
+    "nom": "Pharyngite virale",
+    "categorie": "respiratoires"
+  },
+  {
+    "id": "pied-001",
+    "nom": "Pied diabétique infecté",
+    "categorie": "dermatologiques"
+  },
+  {
+    "id": "pla-001",
+    "nom": "Plaie profonde",
+    "categorie": "traumatiques"
+  },
+  {
+    "id": "pneu-001",
+    "nom": "Pneumonie",
+    "categorie": "respiratoires"
+  },
+  {
+    "id": "pneu-003",
+    "nom": "Pneumonie (enfant <5 ans)",
+    "categorie": "pediatriques"
+  },
+  {
+    "id": "poli-001",
+    "nom": "Poliomyélite",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "pree-001",
+    "nom": "Prééclampsie",
+    "categorie": "gyneco"
+  },
+  {
+    "id": "rick-001",
+    "nom": "Rachitisme",
+    "categorie": "nutritionnelles"
+  },
+  {
+    "id": "rage-001",
+    "nom": "Rage",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "roug-001",
+    "nom": "Rougeole",
+    "categorie": "dermatologiques"
+  },
+  {
+    "id": "rubi-001",
+    "nom": "Rubéole",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "scar-001",
+    "nom": "Scarlatine",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "scor-001",
+    "nom": "Scorbut (carence vitamine C)",
+    "categorie": "nutritionnelles"
+  },
+  {
+    "id": "seps-001",
+    "nom": "Sepsis",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "shig-001",
+    "nom": "Shigellose (dysenterie bacillaire)",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "sinu-001",
+    "nom": "Sinusite aiguë",
+    "categorie": "respiratoires"
+  },
+  {
+    "id": "sync-001",
+    "nom": "Syncope",
+    "categorie": "neurologiques"
+  },
+  {
+    "id": "srag-001",
+    "nom": "Syndrome respiratoire aigu sévère",
+    "categorie": "respiratoires"
+  },
+  {
+    "id": "syp-001",
+    "nom": "Syphilis",
+    "categorie": "gyneco"
+  },
+  {
+    "id": "teig-001",
+    "nom": "Teigne",
+    "categorie": "dermatologiques"
+  },
+  {
+    "id": "teta-001",
+    "nom": "Tétanos",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "tet-002",
+    "nom": "Tétanos néonatal",
+    "categorie": "neurologiques"
+  },
+  {
+    "id": "trac-001",
+    "nom": "Trachome",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "ent-001",
+    "nom": "Traumatisme crânien",
+    "categorie": "traumatiques"
+  },
+  {
+    "id": "try-001",
+    "nom": "Trypanosomiase (Maladie du sommeil)",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "tube-001",
+    "nom": "Tuberculose",
+    "categorie": "respiratoires"
+  },
+  {
+    "id": "typh-001",
+    "nom": "Typhoïde",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "typh-002",
+    "nom": "Typhus",
+    "categorie": "infectieuses"
+  },
+  {
+    "id": "ulce-001",
+    "nom": "Ulcère gastroduodénal",
+    "categorie": "digestives"
+  },
+  {
+    "id": "bact-001",
+    "nom": "Vaginose bactérienne",
+    "categorie": "gyneco"
+  },
+  {
+    "id": "vari-001",
+    "nom": "Varicelle",
+    "categorie": "dermatologiques"
+  },
+  {
+    "id": "zona-001",
+    "nom": "Zona (herpès zoster)",
+    "categorie": "dermatologiques"
+  }
 ]

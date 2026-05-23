@@ -5,12 +5,28 @@
     "categorie": "infectieuses",
     "description": "Maladie infectieuse due à un parasite transmis par les piqûres de moustiques.",
     "symptomes": [
-      { "nom": "fièvre", "poids": 3 },
-      { "nom": "frissons", "poids": 3 },
-      { "nom": "maux de tête", "poids": 2 },
-      { "nom": "nausées", "poids": 1 }
+      {
+        "nom": "fièvre",
+        "poids": 3
+      },
+      {
+        "nom": "frissons",
+        "poids": 3
+      },
+      {
+        "nom": "maux de tête",
+        "poids": 2
+      },
+      {
+        "nom": "nausées",
+        "poids": 1
+      }
     ],
-    "danger": ["convulsions", "perte de connaissance", "anémie sévère"],
+    "danger": [
+      "convulsions",
+      "perte de connaissance",
+      "anémie sévère"
+    ],
     "prise_en_charge": "Effectuer TDR. Si +, donner CTA.",
     "urgence": "Haute"
   },
@@ -20,12 +36,28 @@
     "categorie": "infectieuses",
     "description": "Infection bactérienne transmissible par l'eau ou les aliments.",
     "symptomes": [
-      { "nom": "fièvre prolongée", "poids": 3 },
-      { "nom": "douleurs abdominales", "poids": 2 },
-      { "nom": "maux de tête", "poids": 2 },
-      { "nom": "diarrhée", "poids": 1 }
+      {
+        "nom": "fièvre prolongée",
+        "poids": 3
+      },
+      {
+        "nom": "douleurs abdominales",
+        "poids": 2
+      },
+      {
+        "nom": "maux de tête",
+        "poids": 2
+      },
+      {
+        "nom": "diarrhée",
+        "poids": 1
+      }
     ],
-    "danger": ["perforation intestinale", "hémorragie", "état de choc"],
+    "danger": [
+      "perforation intestinale",
+      "hémorragie",
+      "état de choc"
+    ],
     "prise_en_charge": "Antibiotiques, réhydratation.",
     "urgence": "Haute"
   },
@@ -35,12 +67,28 @@
     "categorie": "infectieuses",
     "description": "Inflammation des membranes qui enveloppent le cerveau et la moelle épinière.",
     "symptomes": [
-      { "nom": "raideur de la nuque", "poids": 3 },
-      { "nom": "fièvre élevée", "poids": 3 },
-      { "nom": "photophobie", "poids": 2 },
-      { "nom": "maux de tête intenses", "poids": 2 }
+      {
+        "nom": "raideur de la nuque",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre élevée",
+        "poids": 3
+      },
+      {
+        "nom": "photophobie",
+        "poids": 2
+      },
+      {
+        "nom": "maux de tête intenses",
+        "poids": 2
+      }
     ],
-    "danger": ["convulsions", "coma", "inconscient"],
+    "danger": [
+      "convulsions",
+      "coma",
+      "inconscient"
+    ],
     "prise_en_charge": "Référence immédiate à l'hôpital. Antibiothérapie d'urgence.",
     "urgence": "Critique"
   },
@@ -50,12 +98,28 @@
     "categorie": "infectieuses",
     "description": "Virose transmise par les moustiques Aedes, fréquente en zones tropicales.",
     "symptomes": [
-      { "nom": "fièvre élevée", "poids": 3 },
-      { "nom": "douleurs articulaires", "poids": 2 },
-      { "nom": "maux de tête", "poids": 2 },
-      { "nom": "éruption cutanée", "poids": 1 }
+      {
+        "nom": "fièvre élevée",
+        "poids": 3
+      },
+      {
+        "nom": "douleurs articulaires",
+        "poids": 2
+      },
+      {
+        "nom": "maux de tête",
+        "poids": 2
+      },
+      {
+        "nom": "éruption cutanée",
+        "poids": 1
+      }
     ],
-    "danger": ["hémorragie", "choc", "détresse respiratoire"],
+    "danger": [
+      "hémorragie",
+      "choc",
+      "détresse respiratoire"
+    ],
     "prise_en_charge": "Réhydratation, surveillance des signes d'alarme. Pas d'Aspirine/AINS.",
     "urgence": "Haute"
   },
@@ -65,12 +129,27 @@
     "categorie": "infectieuses",
     "description": "Maladie hémorragique virale transmise par des moustiques infectés.",
     "symptomes": [
-      { "nom": "fièvre", "poids": 3 },
-      { "nom": "jaunisse", "poids": 3 },
-      { "nom": "douleurs musculaires", "poids": 2 },
-      { "nom": "vomissements", "poids": 2 }
+      {
+        "nom": "fièvre",
+        "poids": 3
+      },
+      {
+        "nom": "jaunisse",
+        "poids": 3
+      },
+      {
+        "nom": "douleurs musculaires",
+        "poids": 2
+      },
+      {
+        "nom": "vomissements",
+        "poids": 2
+      }
     ],
-    "danger": ["hémorragie", "inconscient"],
+    "danger": [
+      "hémorragie",
+      "inconscient"
+    ],
     "prise_en_charge": "Traitement symptomatique, hydratation. Transfert hôpital.",
     "urgence": "Haute"
   },
@@ -80,12 +159,27 @@
     "categorie": "infectieuses",
     "description": "Infection aiguë grave par une neurotoxine due à une plaie souillée.",
     "symptomes": [
-      { "nom": "spasmes musculaires", "poids": 3 },
-      { "nom": "rigidité de la mâchoire", "poids": 3 },
-      { "nom": "fièvre", "poids": 1 },
-      { "nom": "difficulté à avaler", "poids": 2 }
+      {
+        "nom": "spasmes musculaires",
+        "poids": 3
+      },
+      {
+        "nom": "rigidité de la mâchoire",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre",
+        "poids": 1
+      },
+      {
+        "nom": "difficulté à avaler",
+        "poids": 2
+      }
     ],
-    "danger": ["détresse respiratoire", "convulsions"],
+    "danger": [
+      "détresse respiratoire",
+      "convulsions"
+    ],
     "prise_en_charge": "Sérum antitétanique, antibiotiques, transfert immédiat.",
     "urgence": "Critique"
   },
@@ -95,13 +189,882 @@
     "categorie": "infectieuses",
     "description": "Maladie parasitaire transmise par les simulies, cause de cécité (cécité des rivières).",
     "symptomes": [
-      { "nom": "démangeaisons intenses", "poids": 3 },
-      { "nom": "lésions oculaires", "poids": 3 },
-      { "nom": "nodules sous-cutanés", "poids": 2 },
-      { "nom": "éruption", "poids": 1 }
+      {
+        "nom": "démangeaisons intenses",
+        "poids": 3
+      },
+      {
+        "nom": "lésions oculaires",
+        "poids": 3
+      },
+      {
+        "nom": "nodules sous-cutanés",
+        "poids": 2
+      },
+      {
+        "nom": "éruption",
+        "poids": 1
+      }
     ],
-    "danger": ["perte de vision"],
+    "danger": [
+      "perte de vision"
+    ],
     "prise_en_charge": "Ivermectine selon le programme national.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "grip-001",
+    "nom": "Grippe (Influenza)",
+    "categorie": "infectieuses",
+    "description": "Infection respiratoire aiguë due aux virus influenza (OMS).",
+    "symptomes": [
+      {
+        "nom": "fièvre",
+        "poids": 3
+      },
+      {
+        "nom": "toux",
+        "poids": 3
+      },
+      {
+        "nom": "courbatures",
+        "poids": 2
+      },
+      {
+        "nom": "fatigue",
+        "poids": 2
+      },
+      {
+        "nom": "mal de gorge",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "détresse respiratoire",
+      "cyanose",
+      "confusion"
+    ],
+    "prise_en_charge": "Repos, hydratation, antipyrétiques. Oseltamivir si protocole national et risque élevé.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "vih-001",
+    "nom": "Infection à VIH",
+    "categorie": "infectieuses",
+    "description": "Virus d'immunodéficience humaine ; évolution vers SIDA sans traitement (OMS).",
+    "symptomes": [
+      {
+        "nom": "fièvre prolongée",
+        "poids": 2
+      },
+      {
+        "nom": "perte de poids",
+        "poids": 3
+      },
+      {
+        "nom": "diarrhée chronique",
+        "poids": 2
+      },
+      {
+        "nom": "toux persistante",
+        "poids": 2
+      },
+      {
+        "nom": "éruptions cutanées",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "infections opportunistes",
+      "tuberculose",
+      "amaigrissement sévère"
+    ],
+    "prise_en_charge": "Dépistage rapide + confirmation. ARV selon protocole national. Prévention transmission.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "poli-001",
+    "nom": "Poliomyélite",
+    "categorie": "infectieuses",
+    "description": "Maladie virale par poliovirus, éradiquée dans de nombreuses régions ; résurgences possibles (OMS).",
+    "symptomes": [
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "maux de tête",
+        "poids": 2
+      },
+      {
+        "nom": "paralysie",
+        "poids": 3
+      },
+      {
+        "nom": "raideur de la nuque",
+        "poids": 2
+      },
+      {
+        "nom": "faiblesse musculaire",
+        "poids": 3
+      }
+    ],
+    "danger": [
+      "paralysie respiratoire",
+      "paralysie permanente"
+    ],
+    "prise_en_charge": "Pas de traitement curatif. Soutien respiratoire si besoin. Vaccination préventive.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "rage-001",
+    "nom": "Rage",
+    "categorie": "infectieuses",
+    "description": "Encéphalite virale mortelle après morsure d'animal infecté (OMS).",
+    "symptomes": [
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "maux de tête",
+        "poids": 3
+      },
+      {
+        "nom": "hydrophobie",
+        "poids": 3
+      },
+      {
+        "nom": "agitation",
+        "poids": 3
+      },
+      {
+        "nom": "paralysie",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "coma",
+      "arrêt respiratoire"
+    ],
+    "prise_en_charge": "Lavage plaie + immunoglobulines + vaccin post-exposition IMMÉDIAT. Référence urgente.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "lept-001",
+    "nom": "Leptospirose",
+    "categorie": "infectieuses",
+    "description": "Zoonose bactérienne transmise par l'eau contaminée (OMS).",
+    "symptomes": [
+      {
+        "nom": "fièvre",
+        "poids": 3
+      },
+      {
+        "nom": "maux de tête",
+        "poids": 2
+      },
+      {
+        "nom": "courbatures",
+        "poids": 3
+      },
+      {
+        "nom": "conjonctivite",
+        "poids": 2
+      },
+      {
+        "nom": "nausées",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "ictère",
+      "insuffisance rénale",
+      "hémorragie"
+    ],
+    "prise_en_charge": "Antibiotiques (doxycycline) précoce. Réhydratation. Référence si forme sévère.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "try-001",
+    "nom": "Trypanosomiase (Maladie du sommeil)",
+    "categorie": "infectieuses",
+    "description": "Parasitose transmise par la mouche tsé-tsé (OMS).",
+    "symptomes": [
+      {
+        "nom": "fièvre intermittente",
+        "poids": 3
+      },
+      {
+        "nom": "maux de tête",
+        "poids": 2
+      },
+      {
+        "nom": "somnolence diurne",
+        "poids": 3
+      },
+      {
+        "nom": "ganglions",
+        "poids": 2
+      },
+      {
+        "nom": "prurit",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "troubles neurologiques",
+      "coma"
+    ],
+    "prise_en_charge": "Dépistage terrain si disponible. Traitement selon stade (suramine/éflornithine/mélarsoprol).",
+    "urgence": "Haute"
+  },
+  {
+    "id": "lfas-001",
+    "nom": "Fièvre de Lassa",
+    "categorie": "infectieuses",
+    "description": "Fièvre hémorragique virale endémique en Afrique de l'Ouest (OMS).",
+    "symptomes": [
+      {
+        "nom": "fièvre",
+        "poids": 3
+      },
+      {
+        "nom": "maux de tête",
+        "poids": 3
+      },
+      {
+        "nom": "vomissements",
+        "poids": 2
+      },
+      {
+        "nom": "douleurs abdominales",
+        "poids": 2
+      },
+      {
+        "nom": "saignement",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "choc",
+      "saignement massif",
+      "défaillance organes"
+    ],
+    "prise_en_charge": "Isolement. Ribavirine si disponible. Soins de support. Référence hôpital.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "ebol-001",
+    "nom": "Maladie à virus Ebola",
+    "categorie": "infectieuses",
+    "description": "Fièvre hémorragique virale à haute létalité (OMS).",
+    "symptomes": [
+      {
+        "nom": "fièvre",
+        "poids": 3
+      },
+      {
+        "nom": "vomissements",
+        "poids": 3
+      },
+      {
+        "nom": "diarrhée",
+        "poids": 3
+      },
+      {
+        "nom": "douleurs musculaires",
+        "poids": 2
+      },
+      {
+        "nom": "saignement",
+        "poids": 3
+      }
+    ],
+    "danger": [
+      "choc",
+      "hémorragie",
+      "défaillance multi-organes"
+    ],
+    "prise_en_charge": "Isolement strict. Soins de support intensifs. Référence centre spécialisé.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "covi-001",
+    "nom": "COVID-19",
+    "categorie": "infectieuses",
+    "description": "Maladie respiratoire due au SARS-CoV-2 (OMS).",
+    "symptomes": [
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "toux",
+        "poids": 3
+      },
+      {
+        "nom": "fatigue",
+        "poids": 2
+      },
+      {
+        "nom": "essoufflement",
+        "poids": 3
+      },
+      {
+        "nom": "perte de goût",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "détresse respiratoire",
+      "hypoxie",
+      "confusion"
+    ],
+    "prise_en_charge": "Isolement si possible. Oxygène si SpO2 basse. Suivi signes de gravité.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "stre-001",
+    "nom": "Angine streptococcique",
+    "categorie": "infectieuses",
+    "description": "Infection pharyngée à Streptococcus pyogenes (OMS/IMCI).",
+    "symptomes": [
+      {
+        "nom": "mal de gorge",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "adénopathies cervicales",
+        "poids": 2
+      },
+      {
+        "nom": "absence de toux",
+        "poids": 2
+      },
+      {
+        "nom": "éruption",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "abcès péri-amygdalien",
+      "rhume des foins"
+    ],
+    "prise_en_charge": "Antibiotiques (pénicilline/azithromycine) si confirmé ou score clinique élevé.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "orei-001",
+    "nom": "Oreillons",
+    "categorie": "infectieuses",
+    "description": "Infection virale à paramyxovirus, contagieuse (OMS).",
+    "symptomes": [
+      {
+        "nom": "gonflement des parotides",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "mal de gorge",
+        "poids": 2
+      },
+      {
+        "nom": "fatigue",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "méningite",
+      "orchite",
+      "surdité"
+    ],
+    "prise_en_charge": "Traitement symptomatique. Vaccination préventive (ROR).",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "rubi-001",
+    "nom": "Rubéole",
+    "categorie": "infectieuses",
+    "description": "Infection virale ; risque majeur en grossesse (syndrome rubéoleux congénital) (OMS).",
+    "symptomes": [
+      {
+        "nom": "éruption cutanée",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre légère",
+        "poids": 1
+      },
+      {
+        "nom": "adénopathies",
+        "poids": 2
+      },
+      {
+        "nom": "arthralgies",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "complications grossesse",
+      "fausse couche"
+    ],
+    "prise_en_charge": "Traitement symptomatique. Vaccination ROR. Éviter grossesse 28 j après vaccin.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "diph-001",
+    "nom": "Diphtérie",
+    "categorie": "infectieuses",
+    "description": "Infection à Corynebacterium diphtheriae (OMS).",
+    "symptomes": [
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "mal de gorge",
+        "poids": 3
+      },
+      {
+        "nom": "fausse membrane pharyngée",
+        "poids": 3
+      },
+      {
+        "nom": "fatigue",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "obstruction des voies aériennes",
+      "myocardite",
+      "paralysie"
+    ],
+    "prise_en_charge": "Antitoxine diphtérique + antibiotiques. Référence urgente.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "trac-001",
+    "nom": "Trachome",
+    "categorie": "infectieuses",
+    "description": "Infection oculaire à Chlamydia trachomatis, cause de cécité évitable (OMS).",
+    "symptomes": [
+      {
+        "nom": "yeux rouges",
+        "poids": 2
+      },
+      {
+        "nom": "démangeaisons oculaires",
+        "poids": 2
+      },
+      {
+        "nom": "écoulement oculaire",
+        "poids": 2
+      },
+      {
+        "nom": "sensibilité à la lumière",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "cécité"
+    ],
+    "prise_en_charge": "Azithromycine en MDA selon programme. Hygiène faciale, eau.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "fila-001",
+    "nom": "Filariose lymphatique",
+    "categorie": "infectieuses",
+    "description": "Parasitose à Wuchereria bancrofti (OMS).",
+    "symptomes": [
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "gonflement des membres",
+        "poids": 3
+      },
+      {
+        "nom": "lymphangite",
+        "poids": 2
+      },
+      {
+        "nom": "douleurs",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "éléphantiasis",
+      "infection secondaire"
+    ],
+    "prise_en_charge": "Albendazole + ivermectine (traitement de masse). Soins des membres.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "shig-001",
+    "nom": "Shigellose (dysenterie bacillaire)",
+    "categorie": "infectieuses",
+    "description": "Infection à Shigella, transmission féco-orale (OMS).",
+    "symptomes": [
+      {
+        "nom": "diarrhée sanglante",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "douleurs abdominales",
+        "poids": 3
+      },
+      {
+        "nom": "tenesme",
+        "poids": 2
+      },
+      {
+        "nom": "vomissements",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "déshydratation sévère",
+      "choc"
+    ],
+    "prise_en_charge": "Réhydratation + antibiotique selon sensibilité locale (ciprofloxacine si indiqué). Zinc enfant.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "rota-001",
+    "nom": "Gastro-entérite à rotavirus",
+    "categorie": "infectieuses",
+    "description": "Cause majeure de diarrhée grave chez l'enfant (OMS).",
+    "symptomes": [
+      {
+        "nom": "diarrhée aqueuse",
+        "poids": 3
+      },
+      {
+        "nom": "vomissements",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre",
+        "poids": 1
+      },
+      {
+        "nom": "déshydratation",
+        "poids": 3
+      }
+    ],
+    "danger": [
+      "choc",
+      "déshydratation sévère"
+    ],
+    "prise_en_charge": "SRO plan A/B/C (IMCI). Zinc 10-14 jours. Vaccin rotavirus prévention.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "giar-001",
+    "nom": "Giardiase",
+    "categorie": "infectieuses",
+    "description": "Parasitose intestinale à Giardia lamblia (OMS).",
+    "symptomes": [
+      {
+        "nom": "diarrhée chronique",
+        "poids": 3
+      },
+      {
+        "nom": "douleurs abdominales",
+        "poids": 2
+      },
+      {
+        "nom": "ballonnements",
+        "poids": 2
+      },
+      {
+        "nom": "nausées",
+        "poids": 1
+      },
+      {
+        "nom": "perte de poids",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "malabsorption",
+      "dénutrition"
+    ],
+    "prise_en_charge": "Métronidazole ou tinidazole. Hygiène eau/aliments.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "hepb-001",
+    "nom": "Hépatite B",
+    "categorie": "infectieuses",
+    "description": "Infection virale du foie, transmission sang et voie sexuelle (OMS).",
+    "symptomes": [
+      {
+        "nom": "fatigue",
+        "poids": 2
+      },
+      {
+        "nom": "jaunisse",
+        "poids": 3
+      },
+      {
+        "nom": "douleurs abdominales",
+        "poids": 2
+      },
+      {
+        "nom": "urines foncées",
+        "poids": 2
+      },
+      {
+        "nom": "nausées",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "insuffisance hépatique aiguë",
+      "cirrhose"
+    ],
+    "prise_en_charge": "Traitement symptomatique aigu. Vaccination prévention. Référence si ictère sévère.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "hepc-001",
+    "nom": "Hépatite C",
+    "categorie": "infectieuses",
+    "description": "Infection virale du foie, souvent chronique (OMS).",
+    "symptomes": [
+      {
+        "nom": "fatigue",
+        "poids": 2
+      },
+      {
+        "nom": "jaunisse",
+        "poids": 1
+      },
+      {
+        "nom": "douleurs abdominales",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "cirrhose",
+      "carcinome hépatocellulaire"
+    ],
+    "prise_en_charge": "Dépistage sérologique. Antiviraux directs si accès. Référence spécialisée.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "typh-002",
+    "nom": "Typhus",
+    "categorie": "infectieuses",
+    "description": "Maladie à Rickettsia transmise par poux ou puces (OMS).",
+    "symptomes": [
+      {
+        "nom": "fièvre élevée",
+        "poids": 3
+      },
+      {
+        "nom": "maux de tête",
+        "poids": 3
+      },
+      {
+        "nom": "éruption",
+        "poids": 2
+      },
+      {
+        "nom": "courbatures",
+        "poids": 2
+      },
+      {
+        "nom": "toux",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "encéphalite",
+      "choc"
+    ],
+    "prise_en_charge": "Antibiotiques (doxycycline). Éradication poux si typhus épidémique.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "leis-001",
+    "nom": "Leishmaniose",
+    "categorie": "infectieuses",
+    "description": "Maladie parasitaire transmise par phlébotomes (OMS).",
+    "symptomes": [
+      {
+        "nom": "lésion cutanée",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "perte de poids",
+        "poids": 2
+      },
+      {
+        "nom": "anémie",
+        "poids": 2
+      },
+      {
+        "nom": "splénomégalie",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "hémorragie",
+      "infection secondaire"
+    ],
+    "prise_en_charge": "Forme cutanée : antimoniaux ou miltefosine. Viscérale : référence hospitalière.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "meni-002",
+    "nom": "Méningite à méningocoque",
+    "categorie": "infectieuses",
+    "description": "Infection bactérienne aiguë des méninges (OMS).",
+    "symptomes": [
+      {
+        "nom": "fièvre élevée",
+        "poids": 3
+      },
+      {
+        "nom": "raideur de la nuque",
+        "poids": 3
+      },
+      {
+        "nom": "vomissements",
+        "poids": 2
+      },
+      {
+        "nom": "purpura",
+        "poids": 3
+      },
+      {
+        "nom": "somnolence",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "choc septique",
+      "coma"
+    ],
+    "prise_en_charge": "Antibiotiques IV/IM immédiats (ceftriaxone). Référence urgente. Chimioprophylaxie contacts.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "seps-001",
+    "nom": "Sepsis",
+    "categorie": "infectieuses",
+    "description": "Réponse dysfonctionnelle du corps à une infection, menace vitale (OMS).",
+    "symptomes": [
+      {
+        "nom": "fièvre ou hypothermie",
+        "poids": 3
+      },
+      {
+        "nom": "fréquence cardiaque élevée",
+        "poids": 2
+      },
+      {
+        "nom": "respiration rapide",
+        "poids": 3
+      },
+      {
+        "nom": "confusion",
+        "poids": 3
+      },
+      {
+        "nom": "extrémités froides",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "choc septique",
+      "défaillance organes"
+    ],
+    "prise_en_charge": "Antibiotiques précoces larges spectre. Réhydratation IV. Référence immédiate.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "scar-001",
+    "nom": "Scarlatine",
+    "categorie": "infectieuses",
+    "description": "Infection à streptocoque avec éruption (OMS).",
+    "symptomes": [
+      {
+        "nom": "éruption scarlatine",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "mal de gorge",
+        "poids": 3
+      },
+      {
+        "nom": "langue framboisée",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "complications rhumatiques",
+      "glomérulonéphrite"
+    ],
+    "prise_en_charge": "Antibiotiques (pénicilline). Traitement symptomatique.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "imp-002",
+    "nom": "Infection urinaire",
+    "categorie": "infectieuses",
+    "description": "Infection du tractus urinaire, fréquente chez la femme (OMS).",
+    "symptomes": [
+      {
+        "nom": "brûlures mictionnelles",
+        "poids": 3
+      },
+      {
+        "nom": "envie fréquente d'uriner",
+        "poids": 3
+      },
+      {
+        "nom": "douleurs sus-pubiennes",
+        "poids": 2
+      },
+      {
+        "nom": "fièvre",
+        "poids": 1
+      },
+      {
+        "nom": "urines troubles",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "pyélonéphrite",
+      "sepsis"
+    ],
+    "prise_en_charge": "Antibiotiques selon protocole. Hydratation. Référence si fièvre haute ou douleur lombaire.",
     "urgence": "Moyenne"
   }
 ]

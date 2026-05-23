@@ -5,9 +5,18 @@
     "categorie": "dermatologiques",
     "description": "Affection cutanée contagieuse due à un parasite.",
     "symptomes": [
-      { "nom": "démangeaisons nocturnes", "poids": 3 },
-      { "nom": "lésions cutanées", "poids": 3 },
-      { "nom": "éruption", "poids": 2 }
+      {
+        "nom": "démangeaisons nocturnes",
+        "poids": 3
+      },
+      {
+        "nom": "lésions cutanées",
+        "poids": 3
+      },
+      {
+        "nom": "éruption",
+        "poids": 2
+      }
     ],
     "danger": [],
     "prise_en_charge": "Lotion antiparasitaire.",
@@ -19,12 +28,26 @@
     "categorie": "dermatologiques",
     "description": "Infection virale très contagieuse.",
     "symptomes": [
-      { "nom": "éruption cutanée", "poids": 3 },
-      { "nom": "fièvre", "poids": 3 },
-      { "nom": "yeux rouges", "poids": 2 },
-      { "nom": "toux", "poids": 2 }
+      {
+        "nom": "éruption cutanée",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre",
+        "poids": 3
+      },
+      {
+        "nom": "yeux rouges",
+        "poids": 2
+      },
+      {
+        "nom": "toux",
+        "poids": 2
+      }
     ],
-    "danger": ["détresse respiratoire"],
+    "danger": [
+      "détresse respiratoire"
+    ],
     "prise_en_charge": "Vitamine A, antipyrétiques.",
     "urgence": "Haute"
   },
@@ -34,12 +57,27 @@
     "categorie": "dermatologiques",
     "description": "Infection virale très contagieuse avec éruption vésiculeuse.",
     "symptomes": [
-      { "nom": "éruption vésiculeuse", "poids": 3 },
-      { "nom": "fièvre", "poids": 2 },
-      { "nom": "démangeaisons", "poids": 2 },
-      { "nom": "fatigue", "poids": 1 }
+      {
+        "nom": "éruption vésiculeuse",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "démangeaisons",
+        "poids": 2
+      },
+      {
+        "nom": "fatigue",
+        "poids": 1
+      }
     ],
-    "danger": ["surinfection cutanée", "déshydratation"],
+    "danger": [
+      "surinfection cutanée",
+      "déshydratation"
+    ],
     "prise_en_charge": "Antipyrétiques, soins cutanés, isolement.",
     "urgence": "Faible"
   },
@@ -49,11 +87,22 @@
     "categorie": "dermatologiques",
     "description": "Maladie infectieuse chronique attaquant la peau.",
     "symptomes": [
-      { "nom": "taches insensibles", "poids": 3 },
-      { "nom": "faiblesse musculaire", "poids": 2 },
-      { "nom": "nodules", "poids": 2 }
+      {
+        "nom": "taches insensibles",
+        "poids": 3
+      },
+      {
+        "nom": "faiblesse musculaire",
+        "poids": 2
+      },
+      {
+        "nom": "nodules",
+        "poids": 2
+      }
     ],
-    "danger": ["mutilations"],
+    "danger": [
+      "mutilations"
+    ],
     "prise_en_charge": "Polychimiothérapie (PCT).",
     "urgence": "Moyenne"
   },
@@ -63,9 +112,18 @@
     "categorie": "dermatologiques",
     "description": "Infection fongique du cuir chevelu ou de la peau.",
     "symptomes": [
-      { "nom": "plaques chauves", "poids": 3 },
-      { "nom": "démangeaisons", "poids": 2 },
-      { "nom": "desquamation", "poids": 2 }
+      {
+        "nom": "plaques chauves",
+        "poids": 3
+      },
+      {
+        "nom": "démangeaisons",
+        "poids": 2
+      },
+      {
+        "nom": "desquamation",
+        "poids": 2
+      }
     ],
     "danger": [],
     "prise_en_charge": "Antifongiques locaux ou oraux.",
@@ -77,12 +135,258 @@
     "categorie": "dermatologiques",
     "description": "Infection cutanée bactérienne superficielle très contagieuse.",
     "symptomes": [
-      { "nom": "croûtes jaunâtres", "poids": 3 },
-      { "nom": "lésions suintantes", "poids": 3 },
-      { "nom": "démangeaisons", "poids": 1 }
+      {
+        "nom": "croûtes jaunâtres",
+        "poids": 3
+      },
+      {
+        "nom": "lésions suintantes",
+        "poids": 3
+      },
+      {
+        "nom": "démangeaisons",
+        "poids": 1
+      }
     ],
-    "danger": ["surinfection"],
+    "danger": [
+      "surinfection"
+    ],
     "prise_en_charge": "Soins locaux, antiseptiques, antibiotiques.",
     "urgence": "Faible"
+  },
+  {
+    "id": "cell-001",
+    "nom": "Cellulite infectieuse",
+    "categorie": "dermatologiques",
+    "description": "Infection bactérienne des tissus mous (OMS).",
+    "symptomes": [
+      {
+        "nom": "rougeur",
+        "poids": 3
+      },
+      {
+        "nom": "chaleur locale",
+        "poids": 2
+      },
+      {
+        "nom": "gonflement",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "douleur",
+        "poids": 3
+      }
+    ],
+    "danger": [
+      "abcès",
+      "sepsis"
+    ],
+    "prise_en_charge": "Antibiotiques oraux/IV. Surélever membre. Incision si abcès.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "absc-001",
+    "nom": "Abcès cutané",
+    "categorie": "dermatologiques",
+    "description": "Collection de pus sous la peau (OMS).",
+    "symptomes": [
+      {
+        "nom": "masse rouge et douloureuse",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "fluctuation",
+        "poids": 3
+      }
+    ],
+    "danger": [
+      "sepsis",
+      "fasciite nécrosante"
+    ],
+    "prise_en_charge": "Incision-drainage. Antibiotiques si cellulite associée.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "derm-001",
+    "nom": "Dermatophytose (teigne corps)",
+    "categorie": "dermatologiques",
+    "description": "Infection fongique de la peau (OMS).",
+    "symptomes": [
+      {
+        "nom": "lésion annulaire",
+        "poids": 3
+      },
+      {
+        "nom": "démangeaisons",
+        "poids": 2
+      },
+      {
+        "nom": "desquamation",
+        "poids": 2
+      },
+      {
+        "nom": "bordure active",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "surinfection"
+    ],
+    "prise_en_charge": "Antifongiques topiques ou oraux (griséofulvine, terbinafine).",
+    "urgence": "Faible"
+  },
+  {
+    "id": "pied-001",
+    "nom": "Pied diabétique infecté",
+    "categorie": "dermatologiques",
+    "description": "Plaie du pied compliquée chez diabétique (OMS).",
+    "symptomes": [
+      {
+        "nom": "plaie au pied",
+        "poids": 3
+      },
+      {
+        "nom": "écoulement purulent",
+        "poids": 2
+      },
+      {
+        "nom": "odeur",
+        "poids": 2
+      },
+      {
+        "nom": "douleur",
+        "poids": 1
+      },
+      {
+        "nom": "engourdissement",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "gangrène",
+      "amputation"
+    ],
+    "prise_en_charge": "Débridement. Antibiotiques. Contrôle glycémie. Référence spécialisée.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "brul-001",
+    "nom": "Brûlure",
+    "categorie": "dermatologiques",
+    "description": "Lésion tissulaire par chaleur, produits chimiques ou électricité (OMS).",
+    "symptomes": [
+      {
+        "nom": "douleur",
+        "poids": 3
+      },
+      {
+        "nom": "rougeur",
+        "poids": 2
+      },
+      {
+        "nom": "cloques",
+        "poids": 3
+      },
+      {
+        "nom": "peau blanche ou carbonisée",
+        "poids": 3
+      }
+    ],
+    "danger": [
+      "choc",
+      "infection",
+      "déshydratation"
+    ],
+    "prise_en_charge": "Refroidir eau 20 min. Couvrir propre. Référence si étendue ou visage/mains.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "moll-001",
+    "nom": "Molluscum contagiosum",
+    "categorie": "dermatologiques",
+    "description": "Infection virale cutanée bénigne (OMS).",
+    "symptomes": [
+      {
+        "nom": "boutons perlés",
+        "poids": 3
+      },
+      {
+        "nom": "démangeaisons légères",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "surinfection"
+    ],
+    "prise_en_charge": "Souvent spontané. Traitement topique ou cryothérapie si gênant.",
+    "urgence": "Faible"
+  },
+  {
+    "id": "zona-001",
+    "nom": "Zona (herpès zoster)",
+    "categorie": "dermatologiques",
+    "description": "Réactivation du virus varicelle-zona (OMS).",
+    "symptomes": [
+      {
+        "nom": "éruption en bande",
+        "poids": 3
+      },
+      {
+        "nom": "douleur brûlante",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre",
+        "poids": 1
+      },
+      {
+        "nom": "démangeaisons",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "neuralgie post-zostérienne",
+      "atteinte oculaire"
+    ],
+    "prise_en_charge": "Antiviraux précoces (acyclovir). Analgiques. Référence si oeil atteint.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "mpox-001",
+    "nom": "Mpox (variole du singe)",
+    "categorie": "dermatologiques",
+    "description": "Maladie virale avec éruption, endémies possibles (OMS).",
+    "symptomes": [
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "éruption pustuleuse",
+        "poids": 3
+      },
+      {
+        "nom": "adénopathies",
+        "poids": 2
+      },
+      {
+        "nom": "céphalées",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "surinfection",
+      "pneumonie"
+    ],
+    "prise_en_charge": "Isolement. Soins symptomatiques. Référence si forme sévère.",
+    "urgence": "Moyenne"
   }
 ]

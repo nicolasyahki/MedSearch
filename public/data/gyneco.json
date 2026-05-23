@@ -5,12 +5,28 @@
     "categorie": "gyneco",
     "description": "Crises convulsives chez une femme enceinte, compliquant une pré-éclampsie.",
     "symptomes": [
-      { "nom": "convulsions", "poids": 3 },
-      { "nom": "maux de tête intenses", "poids": 3 },
-      { "nom": "troubles de la vision", "poids": 3 },
-      { "nom": "gonflement", "poids": 2 }
+      {
+        "nom": "convulsions",
+        "poids": 3
+      },
+      {
+        "nom": "maux de tête intenses",
+        "poids": 3
+      },
+      {
+        "nom": "troubles de la vision",
+        "poids": 3
+      },
+      {
+        "nom": "gonflement",
+        "poids": 2
+      }
     ],
-    "danger": ["convulsions", "inconscient", "choc"],
+    "danger": [
+      "convulsions",
+      "inconscient",
+      "choc"
+    ],
     "prise_en_charge": "Sulfate de magnésium, transfert en urgence absolue.",
     "urgence": "Critique"
   },
@@ -20,12 +36,27 @@
     "categorie": "gyneco",
     "description": "Saignement excessif après l'accouchement.",
     "symptomes": [
-      { "nom": "saignement abondant", "poids": 3 },
-      { "nom": "pâleur", "poids": 3 },
-      { "nom": "fatigue", "poids": 2 },
-      { "nom": "vertiges", "poids": 2 }
+      {
+        "nom": "saignement abondant",
+        "poids": 3
+      },
+      {
+        "nom": "pâleur",
+        "poids": 3
+      },
+      {
+        "nom": "fatigue",
+        "poids": 2
+      },
+      {
+        "nom": "vertiges",
+        "poids": 2
+      }
     ],
-    "danger": ["choc", "perte de connaissance"],
+    "danger": [
+      "choc",
+      "perte de connaissance"
+    ],
     "prise_en_charge": "Massage utérin, ocytocine, transfert d'urgence.",
     "urgence": "Critique"
   },
@@ -35,13 +66,249 @@
     "categorie": "gyneco",
     "description": "Infection de l'appareil génital après l'accouchement.",
     "symptomes": [
-      { "nom": "fièvre", "poids": 3 },
-      { "nom": "pertes malodorantes", "poids": 3 },
-      { "nom": "douleurs pelviennes", "poids": 3 },
-      { "nom": "fatigue", "poids": 2 }
+      {
+        "nom": "fièvre",
+        "poids": 3
+      },
+      {
+        "nom": "pertes malodorantes",
+        "poids": 3
+      },
+      {
+        "nom": "douleurs pelviennes",
+        "poids": 3
+      },
+      {
+        "nom": "fatigue",
+        "poids": 2
+      }
     ],
-    "danger": ["choc septique"],
+    "danger": [
+      "choc septique"
+    ],
     "prise_en_charge": "Antibiotiques à large spectre, transfert.",
     "urgence": "Haute"
+  },
+  {
+    "id": "pree-001",
+    "nom": "Prééclampsie",
+    "categorie": "gyneco",
+    "description": "Hypertension et protéinurie après 20 SA (OMS).",
+    "symptomes": [
+      {
+        "nom": "céphalées",
+        "poids": 3
+      },
+      {
+        "nom": "œdème",
+        "poids": 2
+      },
+      {
+        "nom": "douleurs épigastriques",
+        "poids": 2
+      },
+      {
+        "nom": "troubles visuels",
+        "poids": 2
+      },
+      {
+        "nom": "hypertension",
+        "poids": 3
+      }
+    ],
+    "danger": [
+      "éclampsie",
+      "HELLP"
+    ],
+    "prise_en_charge": "Référence obstétricale. Sulfate de magnésium si éclampsie. Surveillance fœtale.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "anem-002",
+    "nom": "Anémie de la grossesse",
+    "categorie": "gyneco",
+    "description": "Anémie fréquente, souvent ferriprive (OMS).",
+    "symptomes": [
+      {
+        "nom": "fatigue",
+        "poids": 3
+      },
+      {
+        "nom": "pâleur",
+        "poids": 2
+      },
+      {
+        "nom": "essoufflement",
+        "poids": 2
+      },
+      {
+        "nom": "vertiges",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "insuffisance cardiaque"
+    ],
+    "prise_en_charge": "Fer + acide folique. Alimentation. Référence si Hb très basse.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "gon-001",
+    "nom": "Gonorrhée",
+    "categorie": "gyneco",
+    "description": "IST bactérienne à Neisseria gonorrhoeae (OMS).",
+    "symptomes": [
+      {
+        "nom": "écoulement vaginal",
+        "poids": 3
+      },
+      {
+        "nom": "douleur à la miction",
+        "poids": 2
+      },
+      {
+        "nom": "douleurs pelviennes",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "salpingite",
+      "stérilité"
+    ],
+    "prise_en_charge": "Antibiotiques selon protocole (ceftriaxone). Traiter partenaire. Dépistage IST.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "chla-001",
+    "nom": "Chlamydia",
+    "categorie": "gyneco",
+    "description": "IST bactérienne fréquente, souvent asymptomatique (OMS).",
+    "symptomes": [
+      {
+        "nom": "écoulement",
+        "poids": 2
+      },
+      {
+        "nom": "douleur pelvienne",
+        "poids": 2
+      },
+      {
+        "nom": "saignement intermenstruel",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "salpingite",
+      "grossesse extra-utérine"
+    ],
+    "prise_en_charge": "Azithromycine ou doxycycline. Dépistage et traitement partenaire.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "syp-001",
+    "nom": "Syphilis",
+    "categorie": "gyneco",
+    "description": "IST à Treponema pallidum (OMS).",
+    "symptomes": [
+      {
+        "nom": "chancre indolore",
+        "poids": 3
+      },
+      {
+        "nom": "éruption cutanée",
+        "poids": 2
+      },
+      {
+        "nom": "adénopathies",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "syphilis congénitale"
+    ],
+    "prise_en_charge": "Benzathine pénicilline G. Dépistage grossesse. Traitement partenaire.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "vag-001",
+    "nom": "Infection vaginale (candidose)",
+    "categorie": "gyneco",
+    "description": "Candidose à Candida albicans (OMS).",
+    "symptomes": [
+      {
+        "nom": "prurit vulvaire",
+        "poids": 3
+      },
+      {
+        "nom": "écoulement blanc grumeleux",
+        "poids": 3
+      },
+      {
+        "nom": "brûlures",
+        "poids": 2
+      },
+      {
+        "nom": "dyspareunie",
+        "poids": 1
+      }
+    ],
+    "danger": [],
+    "prise_en_charge": "Antifongique local ou oral (fluconazole). Éviter savons irritants.",
+    "urgence": "Faible"
+  },
+  {
+    "id": "bact-001",
+    "nom": "Vaginose bactérienne",
+    "categorie": "gyneco",
+    "description": "Déséquilibre de la flore vaginale (OMS).",
+    "symptomes": [
+      {
+        "nom": "écoulement grisâtre",
+        "poids": 3
+      },
+      {
+        "nom": "odeur de poisson",
+        "poids": 3
+      },
+      {
+        "nom": "démangeaisons légères",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "infection post-partum"
+    ],
+    "prise_en_charge": "Métronidazole ou clinadamycine.",
+    "urgence": "Faible"
+  },
+  {
+    "id": "avort-001",
+    "nom": "Complications d'avortement non médicalisé",
+    "categorie": "gyneco",
+    "description": "Cause majeure de mortalité maternelle (OMS).",
+    "symptomes": [
+      {
+        "nom": "saignement vaginal",
+        "poids": 3
+      },
+      {
+        "nom": "douleurs pelviennes",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "écoulement malodorant",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "choc hémorragique",
+      "sepsis"
+    ],
+    "prise_en_charge": "Référence urgente. Antibiotiques + évacuation utérine en hôpital.",
+    "urgence": "Critique"
   }
 ]

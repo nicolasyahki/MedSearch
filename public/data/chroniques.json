@@ -5,13 +5,32 @@
     "categorie": "chroniques",
     "description": "Maladie chronique caractérisée par un excès de sucre dans le sang.",
     "symptomes": [
-      { "nom": "soif intense", "poids": 3 },
-      { "nom": "envie fréquente d'uriner", "poids": 3 },
-      { "nom": "fatigue", "poids": 2 },
-      { "nom": "vision floue", "poids": 2 },
-      { "nom": "cicatrisation lente", "poids": 1 }
+      {
+        "nom": "soif intense",
+        "poids": 3
+      },
+      {
+        "nom": "envie fréquente d'uriner",
+        "poids": 3
+      },
+      {
+        "nom": "fatigue",
+        "poids": 2
+      },
+      {
+        "nom": "vision floue",
+        "poids": 2
+      },
+      {
+        "nom": "cicatrisation lente",
+        "poids": 1
+      }
     ],
-    "danger": ["inconscient", "coma", "plaie infectée au pied"],
+    "danger": [
+      "inconscient",
+      "coma",
+      "plaie infectée au pied"
+    ],
     "prise_en_charge": "Contrôle glycémie, antidiabétiques oraux, référence pour suivi.",
     "urgence": "Moyenne"
   },
@@ -21,12 +40,28 @@
     "categorie": "chroniques",
     "description": "Tension artérielle anormalement élevée, souvent silencieuse.",
     "symptomes": [
-      { "nom": "maux de tête intenses", "poids": 3 },
-      { "nom": "vertiges", "poids": 2 },
-      { "nom": "bourdonnements d'oreille", "poids": 2 },
-      { "nom": "saignement de nez", "poids": 1 }
+      {
+        "nom": "maux de tête intenses",
+        "poids": 3
+      },
+      {
+        "nom": "vertiges",
+        "poids": 2
+      },
+      {
+        "nom": "bourdonnements d'oreille",
+        "poids": 2
+      },
+      {
+        "nom": "saignement de nez",
+        "poids": 1
+      }
     ],
-    "danger": ["paralysie", "troubles de la parole", "douleur thoracique"],
+    "danger": [
+      "paralysie",
+      "troubles de la parole",
+      "douleur thoracique"
+    ],
     "prise_en_charge": "Mesure tension. Antihypertenseurs, régime sans sel.",
     "urgence": "Moyenne"
   },
@@ -36,12 +71,28 @@
     "categorie": "chroniques",
     "description": "Maladie génétique du sang très fréquente en Afrique subsaharienne.",
     "symptomes": [
-      { "nom": "douleurs osseuses intenses", "poids": 3 },
-      { "nom": "crise douloureuse", "poids": 3 },
-      { "nom": "pâleur", "poids": 2 },
-      { "nom": "gonflement des mains ou pieds", "poids": 2 }
+      {
+        "nom": "douleurs osseuses intenses",
+        "poids": 3
+      },
+      {
+        "nom": "crise douloureuse",
+        "poids": 3
+      },
+      {
+        "nom": "pâleur",
+        "poids": 2
+      },
+      {
+        "nom": "gonflement des mains ou pieds",
+        "poids": 2
+      }
     ],
-    "danger": ["pâleur extrême", "détresse respiratoire", "fièvre élevée"],
+    "danger": [
+      "pâleur extrême",
+      "détresse respiratoire",
+      "fièvre élevée"
+    ],
     "prise_en_charge": "Antalgiques puissants, hyperhydratation, acide folique, référence hôpital.",
     "urgence": "Haute"
   },
@@ -51,13 +102,218 @@
     "categorie": "chroniques",
     "description": "Trouble neurologique provoquant des crises convulsives répétées.",
     "symptomes": [
-      { "nom": "crise convulsive", "poids": 3 },
-      { "nom": "perte de connaissance brève", "poids": 3 },
-      { "nom": "morsure de la langue", "poids": 2 },
-      { "nom": "perte d'urine", "poids": 2 }
+      {
+        "nom": "crise convulsive",
+        "poids": 3
+      },
+      {
+        "nom": "perte de connaissance brève",
+        "poids": 3
+      },
+      {
+        "nom": "morsure de la langue",
+        "poids": 2
+      },
+      {
+        "nom": "perte d'urine",
+        "poids": 2
+      }
     ],
-    "danger": ["convulsions de plus de 5 minutes", "inconscient"],
+    "danger": [
+      "convulsions de plus de 5 minutes",
+      "inconscient"
+    ],
     "prise_en_charge": "Protection pendant la crise, PLS. Antiépileptiques (phénobarbital, etc.).",
     "urgence": "Haute"
+  },
+  {
+    "id": "icc-001",
+    "nom": "Insuffisance cardiaque",
+    "categorie": "chroniques",
+    "description": "Incapacité du cœur à pomper efficacement (OMS).",
+    "symptomes": [
+      {
+        "nom": "essoufflement",
+        "poids": 3
+      },
+      {
+        "nom": "fatigue",
+        "poids": 2
+      },
+      {
+        "nom": "œdème des jambes",
+        "poids": 3
+      },
+      {
+        "nom": "prise de poids rapide",
+        "poids": 2
+      },
+      {
+        "nom": "toux nocturne",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "œdème pulmonaire",
+      "choc cardiogénique"
+    ],
+    "prise_en_charge": "Diurétiques, IEC si disponibles. Sel limité. Référence si décompensation.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "irc-001",
+    "nom": "Insuffisance rénale chronique",
+    "categorie": "chroniques",
+    "description": "Perte progressive de la fonction rénale (OMS).",
+    "symptomes": [
+      {
+        "nom": "fatigue",
+        "poids": 2
+      },
+      {
+        "nom": "œdème",
+        "poids": 2
+      },
+      {
+        "nom": "urines diminuées",
+        "poids": 2
+      },
+      {
+        "nom": "nausées",
+        "poids": 2
+      },
+      {
+        "nom": "démangeaisons",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "hyperkaliémie",
+      "urémie"
+    ],
+    "prise_en_charge": "Contrôle PA et diabète. Référence néphrologie. Dialyse si terminale.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "dep-001",
+    "nom": "Dépression",
+    "categorie": "chroniques",
+    "description": "Trouble mental fréquent, sous-diagnostiqué (OMS).",
+    "symptomes": [
+      {
+        "nom": "tristesse",
+        "poids": 3
+      },
+      {
+        "nom": "perte d'intérêt",
+        "poids": 3
+      },
+      {
+        "nom": "fatigue",
+        "poids": 2
+      },
+      {
+        "nom": "troubles du sommeil",
+        "poids": 2
+      },
+      {
+        "nom": "perte d'appétit",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "idées suicidaires"
+    ],
+    "prise_en_charge": "Écoute empathique. Référence santé mentale. Antidépresseurs si disponibles.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "epi-002",
+    "nom": "État de mal épileptique",
+    "categorie": "chroniques",
+    "description": "Crises convulsives prolongées ou répétées (OMS).",
+    "symptomes": [
+      {
+        "nom": "convulsions",
+        "poids": 3
+      },
+      {
+        "nom": "perte de conscience",
+        "poids": 3
+      },
+      {
+        "nom": "morsure de langue",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "arrêt respiratoire",
+      "lésions cérébrales"
+    ],
+    "prise_en_charge": "Diazépam rectal/IV. Référence IMMÉDIATE. Position latérale de sécurité.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "hypo-001",
+    "nom": "Hypothyroïdie",
+    "categorie": "chroniques",
+    "description": "Déficit en hormones thyroïdiennes (OMS).",
+    "symptomes": [
+      {
+        "nom": "fatigue",
+        "poids": 2
+      },
+      {
+        "nom": "prise de poids",
+        "poids": 2
+      },
+      {
+        "nom": "intolérance au froid",
+        "poids": 2
+      },
+      {
+        "nom": "constipation",
+        "poids": 1
+      },
+      {
+        "nom": "peau sèche",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "coma myxœdémateux"
+    ],
+    "prise_en_charge": "Lévothyroxine si disponible. Dépistage TSH.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "arth-001",
+    "nom": "Arthrite rhumatoïde",
+    "categorie": "chroniques",
+    "description": "Maladie inflammatoire chronique des articulations (OMS).",
+    "symptomes": [
+      {
+        "nom": "douleurs articulaires",
+        "poids": 3
+      },
+      {
+        "nom": "raideur matinale",
+        "poids": 3
+      },
+      {
+        "nom": "gonflement articulaire",
+        "poids": 2
+      },
+      {
+        "nom": "fatigue",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "déformations",
+      "invalidité"
+    ],
+    "prise_en_charge": "AINS si pas contre-indication. Référence rhumatologie. Physiothérapie.",
+    "urgence": "Moyenne"
   }
 ]

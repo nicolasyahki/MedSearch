@@ -1,0 +1,335 @@
+[
+  {
+    "id": "avc-001",
+    "nom": "Accident vasculaire cérébral",
+    "categorie": "neurologiques",
+    "description": "Syndrome neurologique focal d'origine vasculaire (OMS).",
+    "symptomes": [
+      {
+        "nom": "paralysie d'un côté",
+        "poids": 3
+      },
+      {
+        "nom": "troubles de la parole",
+        "poids": 3
+      },
+      {
+        "nom": "visage asymétrique",
+        "poids": 3
+      },
+      {
+        "nom": "maux de tête brutal",
+        "poids": 2
+      },
+      {
+        "nom": "confusion",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "coma",
+      "dépendance"
+    ],
+    "prise_en_charge": "Référence IMMÉDIATE (<4h si thrombolyse). Position demi-assise. Glycémie.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "enc-001",
+    "nom": "Encéphalite",
+    "categorie": "neurologiques",
+    "description": "Inflammation du cerveau, souvent virale (OMS).",
+    "symptomes": [
+      {
+        "nom": "fièvre",
+        "poids": 3
+      },
+      {
+        "nom": "maux de tête",
+        "poids": 3
+      },
+      {
+        "nom": "confusion",
+        "poids": 3
+      },
+      {
+        "nom": "convulsions",
+        "poids": 2
+      },
+      {
+        "nom": "raideur de la nuque",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "coma"
+    ],
+    "prise_en_charge": "Référence hospitalière. Soins de support. Antiviraux si herpès suspecté.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "migr-001",
+    "nom": "Migraine",
+    "categorie": "neurologiques",
+    "description": "Céphalée primaire récurrente (OMS).",
+    "symptomes": [
+      {
+        "nom": "maux de tête pulsatile",
+        "poids": 3
+      },
+      {
+        "nom": "nausées",
+        "poids": 2
+      },
+      {
+        "nom": "photophobie",
+        "poids": 2
+      },
+      {
+        "nom": "vomissements",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "état de mal migraineux"
+    ],
+    "prise_en_charge": "Antalgiques. Repos obscurité. Triptans si disponibles.",
+    "urgence": "Faible"
+  },
+  {
+    "id": "meni-003",
+    "nom": "Méningite tuberculeuse",
+    "categorie": "neurologiques",
+    "description": "Forme grave de tuberculose (OMS).",
+    "symptomes": [
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "maux de tête",
+        "poids": 3
+      },
+      {
+        "nom": "raideur de la nuque",
+        "poids": 3
+      },
+      {
+        "nom": "confusion",
+        "poids": 2
+      },
+      {
+        "nom": "perte de poids",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "hydrocéphalie",
+      "coma"
+    ],
+    "prise_en_charge": "Anti-TB prolongé + corticoïdes. Référence spécialisée.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "tet-002",
+    "nom": "Tétanos néonatal",
+    "categorie": "neurologiques",
+    "description": "Infection du cordon ombilical non stérile (OMS).",
+    "symptomes": [
+      {
+        "nom": "incapacité à téter",
+        "poids": 3
+      },
+      {
+        "nom": "raideur",
+        "poids": 3
+      },
+      {
+        "nom": "spasmes",
+        "poids": 3
+      },
+      {
+        "nom": "opisthotonos",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "décès"
+    ],
+    "prise_en_charge": "Soins intensifs. Immunoglobuline antitétanique. Prévention : hygiène du cordon.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "park-001",
+    "nom": "Maladie de Parkinson",
+    "categorie": "neurologiques",
+    "description": "Trouble neurodégénératif progressif (OMS).",
+    "symptomes": [
+      {
+        "nom": "tremblements au repos",
+        "poids": 3
+      },
+      {
+        "nom": "raideur",
+        "poids": 2
+      },
+      {
+        "nom": "lenteur des mouvements",
+        "poids": 3
+      },
+      {
+        "nom": "instabilité",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "chutes",
+      "dépendance"
+    ],
+    "prise_en_charge": "Référence neurologie. Lévodopa si disponible. Kinésithérapie.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "dem-001",
+    "nom": "Démence",
+    "categorie": "neurologiques",
+    "description": "Déclin cognitif progressif, Alzheimer fréquent (OMS).",
+    "symptomes": [
+      {
+        "nom": "troubles de la mémoire",
+        "poids": 3
+      },
+      {
+        "nom": "désorientation",
+        "poids": 2
+      },
+      {
+        "nom": "troubles du comportement",
+        "poids": 2
+      },
+      {
+        "nom": "difficultés quotidiennes",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "errance",
+      "dénutrition"
+    ],
+    "prise_en_charge": "Évaluation cognitive. Soutien familial. Référence si début brutal (exclure AVC).",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "bell-001",
+    "nom": "Paralysie faciale (Bell)",
+    "categorie": "neurologiques",
+    "description": "Paralysie aiguë du nerf facial (OMS).",
+    "symptomes": [
+      {
+        "nom": "asymétrie du visage",
+        "poids": 3
+      },
+      {
+        "nom": "impossibilité de fermer l'œil",
+        "poids": 2
+      },
+      {
+        "nom": "sécheresse buccale",
+        "poids": 1
+      }
+    ],
+    "danger": [],
+    "prise_en_charge": "Corticoïdes précoces si protocole. Protection de l'œil. Référence si atteinte bilatérale.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "ceph-001",
+    "nom": "Céphalée de tension",
+    "categorie": "neurologiques",
+    "description": "Céphalée primaire bénigne fréquente (OMS).",
+    "symptomes": [
+      {
+        "nom": "maux de tête bilatéraux",
+        "poids": 3
+      },
+      {
+        "nom": "pression",
+        "poids": 2
+      },
+      {
+        "nom": "raideur cervicale",
+        "poids": 1
+      },
+      {
+        "nom": "fatigue",
+        "poids": 1
+      }
+    ],
+    "danger": [],
+    "prise_en_charge": "Antalgiques simples. Repos. Référence si céphalée brutale ou signes neurologiques.",
+    "urgence": "Faible"
+  },
+  {
+    "id": "sync-001",
+    "nom": "Syncope",
+    "categorie": "neurologiques",
+    "description": "Perte de conscience brève, récupération rapide (OMS).",
+    "symptomes": [
+      {
+        "nom": "perte de conscience",
+        "poids": 3
+      },
+      {
+        "nom": "pâleur",
+        "poids": 2
+      },
+      {
+        "nom": "sueurs",
+        "poids": 2
+      },
+      {
+        "nom": "vertiges",
+        "poids": 2
+      },
+      {
+        "nom": "palpitations",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "arythmie",
+      "AVC"
+    ],
+    "prise_en_charge": "Position allongée, jambes surélevées. Rechercher cause (déshydratation, anémie). Référence si récidive.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "neur-001",
+    "nom": "Neuropathie périphérique",
+    "categorie": "neurologiques",
+    "description": "Atteinte des nerfs périphériques, souvent diabétique (OMS).",
+    "symptomes": [
+      {
+        "nom": "fourmillements",
+        "poids": 3
+      },
+      {
+        "nom": "brûlures des pieds",
+        "poids": 2
+      },
+      {
+        "nom": "faiblesse",
+        "poids": 2
+      },
+      {
+        "nom": "douleurs",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "plaies du pied",
+      "amputation"
+    ],
+    "prise_en_charge": "Contrôle glycémie. Soins des pieds. Référence si progression rapide.",
+    "urgence": "Moyenne"
+  }
+]

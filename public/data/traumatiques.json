@@ -1,0 +1,311 @@
+[
+  {
+    "id": "snak-001",
+    "nom": "Morsure de serpent",
+    "categorie": "traumatiques",
+    "description": "Urgence médicale en zones tropicales (OMS).",
+    "symptomes": [
+      {
+        "nom": "douleur locale",
+        "poids": 3
+      },
+      {
+        "nom": "gonflement",
+        "poids": 3
+      },
+      {
+        "nom": "ecchymoses",
+        "poids": 2
+      },
+      {
+        "nom": "nausées",
+        "poids": 2
+      },
+      {
+        "nom": "saignement",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "choc",
+      "paralysie",
+      "nécrose"
+    ],
+    "prise_en_charge": "Immobiliser membre. Référence IMMÉDIATE. Antivenin si disponible. Pas d'incision.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "frac-001",
+    "nom": "Fracture",
+    "categorie": "traumatiques",
+    "description": "Rupture osseuse suite traumatisme (OMS).",
+    "symptomes": [
+      {
+        "nom": "douleur",
+        "poids": 3
+      },
+      {
+        "nom": "déformation",
+        "poids": 3
+      },
+      {
+        "nom": "impotence fonctionnelle",
+        "poids": 3
+      },
+      {
+        "nom": "gonflement",
+        "poids": 2
+      },
+      {
+        "nom": "ecchymose",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "choc",
+      "syndrome des loges"
+    ],
+    "prise_en_charge": "Immobilisation. Référence radiographie et réduction. Antalgiques.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "pla-001",
+    "nom": "Plaie profonde",
+    "categorie": "traumatiques",
+    "description": "Lésion cutanée nécessitant suture (OMS).",
+    "symptomes": [
+      {
+        "nom": "saignement",
+        "poids": 3
+      },
+      {
+        "nom": "douleur",
+        "poids": 3
+      },
+      {
+        "nom": "plaie visible",
+        "poids": 3
+      }
+    ],
+    "danger": [
+      "hémorragie",
+      "infection",
+      "tétanos"
+    ],
+    "prise_en_charge": "Compression hémorragie. Suture si <6-8h. Vaccin/immunoglobuline antitétanique.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "ent-001",
+    "nom": "Traumatisme crânien",
+    "categorie": "traumatiques",
+    "description": "Choc à la tête (OMS).",
+    "symptomes": [
+      {
+        "nom": "maux de tête",
+        "poids": 3
+      },
+      {
+        "nom": "vomissements",
+        "poids": 2
+      },
+      {
+        "nom": "somnolence",
+        "poids": 2
+      },
+      {
+        "nom": "amnésie",
+        "poids": 2
+      },
+      {
+        "nom": "vertiges",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "hématome sous-dural",
+      "coma"
+    ],
+    "prise_en_charge": "Surveillance 24-48h. Référence si vomissements répétés, convulsions, inconscience.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "burn-001",
+    "nom": "Brûlure",
+    "categorie": "traumatiques",
+    "description": "Lésion tissulaire par chaleur, produits chimiques ou électricité (OMS).",
+    "symptomes": [
+      {
+        "nom": "douleur",
+        "poids": 3
+      },
+      {
+        "nom": "rougeur",
+        "poids": 2
+      },
+      {
+        "nom": "cloques",
+        "poids": 3
+      },
+      {
+        "nom": "peau blanchâtre",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "choc",
+      "infection",
+      "déshydratation"
+    ],
+    "prise_en_charge": "Refroidir à l'eau 20 min. Couvrir propre. Référence si >10% surface, visage, mains, pieds, enfant.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "dog-001",
+    "nom": "Morsure de chien",
+    "categorie": "traumatiques",
+    "description": "Plaie par morsure, risque rage et infection (OMS).",
+    "symptomes": [
+      {
+        "nom": "plaie",
+        "poids": 3
+      },
+      {
+        "nom": "saignement",
+        "poids": 2
+      },
+      {
+        "nom": "douleur",
+        "poids": 2
+      },
+      {
+        "nom": "gonflement",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "rage",
+      "tétanos",
+      "infection"
+    ],
+    "prise_en_charge": "Lavage abondant 15 min. Antibiotiques si plaie profonde. Vaccin antirabique si zone endémique.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "disl-001",
+    "nom": "Luxation",
+    "categorie": "traumatiques",
+    "description": "Déplacement articulaire (OMS).",
+    "symptomes": [
+      {
+        "nom": "douleur",
+        "poids": 3
+      },
+      {
+        "nom": "déformation",
+        "poids": 3
+      },
+      {
+        "nom": "impotence",
+        "poids": 2
+      },
+      {
+        "nom": "gonflement",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "lésion vasculaire"
+    ],
+    "prise_en_charge": "Immobiliser. Réduction par personnel formé. Radiographie après.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "entr-001",
+    "nom": "Entorse",
+    "categorie": "traumatiques",
+    "description": "Lésion ligamentaire (OMS).",
+    "symptomes": [
+      {
+        "nom": "douleur",
+        "poids": 3
+      },
+      {
+        "nom": "gonflement",
+        "poids": 3
+      },
+      {
+        "nom": "ecchymose",
+        "poids": 2
+      },
+      {
+        "nom": "instabilité",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "fracture associée"
+    ],
+    "prise_en_charge": "Repos, glace, compression, surélévation. Référence si incapacité à appuyer.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "amp-001",
+    "nom": "Amputation traumatique",
+    "categorie": "traumatiques",
+    "description": "Perte partielle ou totale d'un membre (OMS).",
+    "symptomes": [
+      {
+        "nom": "saignement",
+        "poids": 3
+      },
+      {
+        "nom": "douleur",
+        "poids": 3
+      },
+      {
+        "nom": "membre sectionné",
+        "poids": 3
+      }
+    ],
+    "danger": [
+      "choc hémorragique"
+    ],
+    "prise_en_charge": "Compression hémorragie. Référence chirurgicale IMMÉDIATE. Conserver segment au frais humide.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "noy-001",
+    "nom": "Noyade / quasi-noyade",
+    "categorie": "traumatiques",
+    "description": "Hypoxie par immersion (OMS).",
+    "symptomes": [
+      {
+        "nom": "difficulté à respirer",
+        "poids": 3
+      },
+      {
+        "nom": "toux",
+        "poids": 2
+      },
+      {
+        "nom": "cyanose",
+        "poids": 2
+      },
+      {
+        "nom": "léthargie",
+        "poids": 2
+      },
+      {
+        "nom": "vomissements",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "arrêt cardiaque",
+      "œdème pulmonaire"
+    ],
+    "prise_en_charge": "Réanimation si arrêt. Oxygène. Référence même si récupération apparente.",
+    "urgence": "Critique"
+  }
+]

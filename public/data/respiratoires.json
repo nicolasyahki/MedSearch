@@ -5,12 +5,28 @@
     "categorie": "respiratoires",
     "description": "Infection respiratoire aiguë affectant les poumons.",
     "symptomes": [
-      { "nom": "toux", "poids": 3 },
-      { "nom": "difficulté à respirer", "poids": 3 },
-      { "nom": "fièvre", "poids": 2 },
-      { "nom": "douleur thoracique", "poids": 2 }
+      {
+        "nom": "toux",
+        "poids": 3
+      },
+      {
+        "nom": "difficulté à respirer",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "douleur thoracique",
+        "poids": 2
+      }
     ],
-    "danger": ["détresse respiratoire", "cyanose", "inconscient"],
+    "danger": [
+      "détresse respiratoire",
+      "cyanose",
+      "inconscient"
+    ],
     "prise_en_charge": "Antibiotiques, oxygène si disponible, réhydratation.",
     "urgence": "Haute"
   },
@@ -20,12 +36,27 @@
     "categorie": "respiratoires",
     "description": "Maladie infectieuse chronique des poumons.",
     "symptomes": [
-      { "nom": "toux persistante", "poids": 3 },
-      { "nom": "sueurs nocturnes", "poids": 3 },
-      { "nom": "perte de poids", "poids": 2 },
-      { "nom": "fièvre légère", "poids": 1 }
+      {
+        "nom": "toux persistante",
+        "poids": 3
+      },
+      {
+        "nom": "sueurs nocturnes",
+        "poids": 3
+      },
+      {
+        "nom": "perte de poids",
+        "poids": 2
+      },
+      {
+        "nom": "fièvre légère",
+        "poids": 1
+      }
     ],
-    "danger": ["hémorragie", "insuffisance respiratoire"],
+    "danger": [
+      "hémorragie",
+      "insuffisance respiratoire"
+    ],
     "prise_en_charge": "Dépistage des crachats. Traitement DOTS.",
     "urgence": "Moyenne"
   },
@@ -35,12 +66,27 @@
     "categorie": "respiratoires",
     "description": "Maladie inflammatoire chronique des voies aériennes.",
     "symptomes": [
-      { "nom": "respiration sifflante", "poids": 3 },
-      { "nom": "essoufflement", "poids": 3 },
-      { "nom": "oppression thoracique", "poids": 2 },
-      { "nom": "toux nocturne", "poids": 1 }
+      {
+        "nom": "respiration sifflante",
+        "poids": 3
+      },
+      {
+        "nom": "essoufflement",
+        "poids": 3
+      },
+      {
+        "nom": "oppression thoracique",
+        "poids": 2
+      },
+      {
+        "nom": "toux nocturne",
+        "poids": 1
+      }
     ],
-    "danger": ["crise sévère", "cyanose"],
+    "danger": [
+      "crise sévère",
+      "cyanose"
+    ],
     "prise_en_charge": "Bronchodilatateurs inhalés.",
     "urgence": "Haute"
   },
@@ -50,12 +96,27 @@
     "categorie": "respiratoires",
     "description": "Infection de l'oreille moyenne, fréquente chez l'enfant.",
     "symptomes": [
-      { "nom": "douleur auriculaire", "poids": 3 },
-      { "nom": "fièvre", "poids": 2 },
-      { "nom": "irritabilité", "poids": 2 },
-      { "nom": "écoulement auriculaire", "poids": 1 }
+      {
+        "nom": "douleur auriculaire",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "irritabilité",
+        "poids": 2
+      },
+      {
+        "nom": "écoulement auriculaire",
+        "poids": 1
+      }
     ],
-    "danger": ["inconscient", "convulsions"],
+    "danger": [
+      "inconscient",
+      "convulsions"
+    ],
     "prise_en_charge": "Antibiotiques si critères cliniques, antalgiques.",
     "urgence": "Moyenne"
   },
@@ -65,12 +126,27 @@
     "categorie": "respiratoires",
     "description": "Infection respiratoire bactérienne très contagieuse.",
     "symptomes": [
-      { "nom": "toux persistante", "poids": 3 },
-      { "nom": "quinte de toux", "poids": 3 },
-      { "nom": "vomissements après toux", "poids": 2 },
-      { "nom": "fatigue", "poids": 1 }
+      {
+        "nom": "toux persistante",
+        "poids": 3
+      },
+      {
+        "nom": "quinte de toux",
+        "poids": 3
+      },
+      {
+        "nom": "vomissements après toux",
+        "poids": 2
+      },
+      {
+        "nom": "fatigue",
+        "poids": 1
+      }
     ],
-    "danger": ["détresse respiratoire", "cyanose"],
+    "danger": [
+      "détresse respiratoire",
+      "cyanose"
+    ],
     "prise_en_charge": "Antibiotiques (macrolides).",
     "urgence": "Moyenne"
   },
@@ -80,13 +156,248 @@
     "categorie": "respiratoires",
     "description": "Infection virale aiguë des petites bronches chez le nourrisson.",
     "symptomes": [
-      { "nom": "respiration sifflante", "poids": 3 },
-      { "nom": "difficulté à respirer", "poids": 3 },
-      { "nom": "toux", "poids": 2 },
-      { "nom": "fièvre légère", "poids": 1 }
+      {
+        "nom": "respiration sifflante",
+        "poids": 3
+      },
+      {
+        "nom": "difficulté à respirer",
+        "poids": 3
+      },
+      {
+        "nom": "toux",
+        "poids": 2
+      },
+      {
+        "nom": "fièvre légère",
+        "poids": 1
+      }
     ],
-    "danger": ["détresse respiratoire", "cyanose", "refus de boire"],
+    "danger": [
+      "détresse respiratoire",
+      "cyanose",
+      "refus de boire"
+    ],
     "prise_en_charge": "Lavage du nez, hydratation, oxygénothérapie si détresse.",
     "urgence": "Haute"
+  },
+  {
+    "id": "sinu-001",
+    "nom": "Sinusite aiguë",
+    "categorie": "respiratoires",
+    "description": "Inflammation des sinus paranasaux, souvent post-virale (OMS).",
+    "symptomes": [
+      {
+        "nom": "douleur faciale",
+        "poids": 3
+      },
+      {
+        "nom": "congestion nasale",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre",
+        "poids": 1
+      },
+      {
+        "nom": "maux de tête",
+        "poids": 2
+      },
+      {
+        "nom": "écoulement nasal purulent",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "infection orbitaire",
+      "méningite"
+    ],
+    "prise_en_charge": "Antibiotiques si persistance >10 j ou signes sévères. Lavage nasal, antalgiques.",
+    "urgence": "Faible"
+  },
+  {
+    "id": "lary-001",
+    "nom": "Laryngite aiguë",
+    "categorie": "respiratoires",
+    "description": "Inflammation du larynx, fréquente chez l'enfant (croup) (OMS).",
+    "symptomes": [
+      {
+        "nom": "toux rauque",
+        "poids": 3
+      },
+      {
+        "nom": "enrouement",
+        "poids": 3
+      },
+      {
+        "nom": "stridor",
+        "poids": 2
+      },
+      {
+        "nom": "fièvre légère",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "détresse respiratoire",
+      "cyanose"
+    ],
+    "prise_en_charge": "Corticoïdes si croup modéré/sévère. Aérosols humides. Référence si détresse.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "epig-001",
+    "nom": "Épiglotte aiguë",
+    "categorie": "respiratoires",
+    "description": "Infection urgente du larynx, souvent H. influenzae (OMS).",
+    "symptomes": [
+      {
+        "nom": "fièvre élevée",
+        "poids": 3
+      },
+      {
+        "nom": "douleur à la déglutition",
+        "poids": 3
+      },
+      {
+        "nom": "salivation",
+        "poids": 3
+      },
+      {
+        "nom": "stridor",
+        "poids": 3
+      },
+      {
+        "nom": "position assise penchée",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "obstruction totale des voies aériennes"
+    ],
+    "prise_en_charge": "NE PAS examiner la gorge. Référence IMMÉDIATE. Voie aérienne sécurisée en hôpital.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "bpco-001",
+    "nom": "BPCO",
+    "categorie": "respiratoires",
+    "description": "Bronchopneumopathie chronique obstructive, liée au tabac (OMS).",
+    "symptomes": [
+      {
+        "nom": "essoufflement chronique",
+        "poids": 3
+      },
+      {
+        "nom": "toux chronique",
+        "poids": 3
+      },
+      {
+        "nom": "expectorations",
+        "poids": 2
+      },
+      {
+        "nom": "sifflements",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "exacerbation sévère",
+      "insuffisance respiratoire"
+    ],
+    "prise_en_charge": "Arrêt tabac. Bronchodilatateurs. Référence si exacerbation.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "phar-001",
+    "nom": "Pharyngite virale",
+    "categorie": "respiratoires",
+    "description": "Inflammation du pharynx, majoritairement virale (OMS/IMCI).",
+    "symptomes": [
+      {
+        "nom": "mal de gorge",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre légère",
+        "poids": 1
+      },
+      {
+        "nom": "rhinorrhée",
+        "poids": 2
+      },
+      {
+        "nom": "toux",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "déshydratation"
+    ],
+    "prise_en_charge": "Traitement symptomatique. Pas d'antibiotiques sauf suspicion streptocoque.",
+    "urgence": "Faible"
+  },
+  {
+    "id": "crup-001",
+    "nom": "Croup (laryngotrachéite)",
+    "categorie": "respiratoires",
+    "description": "Infection virale des voies aériennes supérieures chez l'enfant (OMS).",
+    "symptomes": [
+      {
+        "nom": "toux aboyante",
+        "poids": 3
+      },
+      {
+        "nom": "stridor inspiratoire",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "respiration bruyante",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "détresse respiratoire sévère"
+    ],
+    "prise_en_charge": "Dexaméthasone dose unique si modéré+. Oxygène si besoin.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "srag-001",
+    "nom": "Syndrome respiratoire aigu sévère",
+    "categorie": "respiratoires",
+    "description": "Infection respiratoire grave avec détresse (contexte OMS).",
+    "symptomes": [
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "toux",
+        "poids": 2
+      },
+      {
+        "nom": "essoufflement rapide",
+        "poids": 3
+      },
+      {
+        "nom": "confusion",
+        "poids": 2
+      },
+      {
+        "nom": "lèvres bleues",
+        "poids": 3
+      }
+    ],
+    "danger": [
+      "insuffisance respiratoire",
+      "choc"
+    ],
+    "prise_en_charge": "Oxygénothérapie. Antibiotiques/antiviraux selon cause. Référence hospitalière.",
+    "urgence": "Critique"
   }
 ]

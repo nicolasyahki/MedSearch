@@ -1,0 +1,340 @@
+[
+  {
+    "id": "desh-001",
+    "nom": "Déshydratation (enfant)",
+    "categorie": "pediatriques",
+    "description": "Perte excessive de liquides, urgence IMCI (OMS).",
+    "symptomes": [
+      {
+        "nom": "soif",
+        "poids": 2
+      },
+      {
+        "nom": "yeux enfoncés",
+        "poids": 3
+      },
+      {
+        "nom": "peau plissée lente",
+        "poids": 3
+      },
+      {
+        "nom": "pleurs sans larmes",
+        "poids": 2
+      },
+      {
+        "nom": "léthargie",
+        "poids": 3
+      }
+    ],
+    "danger": [
+      "choc",
+      "inconscient"
+    ],
+    "prise_en_charge": "Plan A/B/C SRO. Voie IV si plan C. Référence urgente si choc.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "mala-001",
+    "nom": "Paludisme grave (enfant)",
+    "categorie": "pediatriques",
+    "description": "Complication du paludisme chez l'enfant (OMS).",
+    "symptomes": [
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "convulsions",
+        "poids": 3
+      },
+      {
+        "nom": "léthargie",
+        "poids": 3
+      },
+      {
+        "nom": "anémie",
+        "poids": 2
+      },
+      {
+        "nom": "vomissements",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "coma",
+      "décès"
+    ],
+    "prise_en_charge": "ACT injectable ou suppositoire. Référence urgente. TDR si possible.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "pneu-003",
+    "nom": "Pneumonie (enfant <5 ans)",
+    "categorie": "pediatriques",
+    "description": "Cause majeure de mortalité infantile (OMS/IMCI).",
+    "symptomes": [
+      {
+        "nom": "toux",
+        "poids": 2
+      },
+      {
+        "nom": "tirage",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "refus de boire",
+        "poids": 2
+      },
+      {
+        "nom": "convulsions",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "hypoxie",
+      "inconscient"
+    ],
+    "prise_en_charge": "Antibiotiques oraux amoxicilline. Oxygène si tirage. Référence si grave.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "diar-002",
+    "nom": "Diarrhée persistante (enfant)",
+    "categorie": "pediatriques",
+    "description": "Diarrhée >14 jours (OMS).",
+    "symptomes": [
+      {
+        "nom": "diarrhée",
+        "poids": 3
+      },
+      {
+        "nom": "perte de poids",
+        "poids": 2
+      },
+      {
+        "nom": "vomissements",
+        "poids": 1
+      },
+      {
+        "nom": "fièvre",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "malnutrition"
+    ],
+    "prise_en_charge": "Zinc. Alimentation continue. Rechercher parasites. Référence si émaciation.",
+    "urgence": "Moyenne"
+  },
+  {
+    "id": "neon-001",
+    "nom": "Infection néonatale",
+    "categorie": "pediatriques",
+    "description": "Sepsis du nouveau-né dans les 28 premiers jours (OMS).",
+    "symptomes": [
+      {
+        "nom": "fièvre ou hypothermie",
+        "poids": 3
+      },
+      {
+        "nom": "refus de boire",
+        "poids": 3
+      },
+      {
+        "nom": "léthargie",
+        "poids": 3
+      },
+      {
+        "nom": "respiration rapide",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "sepsis",
+      "décès"
+    ],
+    "prise_en_charge": "Antibiotiques IV. Référence maternité/hôpital. Allaitement précoce prévention.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "fiev-002",
+    "nom": "Fièvre sans foyer (nourrisson)",
+    "categorie": "pediatriques",
+    "description": "Fièvre chez enfant <3 mois, évaluation urgente (IMCI).",
+    "symptomes": [
+      {
+        "nom": "fièvre",
+        "poids": 3
+      },
+      {
+        "nom": "irritabilité",
+        "poids": 2
+      },
+      {
+        "nom": "refus de boire",
+        "poids": 2
+      },
+      {
+        "nom": "léthargie",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "sepsis",
+      "méningite"
+    ],
+    "prise_en_charge": "Référence hospitalière pour bilan. Ne pas retarder antibiotiques si signes graves.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "conv-001",
+    "nom": "Convulsions fébriles",
+    "categorie": "pediatriques",
+    "description": "Crises liées à la fièvre chez l'enfant 6 mois-5 ans (OMS).",
+    "symptomes": [
+      {
+        "nom": "convulsions",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre",
+        "poids": 3
+      },
+      {
+        "nom": "perte de conscience brève",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "méningite",
+      "état de mal"
+    ],
+    "prise_en_charge": "Position latérale. Antipyrétiques. Référence si première crise <6 mois, signes méningés ou crise >15 min.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "crou-001",
+    "nom": "Laryngite aiguë (croup)",
+    "categorie": "pediatriques",
+    "description": "Infection des voies aériennes supérieures chez l'enfant (OMS).",
+    "symptomes": [
+      {
+        "nom": "toux aboyante",
+        "poids": 3
+      },
+      {
+        "nom": "stridor",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre",
+        "poids": 1
+      },
+      {
+        "nom": "difficulté à respirer",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "détresse respiratoire"
+    ],
+    "prise_en_charge": "Humidification. Corticoïdes oraux si modéré/sévère. Référence si tirage ou cyanose.",
+    "urgence": "Haute"
+  },
+  {
+    "id": "orl-001",
+    "nom": "Angine virale (enfant)",
+    "categorie": "pediatriques",
+    "description": "Infection pharyngée virale fréquente (IMCI).",
+    "symptomes": [
+      {
+        "nom": "mal de gorge",
+        "poids": 3
+      },
+      {
+        "nom": "fièvre",
+        "poids": 2
+      },
+      {
+        "nom": "toux",
+        "poids": 1
+      },
+      {
+        "nom": "adénopathies",
+        "poids": 1
+      }
+    ],
+    "danger": [
+      "abcès"
+    ],
+    "prise_en_charge": "Symptomatique. Antibiotiques seulement si strepto confirmé ou score élevé.",
+    "urgence": "Faible"
+  },
+  {
+    "id": "pneu-004",
+    "nom": "Bronchopneumonie (nourrisson)",
+    "categorie": "pediatriques",
+    "description": "Pneumonie chez nourrisson <2 mois (OMS).",
+    "symptomes": [
+      {
+        "nom": "toux",
+        "poids": 2
+      },
+      {
+        "nom": "tirage",
+        "poids": 3
+      },
+      {
+        "nom": "refus de boire",
+        "poids": 3
+      },
+      {
+        "nom": "cyanose",
+        "poids": 2
+      },
+      {
+        "nom": "apnées",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "hypoxie",
+      "choc"
+    ],
+    "prise_en_charge": "Référence IMMÉDIATE. Antibiotiques IV. Oxygène.",
+    "urgence": "Critique"
+  },
+  {
+    "id": "jaun-001",
+    "nom": "Ictère néonatal",
+    "categorie": "pediatriques",
+    "description": "Coloration jaune du nouveau-né (OMS).",
+    "symptomes": [
+      {
+        "nom": "jaunisse",
+        "poids": 3
+      },
+      {
+        "nom": "urines foncées",
+        "poids": 1
+      },
+      {
+        "nom": "léthargie",
+        "poids": 2
+      },
+      {
+        "nom": "refus de boire",
+        "poids": 2
+      }
+    ],
+    "danger": [
+      "encéphalopathie bilirubinique"
+    ],
+    "prise_en_charge": "Allaitement fréquent. Photothérapie si seuils dépassés. Référence si <24h ou signes neurologiques.",
+    "urgence": "Haute"
+  }
+]
