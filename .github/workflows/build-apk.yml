@@ -50,7 +50,7 @@ jobs:
           yes | sdkmanager --licenses >/dev/null 2>&1 || true
           sdkmanager --install \
             "platform-tools" \
-            "platforms;android-36" \
+            "platforms;android-35" \
             "build-tools;35.0.0"
 
       - name: Install npm dependencies
@@ -64,7 +64,10 @@ jobs:
 
       - name: Compile APK (Gradle)
         working-directory: android
-        run: chmod +x gradlew && ./gradlew assembleDebug --no-daemon --stacktrace
+        run: chmod +x gradlew && ./gradlew assembleDebug --no-daemon
+        env:
+          ANDROID_HOME: ${{ env.ANDROID_SDK_ROOT }}
+          ANDROID_SDK_ROOT: ${{ env.ANDROID_SDK_ROOT }}
 
       - name: Verify APK
         run: |
